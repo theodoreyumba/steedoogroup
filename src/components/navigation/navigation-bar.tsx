@@ -2,7 +2,7 @@
 
 import { SGFullLogo } from '@/assets/images/sg-full-logo.svg';
 import Autoplay from 'embla-carousel-autoplay';
-import { AppShell, Burger, Button, Container, Flex, Group, Paper, rem, Tabs, UnstyledButton, Image, BackgroundImage, Skeleton, Transition, LoadingOverlay } from '@mantine/core';
+import { AppShell, Burger, Button, Container, Flex, Group, Paper, rem, Tabs, UnstyledButton, Image, BackgroundImage, Skeleton, Transition, LoadingOverlay, Stack } from '@mantine/core';
 import { useDisclosure, useIsomorphicEffect, useViewportSize } from '@mantine/hooks';
 import { IconAddressBook, IconBuildingSkyscraper, IconChartInfographic, IconHome, IconMessageCircle, IconPhoto, IconSettings, IconUsersGroup } from '@tabler/icons-react';
 import { Suspense, useRef, useState } from 'react';
@@ -88,6 +88,19 @@ export function Navbar({
                 </AppShell.Header>
 
                 <AppShell.Navbar py="md" px={4}>
+                            <Tabs.Tab value="home" onClick={toggle} leftSection={<IconHome style={{width: rem(20), height: rem(20)}} />}>
+                                Home
+                            </Tabs.Tab>
+                            <Tabs.Tab value="portfolio" onClick={toggle} leftSection={<IconBuildingSkyscraper style={{width: rem(20), height: rem(20)}} />}>
+                                Portfolio
+                            </Tabs.Tab>
+                            <Tabs.Tab value="about-us" onClick={toggle} leftSection={<IconUsersGroup style={{width: rem(20), height: rem(20)}} />}>
+                                About Us
+                            </Tabs.Tab>
+                            <Tabs.Tab value="contact" onClick={toggle} leftSection={<IconAddressBook style={{width: rem(20), height: rem(20)}} />}>
+                                Contact
+                            </Tabs.Tab>
+                        <Button leftSection={<IconChartInfographic style={{width: rem(20), height: rem(20)}} />} variant="subtle" color="green">Investor</Button>
                 </AppShell.Navbar>
                 {isLoading && <Skeleton height={'100vh'} animate />}
                 <Suspense fallback={<Skeleton height={'100vh'} animate/>}>
@@ -132,8 +145,10 @@ export function Navbar({
                             </Transition>
                         </Tabs.Panel>
                     </Container>
-                    <Footer>
-                            <Tabs.Tab value="home" leftSection={<IconHome style={{width: rem(20), height: rem(20)}} />}>
+                    <Footer><Tabs radius="md" orientation="vertical" defaultValue="home" value={activeTab} onChange={setActiveTab}>
+                        <Stack>
+                            
+                        <Tabs.Tab value="home" leftSection={<IconHome style={{width: rem(20), height: rem(20)}} />}>
                                 Home
                             </Tabs.Tab>
                             <Tabs.Tab value="portfolio" leftSection={<IconBuildingSkyscraper style={{width: rem(20), height: rem(20)}} />}>
@@ -146,6 +161,8 @@ export function Navbar({
                                 Contact
                             </Tabs.Tab>
                         <Button leftSection={<IconChartInfographic style={{width: rem(20), height: rem(20)}} />} variant="subtle" color="green">Investor</Button>
+                        </Stack>
+                        </Tabs>
                     </Footer>
                 </AppShell.Main>
             </Tabs>

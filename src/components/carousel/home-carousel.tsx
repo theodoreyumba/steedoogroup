@@ -89,7 +89,7 @@ export const HomePageCarousel = (homecarousel: HomePageCarouselProps) => {
                     {(styles) => (
                         <Paper shadow="md" radius="md" style={styles}>
                             <Carousel slideGap="xs" controlsOffset="xs" loop draggable={false} withControls={false} withIndicators classNames={classes}
-                             height={homecarousel.height} plugins={[autoplay.current, fade.current]}>
+                             mih={homecarousel.height} plugins={[autoplay.current, fade.current]}>
                                 {slides.map((slide, index) => (
                                     <Carousel.Slide key={index}>
                                                     {slide.content}
