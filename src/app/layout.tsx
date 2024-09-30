@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
-import classes from '@/assets/styles/base.module.css';
+import '@/assets/styles/base.css';
 import localFont from "next/font/local";
 import { ColorSchemeScript, createTheme, MantineProvider } from '@mantine/core';
 import { headers } from "next/headers";
@@ -114,7 +114,7 @@ export default function RootLayout({
           `
         }} />
     </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${classes.sg}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <MantineProvider theme={theme} >
         <ColorSchemeScript nonce={nonce} />
             <Suspense fallback={<AppLoading/>}>
