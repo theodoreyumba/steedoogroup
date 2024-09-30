@@ -5,14 +5,15 @@ import { AppLoading } from '@/components/transition/loading';
 export const metadata = generateMetadata("Investor");
 
 export default function ChatLayout({
-    newconversation,
-    conversation,
+    data,
+    children,
 }: Readonly<{
-    newconversation: React.ReactNode
-    conversation: React.ReactNode
+    data: React.ReactNode
+    children: React.ReactNode
 }>) {
   return (
     <Suspense fallback={<AppLoading />}>
+      {children}
     </Suspense>
   );
 }
