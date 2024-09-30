@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-.sg-app:root{
+:root{
     --sg-logo-base-color: #535557;
     --sg-logo-accent-color: #37B6FF;
 }
