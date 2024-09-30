@@ -1,0 +1,93 @@
+{
+    "name": "Steedoo Group",
+    "short_name": "SG",
+    "description": "African businesses to the forefront of the global stage.",
+    "categories":["Steedoo Group", "Steedoo", "Holding", "African businesses","global stage"],
+    "display": "standalone",
+    "orientation": "landscape-primary",
+    "lang": "en-US",
+    "dir": "ltr",
+    "scope": "/",
+    "start_url": "/",
+    "background_color": "#e3e3e3",
+    "theme_color": "#2f3347",
+    "icons": [
+        {
+            "src": "/assets/images/logo/favicon-64.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/assets/images/logo/favicon-32.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/assets/images/logo/favicon-16.ico",
+            "sizes": "16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/assets/images/logo/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/images/logo/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "windows",
+            "url": "https://www.steedoogroup.com/",
+            "id": "com.steedoogroup.app"
+        },
+        {
+            "platform": "play",
+            "url": "https://www.steedoogroup.com/"
+        }
+    ],
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Steedoo Group",
+            "short_name": "SG",
+            "description": "African businesses to the forefront of the global stage.",
+            "categories":["Steedoo Group", "Steedoo", "Holding", "African businesses","global stage"],
+            "url": "/",
+            "icons": [
+                {
+                    "src": "/assets/images/logo/icon-192.png",
+                    "type": "image/png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "New Request",
+            "url": "/request/new",
+            "description": "create a new capital expenditure request"
+        }
+    ],
+    "screenshots" : [
+        {
+            "src": "/assets/images/screenshots/screenshot_auth_1921x1007.png",
+            "sizes": "1921x1007",
+            "type": "image/png",
+            "label": "Auth screen",
+            "platform": "web"
+        },
+        {
+            "src": "/assets/images/screenshots/screenshot_1921x1007.png",
+            "sizes": "1921x1007",
+            "type": "image/png",
+            "label": "Home screen",
+            "platform": "web"
+        }
+    ],
+    "splash_pages": null,
+    "edge_side_panel": {
+    }
+}
