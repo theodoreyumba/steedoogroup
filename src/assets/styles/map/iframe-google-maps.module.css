@@ -1,0 +1,5 @@
+.sgIframeGoogleMaps {
+    border: 0; 
+    border-radius: var(--mantine-radius-md);
+    box-shadow: var(--mantine-shadow-md);
+}

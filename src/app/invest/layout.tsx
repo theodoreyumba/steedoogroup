@@ -2,18 +2,17 @@ import { Suspense } from 'react';
 import { generateMetadata } from "@/utils/page/title";
 import { AppLoading } from '@/components/transition/loading';
 
-export const metadata = generateMetadata("Investor");
+export const metadata = generateMetadata("Invest");
 
 export default function ChatLayout({
-    data,
-    children,
+    newconversation,
+    conversation,
 }: Readonly<{
-    data: React.ReactNode
-    children: React.ReactNode
+    newconversation: React.ReactNode
+    conversation: React.ReactNode
 }>) {
   return (
     <Suspense fallback={<AppLoading />}>
-      {children}
     </Suspense>
   );
 }

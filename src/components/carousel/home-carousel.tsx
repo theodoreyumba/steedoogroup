@@ -1,7 +1,7 @@
 import { SGImages } from "@/assets/images";
 import { Carousel } from "@mantine/carousel";
 import { BackgroundImage, Text, Flex, UnstyledButton, Image, Skeleton, rem, Paper, Transition, SimpleGrid, Stack, Title, Group, Card, Grid, Button } from "@mantine/core";
-import classes from '@/components/carousel/home-carousel.module.css';
+import classes from '@/assets/styles/carousel/home-carousel.module.css';
 import { useRef, useState } from "react";
 import { useIsomorphicEffect } from "@mantine/hooks";
 import Autoplay from "embla-carousel-autoplay";
@@ -36,9 +36,9 @@ export const HomePageCarousel = (homecarousel: HomePageCarouselProps) => {
     const slides = [
         {
             content: (
-                        <Flex align="center" justify="center" style={{ height: '100%' }} p={'xl'}>
+                        <Flex align="center" justify="center" style={{ height: '100%' }} p={'sm'}>
                             <SimpleGrid  cols={{ base: 1, sm: 2, lg: 2 }}>
-                                <Card h={homecarousel.height/1.25} bg={'light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5))'}>
+                                <Card shadow="md" h={homecarousel.height/1.25} bg={'light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5))'}>
                                 <Card.Section>
                                     <Image
                                     src={SGImages.FlamboyantBg.src}
@@ -57,11 +57,29 @@ export const HomePageCarousel = (homecarousel: HomePageCarouselProps) => {
                                 </Stack>
                                 </Card>
                                 <SimpleGrid cols={{base: 1, sm: 2, lg: 2 }}>
-                                <Skeleton width={'100%'} height={'100%'} animate/>
+                                <Card shadow="md" h={'100%'} w={'100%'} p={0}>
+                                    <BackgroundImage src={SGImages.FlamboyantBg.src} h='100%' w='100%'>
+                                        <Stack align="end" justify="end" p={20}>
+                                        <Button variant="white" rightSection={<IconArrowBigRight height={20} width={20}/>}>Learn More</Button>
+                                        </Stack>
+                                    </BackgroundImage>
+                                </Card>
                                 <div></div>
                                 <div></div>
-                                <Skeleton width={'100%'} height={'100%'} animate/>
-                                <Skeleton width={'100%'} height={'100%'} animate/>
+                                <Card shadow="md" h={'100%'} w={'100%'} p={0}>
+                                    <BackgroundImage src={SGImages.FlamboyantBg.src} h='100%' w='100%'>
+                                        <Stack align="end" justify="end" p={20}>
+                                        <Button variant="white" rightSection={<IconArrowBigRight height={20} width={20}/>}>Learn More</Button>
+                                        </Stack>
+                                    </BackgroundImage>
+                                </Card>
+                                <Card shadow="md" h={'100%'} w={'100%'} p={0}>
+                                    <BackgroundImage src={SGImages.FlamboyantBg.src} h='100%' w='100%'>
+                                        <Stack align="end" justify="end" p={20}>
+                                            <Button variant="white" rightSection={<IconArrowBigRight height={20} width={20}/>}>Learn More</Button>
+                                        </Stack>
+                                    </BackgroundImage>
+                                </Card>
                                 </SimpleGrid>
                             </SimpleGrid>
                         </Flex>
@@ -74,12 +92,11 @@ export const HomePageCarousel = (homecarousel: HomePageCarouselProps) => {
                 <Stack>
                     <Image src={SGImages.Logo.src} alt={SGImages.Logo.alt} width={rem(100)} height={rem(100)} />
                 </Stack>
-                <Skeleton width={rem(200)} height={rem(200)} animate/>
+                <Skeleton width='100%' height='100%' animate/>
             </SimpleGrid>
         </Flex>
         ), },
         { content: <ComingSoonPage /> },
-        // Add more slides here if needed
     ];
 
     return (
@@ -87,15 +104,14 @@ export const HomePageCarousel = (homecarousel: HomePageCarouselProps) => {
             {homecarousel.activeTab === 'home' ? (
                 <Transition mounted={isMounted} transition="fade" duration={homecarousel.globalTransitionDuration} timingFunction="ease">
                     {(styles) => (
-                        <Paper shadow="md" radius="md" style={styles}>
+                        <Paper radius="md" style={styles}>
                             <Carousel slideGap="xs" controlsOffset="xs" loop draggable={false} withControls={false} withIndicators classNames={classes}
-                             mih={homecarousel.height} plugins={[autoplay.current, fade.current]}>
+                             height={homecarousel.height} plugins={[autoplay.current, fade.current]}>
                                 {slides.map((slide, index) => (
                                     <Carousel.Slide key={index}>
                                                     {slide.content}
                                     </Carousel.Slide>
                                 ))}
-                                {/* ...other slides */}
                             </Carousel>
                         </Paper>
                     )}
