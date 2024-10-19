@@ -1,4 +1,12 @@
+body{
+  height: 100%;
+  width: 100%;
+}
 
+:root{
+  --sg-logo-base-color: #535557;
+  --sg-logo-accent-color: #37B6FF;
+}
 ::-webkit-scrollbar {
   padding: 2px;
   width: 11px;
