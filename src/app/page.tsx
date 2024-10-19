@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 const Navbar = dynamic(
-  () => import('@/components/navigation/navigation').then(mod => mod.Navigation),
+  () => import('@/components/navigation/navigation-bar').then(mod => mod.Navbar),
   {
     loading: () => <Skeleton height={'100vh'} animate />,
   }

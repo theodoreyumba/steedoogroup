@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
-import '@/assets/styles/base.module.css';
 import '@/assets/styles/base.css';
 import localFont from "next/font/local";
 import { ColorSchemeScript, createTheme, MantineProvider } from '@mantine/core';
@@ -105,7 +104,7 @@ export default function RootLayout({
 }>) {
   const nonce = headers().get('x-nonce') ?? '';
   return (
-    <html lang="en" dir="ltr" className="no-js" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <html lang="en" dir="ltr" className="no-js sg-app" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <head>
       <meta name='mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />

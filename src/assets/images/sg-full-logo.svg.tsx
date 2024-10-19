@@ -1,20 +1,15 @@
 import classes from '@/assets/images/sg-full-logo.svg.module.css'
-import { Box } from '@mantine/core';
 
 interface SGFullLogoProps {
     height?: number;
     width?: number;
-    mr: number;
-    visibleFrom?: string;
-    hiddenFrom?: string;
     link?: string;
     target?: string;
 }
 
-export const SGFullLogo: React.FC<SGFullLogoProps> = ({ height = 1024, width = 1280, mr, visibleFrom, hiddenFrom, link = 'https://steedoogroup.com/brands', target = '_parent' }: SGFullLogoProps) => {
+export const SGFullLogo: React.FC<SGFullLogoProps> = ({ height = 1024, width = 1280, link = 'https://steedoogroup.com/brands', target = '_parent' }: SGFullLogoProps) => {
     return (
-        <Box visibleFrom={visibleFrom} hiddenFrom={hiddenFrom} h={height} w={width} mr={mr}>
-            <svg
+        <svg
             id="print_transparent"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -75,6 +70,5 @@ export const SGFullLogo: React.FC<SGFullLogoProps> = ({ height = 1024, width = 1
                 </g>
             </a>
         </svg>
-        </Box>
     );
 };
