@@ -7,10 +7,11 @@ import { IframeGoogleMaps } from '../map/iframe-google-maps';
 
 interface FooterProps {
   includeMap?: boolean;
+  ref?: React.RefObject<HTMLDivElement>;
   children?: React.ReactNode;
 }
 
-export const Footer = ({ includeMap = true, children }: FooterProps) => {
+export const Footer = ({ includeMap = true, ref, children }: FooterProps) => {
   const [year, setYear] = useState<number>(new Date().getFullYear());
 
   // Update year automatically
@@ -22,7 +23,7 @@ export const Footer = ({ includeMap = true, children }: FooterProps) => {
   return (
     <>
       <Divider my="sm" />
-      <footer>
+      <footer ref={ref}>
           <Paper p="xl" shadow="md" radius="md" style={{ backgroundColor: 'light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5))' }} mb={5}>
           <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
             <Stack justify='center'>
@@ -38,7 +39,7 @@ export const Footer = ({ includeMap = true, children }: FooterProps) => {
                   <IconMapPin size={20} />
                   <Text>20 Av. Mpolo, Lubumbashi, Democratic Republic of the Congo</Text>
                 </Group>
-                <IframeGoogleMaps width={'100%'} heigth={'300'}/>
+                <IframeGoogleMaps width={'100%'} height={'300'}/>
               </Stack>
             )}
 
@@ -66,12 +67,12 @@ export const Footer = ({ includeMap = true, children }: FooterProps) => {
             </Stack>
             </SimpleGrid>
             <Divider my="md" mt={20} />
-            <SimpleGrid cols={2}>
+            <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}>
             {/* Copyright */}
-                <Text size="sm">
+                <Text size="sm" ta="center">
                     &copy; {year} Steedoo Group SAS. All rights reserved.
                 </Text>
-                <Group align="end" justify="end">
+                <Group align="end" justify="center">
                     <Text  size="sm" component="a" c="gray" href=''>Privacy Policy</Text>
                     <Text  size="sm" component="a" c="gray" href=''>Terms & Conditions</Text>
                 </Group>

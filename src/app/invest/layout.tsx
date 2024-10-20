@@ -5,10 +5,8 @@ import { AppLoading } from '@/components/transition/loading';
 export const metadata = generateMetadata("Invest");
 
 export default function ChatLayout({
-    data,
     children,
 }: Readonly<{
-    data: React.ReactNode
     children: React.ReactNode
 }>) {
   return (

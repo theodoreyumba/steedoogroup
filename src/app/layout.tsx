@@ -8,6 +8,7 @@ import { headers } from "next/headers";
 import showConsoleWarning from "@/utils/console/consoleWarning";
 import { Suspense } from "react";
 import { AppLoading } from "@/components/transition/loading";
+import Disclaimer from "@/components/legal/disclaimer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -118,6 +119,7 @@ export default function RootLayout({
         <MantineProvider theme={theme} >
         <ColorSchemeScript nonce={nonce} />
             <Suspense fallback={<AppLoading/>}>
+            <Disclaimer/>
               {children}
             </Suspense>
         </MantineProvider>
