@@ -23,12 +23,12 @@ export function PublicNavigation() {
                     </Text>
                     <Group justify="center" mt="xl">
                         <Link href="/about" passHref>
-                            <Button size="lg" radius="md" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }}>
+                            <Button size="lg" radius="xl" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }}>
                                 Learn More About Us
                             </Button>
                         </Link>
                         <Link href="/contact" passHref>
-                            <Button size="lg" radius="md" variant="outline">
+                            <Button size="lg" radius="xl" variant="outline">
                                 Contact Us
                             </Button>
                         </Link>
@@ -56,9 +56,9 @@ export function PublicNavigation() {
                         </List>
                     </div>
                     <Image
-                        src="/api/placeholder/600/400"
+                        src={'/assets/images/sg/steedoo-group-hq.webp'}
                         alt="Steedoo Group Headquarters"
-                        radius="md"
+                        radius="xl"
                     />
                 </SimpleGrid>
 
@@ -68,22 +68,22 @@ export function PublicNavigation() {
                         Our Companies
                     </Title>
                     <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl">
-                        <Card shadow="md" radius="md" padding="lg">
-                            <ThemeIcon size={50} radius="md" variant="light" color="blue">
+                        <Card shadow="md" radius="xl" padding="lg">
+                            <ThemeIcon size={50} radius="xl" variant="light" color="blue">
                                 <IconBuildingBank size={30} />
                             </ThemeIcon>
                             <Text fw={700} fz="lg" mt="md">Juniaboss</Text>
                             <Text fz="sm" c="dimmed" mt={5}>Cutting-edge fintech solutions revolutionizing African banking</Text>
                         </Card>
-                        <Card shadow="md" radius="md" padding="lg">
-                            <ThemeIcon size={50} radius="md" variant="light" color="green">
+                        <Card shadow="md" radius="xl" padding="lg">
+                            <ThemeIcon size={50} radius="xl" variant="light" color="green">
                                 <IconTruck size={30} />
                             </ThemeIcon>
                             <Text fw={700} fz="lg" mt="md">Dereva</Text>
                             <Text fz="sm" c="dimmed" mt={5}>AI-powered logistics optimizing supply chains across the continent</Text>
                         </Card>
-                        <Card shadow="md" radius="md" padding="lg">
-                            <ThemeIcon size={50} radius="md" variant="light" color="yellow">
+                        <Card shadow="md" radius="xl" padding="lg">
+                            <ThemeIcon size={50} radius="xl" variant="light" color="yellow">
                                 <IconShirt size={30} />
                             </ThemeIcon>
                             <Text fw={700} fz="lg" mt="md">Ogun</Text>
@@ -98,21 +98,21 @@ export function PublicNavigation() {
                         Our Services
                     </Title>
                     <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl">
-                        <Card shadow="md" radius="md" padding="lg">
+                        <Card shadow="md" radius="xl" padding="lg">
                             <IconSettingsSearch width={40} height={40} color='orange' />
                             <Title order={3} mt="sm" size="lg">
                                 Contracting
                             </Title>
                             <Text mt="xs">Providing expert business contracting to accelerate growth and ensure compliance.</Text>
                         </Card>
-                        <Card shadow="md" radius="md" padding="lg">
+                        <Card shadow="md" radius="xl" padding="lg">
                             <IconBusinessplan width={40} height={40} color='green' />
                             <Title order={3} mt="sm" size="lg">
                                 Investment Solutions
                             </Title>
                             <Text mt="xs">Offering smart investment strategies for sustainable growth and market expansion.</Text>
                         </Card>
-                        <Card shadow="md" radius="md" padding="lg">
+                        <Card shadow="md" radius="xl" padding="lg">
                             <IconBuildingStore width={40} height={40} color='blue' />
                             <Title order={3} mt="sm" size="lg">
                                 Market Expansion
@@ -131,23 +131,23 @@ export function PublicNavigation() {
                         <div>
                             <Timeline active={1} bulletSize={24} lineWidth={2}>
                                 <Timeline.Item bullet={<IconGlobe size={12} />} title="Global Perspective">
-                                    <Text color="dimmed" size="sm">Bridging African innovation with international markets</Text>
+                                    <Text c="dimmed" size="sm">Bridging African innovation with international markets</Text>
                                 </Timeline.Item>
                                 <Timeline.Item bullet={<IconUsers size={12} />} title="Local Expertise">
-                                    <Text color="dimmed" size="sm">Deep understanding of African business landscapes</Text>
+                                    <Text c="dimmed" size="sm">Deep understanding of African business landscapes</Text>
                                 </Timeline.Item>
                                 <Timeline.Item bullet={<IconChartBar size={12} />} title="Proven Track Record">
-                                    <Text color="dimmed" size="sm">Consistent growth and success across our portfolio</Text>
+                                    <Text c="dimmed" size="sm">Consistent growth and success across our portfolio</Text>
                                 </Timeline.Item>
                                 <Timeline.Item bullet={<IconLeaf size={12} />} title="Sustainable Practices">
-                                    <Text color="dimmed" size="sm">Commitment to environmentally responsible business</Text>
+                                    <Text c="dimmed" size="sm">Commitment to environmentally responsible business</Text>
                                 </Timeline.Item>
                             </Timeline>
                         </div>
                         <Image
                             src="/api/placeholder/600/400"
                             alt="Steedoo Group Team"
-                            radius="md"
+                            radius="xl"
                         />
                     </SimpleGrid>
                 </Box>
@@ -159,7 +159,7 @@ export function PublicNavigation() {
                     </Title>
                     <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl">
                         {[1, 2, 3].map((i) => (
-                            <Card key={i} shadow="md" radius="md" padding="lg">
+                            <Card key={i} shadow="md" radius="xl" padding="lg">
                                 <Text fz="lg" style={{ fontStyle: 'italic' }}>
                                     "Steedoo Group has been instrumental in our company's growth. Their innovative solutions and global network have opened new doors for us."
                                 </Text>
@@ -187,7 +187,7 @@ export function PublicNavigation() {
                             { icon: IconAward, title: "Sustainability Leadership Award" },
                             { icon: IconCertificate, title: "Best Place to Work in DRC 2022" },
                         ].map((award, index) => (
-                            <Card key={index} shadow="md" radius="md" padding="lg" ta="center">
+                            <Card key={index} shadow="md" radius="xl" padding="lg" ta="center">
                                 <award.icon size={40} style={{ marginBottom: '1rem' }} />
                                 <Text fw={500}>{award.title}</Text>
                             </Card>
@@ -226,7 +226,7 @@ export function PublicNavigation() {
                     </Text>
                     <Group justify="center" mt="xl">
                         <Link href="/contact" passHref>
-                            <Button size="xl" radius="md" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }}>
+                            <Button size="xl" radius="xl" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }}>
                                 Get Started Today
                             </Button>
                         </Link>

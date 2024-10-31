@@ -1,20 +1,18 @@
-import { Suspense } from 'react';
-import { generateMetadata } from "@/utils/page/title";
-import { AppLoading } from '@/components/transition/loading';
-import { ComingSoonPage } from '@/components/maintenance/coming-soon';
+// app/legal/layout.tsx
 
-export const metadata = generateMetadata("Investor");
+import React from 'react';
+import dynamic from 'next/dynamic';
 
-export default function ChatLayout({
-    terms,
-    policy,
-}: Readonly<{
-    terms: React.ReactNode
-    policy: React.ReactNode
-}>) {
+const LegalNavigation = dynamic(() => import('@/components/legal/navigation'), { ssr: false });
+
+export default function LegalLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <Suspense fallback={<AppLoading />}>
-    <ComingSoonPage/>;
-    </Suspense>
+    <LegalNavigation>
+        {children}
+    </LegalNavigation>
   );
 }

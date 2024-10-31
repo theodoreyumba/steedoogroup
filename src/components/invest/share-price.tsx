@@ -10,7 +10,7 @@ const SharePrice = () => {
   const changePercent = 2.76;
 
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="md">Share Price</Title>
       <SimpleGrid cols={3}>
         <Group>

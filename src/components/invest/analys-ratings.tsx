@@ -32,7 +32,7 @@ const AnalystRatings = () => {
   const currentPrice = 50; // Assume current stock price is $50
 
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Analyst Ratings &amp; Price Targets</Title>
       
       <Group justify="apart" mb="md">

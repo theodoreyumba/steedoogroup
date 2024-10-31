@@ -13,7 +13,7 @@ const exchangeData = [
 
 const MultiExchangeStockInfo = () => {
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Stock Information Across Exchanges</Title>
       <Table.ScrollContainer minWidth={500}>
         <Table striped highlightOnHover>

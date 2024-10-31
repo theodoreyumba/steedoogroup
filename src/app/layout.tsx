@@ -10,17 +10,17 @@ import { Suspense } from "react";
 import { AppLoading } from "@/components/transition/loading";
 import Disclaimer from "@/components/legal/disclaimer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const interSans = localFont({
+  src: "./fonts/InterRegular.woff2",
+  variable: "--font-inter-sans",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const robotoMono = localFont({
+  src: "./fonts/RobotoRegular.woff",
+  variable: "--font-roboto",
 });
 
 const theme = createTheme({
-  fontFamily: 'Geist Sans, sans-serif',
+  fontFamily: 'Roboto,Inter,sans-serif',
   defaultRadius: 'xl',
   white: 'var(--mantine-color-gray-0)',
   autoContrast: true,
@@ -115,11 +115,11 @@ export default function RootLayout({
           `
         }} />
     </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${interSans.variable} ${robotoMono.variable}`}>
         <MantineProvider theme={theme} >
         <ColorSchemeScript nonce={nonce} />
             <Suspense fallback={<AppLoading/>}>
-            <Disclaimer/>
+            {/**<Disclaimer/> */}
               {children}
             </Suspense>
         </MantineProvider>

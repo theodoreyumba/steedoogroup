@@ -15,7 +15,7 @@ const metrics = [
 
 const KeyMetrics = () => {
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Key Financial Metrics</Title>
       <Grid>
         {metrics.map((metric, index) => (

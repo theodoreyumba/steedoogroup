@@ -14,10 +14,10 @@ const reports = [
 
 const FinancialReports = () => {
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Financial Reports</Title>
       
-      <Accordion variant="contained" radius="md" mb="xl">
+      <Accordion variant="contained" radius="xl" mb="xl">
         <Accordion.Item value="latest-report">
           <Accordion.Control>
             <Group>

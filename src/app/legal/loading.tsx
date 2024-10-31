@@ -1,7 +1,11 @@
-import { AppLoading } from "@/components/transition/loading";
+// app/legal/loading.tsx
+import React from 'react';
+import { Center, Loader } from '@mantine/core';
 
-export default function loading() {
-    return (
-        <AppLoading/>
-    )
+export default function LegalLoading() {
+  return (
+    <Center style={{ height: '100vh' }}>
+      <Loader size="xl" variant="bars" />
+    </Center>
+  );
 }

@@ -79,13 +79,13 @@ export default function EnhancedAboutPage() {
         </Text>
       </Box>
 
-      <Paper withBorder shadow="md" p="xl" radius="md" mb={50}>
+      <Paper withBorder shadow="md" p="xl" radius="xl" mb={50}>
         <Title order={2} ta="center" mb="xl">Corporate Structure</Title>
         <Grid>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Card withBorder padding="lg">
               <Group mb="md">
-                <ThemeIcon color="blue" size={40} radius="md">
+                <ThemeIcon color="blue" size={40} radius="xl">
                   <IconBuildingBank size={24} />
                 </ThemeIcon>
                 <Title order={3}>Steedoo Group Inc. (USA)</Title>
@@ -97,7 +97,7 @@ export default function EnhancedAboutPage() {
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Card withBorder padding="lg">
               <Group mb="md">
-                <ThemeIcon color="green" size={40} radius="md">
+                <ThemeIcon color="green" size={40} radius="xl">
                   <IconBuildingBank size={24} />
                 </ThemeIcon>
                 <Title order={3}>Steedoo Group SAS (DRC)</Title>
@@ -114,7 +114,7 @@ export default function EnhancedAboutPage() {
         <Grid gutter="xl">
           {directors.map((director) => (
             <Grid.Col span={{ base: 12, sm: 6, md: 3 }} key={director.name}>
-              <Card shadow="md" radius="md" padding="lg">
+              <Card shadow="md" radius="xl" padding="lg">
                 <Card.Section>
                   <Image src={director.photo} height={220} alt={`${director.name} photo`} />
                 </Card.Section>
@@ -127,13 +127,13 @@ export default function EnhancedAboutPage() {
         </Grid>
       </Box>
 
-      <Paper withBorder shadow="md" p="xl" radius="md" mb={50}>
+      <Paper withBorder shadow="md" p="xl" radius="xl" mb={50}>
         <Title order={2} ta="center" mb="xl">Key Services and Industries</Title>
         <Grid gutter="xl">
           {services.map((service, index) => (
             <Grid.Col span={{ base: 12, sm: 6 }} key={index}>
               <Group>
-                <ThemeIcon color="blue" size={50} radius="md" variant="light">
+                <ThemeIcon color="blue" size={50} radius="xl" variant="light">
                   {service.icon}
                 </ThemeIcon>
                 <Box>
@@ -151,7 +151,7 @@ export default function EnhancedAboutPage() {
         <IframeGoogleMaps width="100%" height="400px" />
       </Box>
 
-      <Paper withBorder shadow="md" p="xl" radius="md" mb={50}>
+      <Paper withBorder shadow="md" p="xl" radius="xl" mb={50}>
         <Title order={2} ta="center" mb="xl">Get in Touch</Title>
         <Grid gutter="xl">
           <Grid.Col span={{ base: 12, md: 6 }}>

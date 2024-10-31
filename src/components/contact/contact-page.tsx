@@ -94,11 +94,11 @@ export default function ExtensiveContactPage() {
         </div>
         
         <Stack>
-          <Paper withBorder shadow="md" radius="md" p="xl">
+          <Paper withBorder shadow="md" radius="xl" p="xl">
             <Title order={3} mb="md">Contact Information</Title>
             {contactInfo.map((item, index) => (
               <Group key={index} mb="xs">
-                <ThemeIcon variant="light" size={40} radius="md">
+                <ThemeIcon variant="light" size={40} radius="xl">
                   <item.icon size={20} />
                 </ThemeIcon>
                 <Box>
@@ -109,11 +109,11 @@ export default function ExtensiveContactPage() {
             ))}
           </Paper>
 
-          <Paper withBorder shadow="md" radius="md" p="xl">
+          <Paper withBorder shadow="md" radius="xl" p="xl">
             <Title order={3} mb="md">Office Hours</Title>
             {officeHours.map((item, index) => (
               <Group key={index} mb="xs">
-                <ThemeIcon variant="light" size={40} radius="md">
+                <ThemeIcon variant="light" size={40} radius="xl">
                   <IconClock size={20} />
                 </ThemeIcon>
                 <Box>
@@ -124,12 +124,12 @@ export default function ExtensiveContactPage() {
             ))}
           </Paper>
 
-          <Card withBorder shadow="md" radius="md" p="xl">
+          <Card withBorder shadow="md" radius="xl" p="xl">
             <Title order={3} mb="md">Follow Us</Title>
             <Group>
               {socialMedia.map((item, index) => (
                 <Anchor key={index} href={item.url} target="_blank">
-                  <ThemeIcon variant="light" size={40} radius="md">
+                  <ThemeIcon variant="light" size={40} radius="xl">
                     <item.icon size={20} />
                   </ThemeIcon>
                 </Anchor>
@@ -143,13 +143,13 @@ export default function ExtensiveContactPage() {
 
       <Title order={2} ta="center" mb="xl">Our Locations</Title>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={30}>
-        <Paper withBorder p="md" radius="md">
+        <Paper withBorder p="md" radius="xl">
           <Title order={3} mb="sm">USA Office</Title>
           <Text>1603 Capitol Avenue, Suite 413A</Text>
           <Text>Cheyenne, WY 82001</Text>
           <Text>United States</Text>
         </Paper>
-        <Paper withBorder p="md" radius="md">
+        <Paper withBorder p="md" radius="xl">
           <Title order={3} mb="sm">DRC Office</Title>
           <Text>20, Avenue Mpolo</Text>
           <Text>Q/Gambela, Lubumbashi</Text>

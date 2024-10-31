@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Carousel } from "@mantine/carousel";
-import { BackgroundImage, Text, Flex, Button, Image, Paper, Transition, SimpleGrid, Stack, Title, Group, Card, Box, ThemeIcon, rem } from "@mantine/core";
+import { BackgroundImage, Text, Flex, Button, Image, Paper, Transition, SimpleGrid, Stack, Title, Group, Card, Box, ThemeIcon, rem, Container } from "@mantine/core";
 import { useIsomorphicEffect } from "@mantine/hooks";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade"
 import { IconArrowBigRight, IconBuildingSkyscraper, IconCoin, IconTruck, IconUsers, IconLeaf, IconSun, IconRobot, IconChartBar, IconMicrophone, IconBuildingBank, IconPlanet, IconDeviceMobile, IconDatabase, IconShield } from "@tabler/icons-react";
+import { SGImages } from '@/assets/images';
 
 interface HomePageCarouselProps {
     height: number;
@@ -47,13 +48,13 @@ export const EnhancedHomePageCarousel: React.FC<HomePageCarouselProps> = ({ heig
     const slides = [
         {
             content: (
-                <Flex justify="center" style={{ height: '100%' }} p={'xl'}>
+                <Flex justify="center" style={{ height: '100%' }} p={'sm'}>
                     <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }} p={'lg'}>
                         <Stack align="stretch" justify="center">
                             <Card shadow="md" h={'100%'} bg={'light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5))'}>
                                 <Card.Section>
                                     <Image
-                                        src="/api/placeholder/800/400"
+                                        src="/assets/images/sg/steedoo-group-hq-1.webp"
                                         h={height / 2.5}
                                         alt="Steedoo Group Headquarters"
                                     />
@@ -95,10 +96,10 @@ export const EnhancedHomePageCarousel: React.FC<HomePageCarouselProps> = ({ heig
                                 </BackgroundImage>
                             </Card>
                             <Card shadow="md" h={'100%'} w={'100%'} p={0} visibleFrom="xs">
-                                <BackgroundImage src="/api/placeholder/400/300" h='100%' w='100%'>
+                                <BackgroundImage src={SGImages.FlamboyantBg.src} h='100%' w='100%'>
                                     <Stack align="stretch" justify='space-between' h='100%' p={20}>
                                         <Box></Box>
-                                        <Text fw={700} truncate="end">
+                                        <Text fw={700} truncate="end" c='white'>
                                         Our diverse portfolio includes Juniaboss, a cutting-edge fintech platform, Dereva, an AI-powered logistics company, and Ogun, a sustainable luxury fashion brand. Together, we're shaping the future of African business.
                                         </Text>
                                         <Button variant="white" rightSection={<IconArrowBigRight height={20} width={20} />}>Our Companies</Button>
@@ -112,16 +113,16 @@ export const EnhancedHomePageCarousel: React.FC<HomePageCarouselProps> = ({ heig
         },
         {
             content: (
-                <Flex justify="center" style={{ height: '100%' }} p={'xl'}>
-                    <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}>
-                        <Card shadow="md" h={'100%'} w={'100%'} p={0} hiddenFrom="xs">
+                <Container style={{ height: '100%' }} size='lg'>
+                    <SimpleGrid h={'100%'} cols={{ base: 1, sm: 2, lg: 2 }}>
+                        <Card shadow="md" h={'100%'} miw={340} w={'100%'} p={0} hiddenFrom="xs">
                             <BackgroundImage src="/api/placeholder/600/400" h='100%' w='100%'>
                                 <Stack align="end" justify="end" p={20}>
                                     <Button variant="white" rightSection={<IconArrowBigRight height={20} width={20} />}>Explore Juniaboss</Button>
                                 </Stack>
                             </BackgroundImage>
                         </Card>
-                        <Card shadow="md" h={'100%'} w={'100%'} p={0} hiddenFrom="xs">
+                        <Card shadow="md" h={'100%'} miw={340} w={'100%'} p={0} hiddenFrom="xs">
                             <BackgroundImage src="/api/placeholder/600/400" h='100%' w='100%'>
                                 <Stack align="end" justify="end" p={20}>
                                     <Button variant="white" rightSection={<IconArrowBigRight height={20} width={20} />}>Discover Dereva</Button>
@@ -129,10 +130,10 @@ export const EnhancedHomePageCarousel: React.FC<HomePageCarouselProps> = ({ heig
                             </BackgroundImage>
                         </Card>
                         <Stack justify='center'>
-                            <Image src="/api/placeholder/200/200" alt="Steedoo Group Logo" width={rem(100)} height={rem(100)} />
+                            <Image src={SGImages.Logo.src} alt="Steedoo Group Logo" w={rem(100)} h={rem(100)} />
                         </Stack>
                         <Stack justify='center' h='100%'>
-                            <Card shadow="md" h='100%' mah={rem(400)} p={0}>
+                            <Card shadow="md" h='100%' miw={340} mah={rem(400)} p={0}>
                                 <BackgroundImage src="/api/placeholder/600/400" h='100%' w='100%'>
                                     <Stack align="end" justify="end" p={20}>
                                         <Button variant="white" rightSection={<IconArrowBigRight height={20} width={20} />}>View Our Projects</Button>
@@ -141,11 +142,11 @@ export const EnhancedHomePageCarousel: React.FC<HomePageCarouselProps> = ({ heig
                             </Card>
                         </Stack>
                     </SimpleGrid>
-                </Flex>
+                </Container>
             ),
         },
         {
-            content: <BackgroundImage src="/api/placeholder/1200/800" h={height} w={'100%'}>
+            content: <BackgroundImage src="/assets/images/sg/steedoo-group-hq-1.webp" h={height} w={'100%'}>
                 <Flex justify="center" align="center" style={{ height: '100%' }}>
                     <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }} p={'lg'}>
                         <Stack align="center" justify="center">
@@ -194,7 +195,7 @@ export const EnhancedHomePageCarousel: React.FC<HomePageCarouselProps> = ({ heig
 
     const featureSlides = features.map((feature, index) => (
         <Carousel.Slide key={index}>
-            <Card padding="md" radius="xl" withBorder h={80} style={{ display: 'flex', alignItems: 'center' }}>
+            <Card padding="md" radius="xl" withBorder h={80} miw={300} style={{ display: 'flex', alignItems: 'center' }}>
                 <Group gap="xs">
                     <ThemeIcon variant="light" size={40} radius="xl">
                         <feature.icon size={24} />
@@ -208,7 +209,7 @@ export const EnhancedHomePageCarousel: React.FC<HomePageCarouselProps> = ({ heig
     return (
         <Transition mounted={isMounted} transition="fade" duration={globalTransitionDuration} timingFunction="ease">
             {(styles) => (
-                <Paper radius="md" style={styles}>
+                <Paper radius="xl" style={styles}>
                     <Carousel
                         slideGap="xs"
                         loop

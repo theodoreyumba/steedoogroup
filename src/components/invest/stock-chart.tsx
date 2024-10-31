@@ -28,7 +28,7 @@ const StockChart = () => {
   };
 
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="md">Stock Performance</Title>
       <Group justify="apart" mb="md">
         <SegmentedControl

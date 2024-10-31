@@ -18,7 +18,7 @@ const InsiderTrading = () => {
   const totalShares = totalBuyShares + totalSellShares;
 
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Insider Trading Activity</Title>
       
       <Group gap="apart" mb="md">

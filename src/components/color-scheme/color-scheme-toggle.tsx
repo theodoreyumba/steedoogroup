@@ -44,7 +44,7 @@ export function ColorSchemeToggle() {
 
     return (
         <Combobox
-            radius="md"
+            radius="xl"
             store={combobox}
             onOptionSubmit={(val) => {
                 setColorScheme(val as MantineColorScheme)
@@ -56,7 +56,7 @@ export function ColorSchemeToggle() {
                     component="button"
                     type="button"
                     variant="unstyled"
-                    radius="md"
+                    radius="xl"
                     size='lg'
                     pointer
                     rightSectionPointerEvents="none"

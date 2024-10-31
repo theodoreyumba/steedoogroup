@@ -1,6 +1,12 @@
-'use client';
-import { Skeleton } from "@mantine/core";
+// app/legal/page.tsx
 
-export default function HomePageLoad() {
-    return <Skeleton height="100vh" width="100vw" animate />;
-};
+import React from 'react';
+import dynamic from 'next/dynamic';
+
+const HomePageComponent = dynamic(() => import('@/components/legal/home-page'), { ssr: false });
+
+export default function LegalPage() {
+  return (
+    <HomePageComponent />
+  );
+}

@@ -25,7 +25,7 @@ const getBadgeColor = (type: string) => {
 
 const FinancialCalendar = () => {
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Financial Calendar</Title>
       <Table.ScrollContainer minWidth={500}>
         <Table>

@@ -37,11 +37,11 @@ const newsItems = [
 
 const NewsAndPressReleases = () => {
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Latest News &amp; Press Releases</Title>
       <Stack gap="md">
         {newsItems.map((item, index) => (
-          <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+          <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
             <Group justify="apart" mb="xs">
               <Text fw={500}>{item.title}</Text>
               <Badge color="blue" variant="light">
@@ -60,7 +60,7 @@ const NewsAndPressReleases = () => {
               color="blue" 
               fullWidth 
               mt="md" 
-              radius="md"
+              radius="xl"
               rightSection={<IconExternalLink size={14} />}
             >
               Read Full Article

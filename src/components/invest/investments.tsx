@@ -19,13 +19,13 @@ const featuredInvestments = [
 
 const Investments = () => {
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Investment Portfolio</Title>
 
       <Text size="lg" mb="md">Sector Allocation</Text>
       <SimpleGrid cols={2} spacing="lg" mb="xl">
         {investmentSectors.map((sector, index) => (
-          <Card key={index} shadow="sm" p="lg" radius="md" withBorder>
+          <Card key={index} shadow="sm" p="lg" radius="xl" withBorder>
             <Group justify="apart" mb="xs">
               <Text fw={500}>{sector.name}</Text>
               <Badge color={sector.color} variant="light">
@@ -44,7 +44,7 @@ const Investments = () => {
       </SimpleGrid>
 
       <Text size="lg" mb="md">Featured Investments</Text>
-      <Accordion variant="contained" radius="md">
+      <Accordion variant="contained" radius="xl">
         {featuredInvestments.map((investment, index) => (
           <Accordion.Item key={index} value={investment.name}>
             <Accordion.Control>

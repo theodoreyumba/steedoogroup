@@ -33,7 +33,7 @@ const faqs = [
 
 const InvestorFAQ = () => {
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Frequently Asked Questions</Title>
       <Accordion variant="separated">
         {faqs.map((faq, index) => (

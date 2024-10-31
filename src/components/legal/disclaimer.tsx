@@ -1,12 +1,10 @@
 // src/components/disclaimer/disclaimer.tsx
 'use client';
 import { useState } from 'react';
-import { Alert, Text, Button, Group, ScrollArea, Box } from '@mantine/core';
+import { Alert, Text, Button, Group } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons-react';
-import { useViewportSize } from '@mantine/hooks';
 
 export default function Disclaimer() {
-  const {height} = useViewportSize();
   const [visible, setVisible] = useState(true);
 
   if (!visible) {
@@ -18,14 +16,12 @@ export default function Disclaimer() {
       icon={<IconAlertCircle size={32} />}
       title="Important Legal Disclaimer"
       color="red"
-      radius="xs"
+      radius="xl"
       closeButtonLabel="Close alert"
       onClose={() => setVisible(false)}
-      style={{ position: 'fixed', backgroundColor: 'var(--mantine-color-pink-9)', top: 0, left: 0, width: '100%', zIndex: 1000 }}
+      style={{ position: 'fixed', backgroundColor: 'var(--mantine-color-pink-filled)', top: 0, left: 0, width: '100%', zIndex: 1000 }}
     >
-<ScrollArea scrollbars='y' h={height/1.055}>
-<Box pb={60}>
-<Text size="md" fw={500}>
+      <Text size="md" fw={500}>
         <strong>Please read this legal disclaimer carefully before using this website.</strong>
         <br /><br />
         <strong>Under Construction:</strong> This website is currently under construction. The content provided is for informational purposes only and may include inaccuracies, simulations, or placeholders used for testing purposes.
@@ -51,8 +47,6 @@ export default function Disclaimer() {
           Accept
         </Button>
       </Group>
-</Box>
-</ScrollArea>
     </Alert>
   );
 }

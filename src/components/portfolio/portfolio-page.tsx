@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Text, Container, Grid, Card, Image, Group, Badge, List, ThemeIcon, Button, Anchor, Timeline, Tabs, Paper, Accordion, SimpleGrid, Box, BackgroundImage, Progress, Table, Avatar, Blockquote, Divider, Center, RingProgress, Spoiler } from "@mantine/core";
+import { Title, Text, Container, Grid, Card, Image, Group, Badge, List, ThemeIcon, Button, Anchor, Timeline, Tabs, Paper, Accordion, SimpleGrid, Box, BackgroundImage, Progress, Table, Avatar, Blockquote, Divider, Center, RingProgress, Spoiler, Stack, rem } from "@mantine/core";
 import { IconTruck, IconCreditCard, IconShirt, IconBuilding, IconCheck, IconChartLine, IconAward, IconUsers, IconGlobe, IconLeaf, IconBrandTwitter, IconBrandLinkedin, IconMail, IconPhone, IconMapPin, IconBriefcase, IconBook, IconRocket, IconHeartHandshake, IconPlant, IconChartPie, IconCoins, IconBuildingSkyscraper, IconSearch, IconClipboardCheck, IconPresentationAnalytics, IconCircleCheck, IconQuote } from '@tabler/icons-react';
 
 
@@ -93,7 +93,7 @@ const companies: Company[] = [
 ];
 
 const CompanyCard: React.FC<{ company: Company }> = ({ company }) => (
-  <Card shadow="sm" padding="lg" radius="md" withBorder>
+  <Card shadow="sm" padding="lg" radius="xl" withBorder>
     <Card.Section>
       <Image
         src={company.logo}
@@ -104,8 +104,8 @@ const CompanyCard: React.FC<{ company: Company }> = ({ company }) => (
 
     <Group justify="space-between" mt="md" mb="xs">
       <Text fw={500}>{company.name}</Text>
-      <Badge color={company.color} variant="light">
-        {company.icon}
+      <Badge color={company.color} variant="light" h={rem(30)}>
+        <Center>{company.icon}</Center>
       </Badge>
     </Group>
 
@@ -129,18 +129,18 @@ const CompanyCard: React.FC<{ company: Company }> = ({ company }) => (
       ))}
     </List>
 
-    <Card mt="md" radius="md" withBorder>
-      <Group grow>
+    <Card mt="md" radius="xl" withBorder>
+      <SimpleGrid cols={{ base: 1, sm: 3 }}>
         {Object.entries(company.stats).map(([key, value]) => (
-          <div key={key} style={{ textAlign: 'center' }}>
+          <Stack key={key} align='center' gap={'sm'}>
             <Text size="lg" fw={500}>{value}</Text>
             <Text size="xs" c="dimmed" tt="uppercase">{key}</Text>
-          </div>
+          </Stack>
         ))}
-      </Group>
+      </SimpleGrid>
     </Card>
 
-    <Button variant="light" color={company.color} fullWidth mt="md" radius="md">
+    <Button variant="light" color={company.color} fullWidth mt="md" radius="xl">
       Learn more
     </Button>
   </Card>
@@ -164,7 +164,7 @@ const PortfolioPage: React.FC = () => {
             { icon: IconChartLine, label: "Annual Revenue", value: "$1.5B+" },
             { icon: IconLeaf, label: "Sustainability Score", value: "A+" },
           ].map((stat, index) => (
-            <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+            <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
               <stat.icon size={30} style={{ marginBottom: '0.5rem' }} />
               <Text fw={700}>{stat.value}</Text>
               <Text size="sm" c="dimmed">{stat.label}</Text>
@@ -176,7 +176,7 @@ const PortfolioPage: React.FC = () => {
       <Title order={2} size="2.5rem" fw={600} ta="center" mb="xl">Our Companies</Title>
       <Grid mb={50}>
         {companies.map((company) => (
-          <Grid.Col key={company.name} span={{ base: 12, md: 6, lg: 3 }}>
+          <Grid.Col key={company.name} span={{ base: 12, md: 6 }}>
             <CompanyCard company={company} />
           </Grid.Col>
         ))}
@@ -256,7 +256,7 @@ const PortfolioPage: React.FC = () => {
                 { label: "5-Year CAGR", value: "18.7%" },
                 { label: "Companies in Portfolio", value: "12" },
               ].map((metric, index) => (
-                <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+                <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
                   <Text fw={700} size="xl">{metric.value}</Text>
                   <Text size="sm" c="dimmed">{metric.label}</Text>
                 </Card>
@@ -274,13 +274,14 @@ const PortfolioPage: React.FC = () => {
                 { label: "Operating Cash Flow", value: "$750M" },
                 { label: "Dividend Yield", value: "3.2%" },
               ].map((metric, index) => (
-                <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+                <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
                   <Text fw={700} size="xl">{metric.value}</Text>
                   <Text size="sm" c="dimmed">{metric.label}</Text>
                 </Card>
               ))}
             </SimpleGrid>
-            <Box mt="xl">
+<Center>
+<Box mt="xl">
               <Title order={3} size="1.5rem" mb="md">Revenue Breakdown</Title>
               <RingProgress
                 size={250}
@@ -299,6 +300,7 @@ const PortfolioPage: React.FC = () => {
                 ]}
               />
             </Box>
+</Center>
           </Tabs.Panel>
 
           <Tabs.Panel value="sustainability">
@@ -321,7 +323,7 @@ const PortfolioPage: React.FC = () => {
                 { icon: IconPlant, label: "Trees Planted", value: "500,000+" },
                 { icon: IconHeartHandshake, label: "Community Investment", value: "$50M" },
               ].map((stat, index) => (
-                <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+                <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
                   <stat.icon size={30} style={{ marginBottom: '0.5rem' }} />
                   <Text fw={700}>{stat.value}</Text>
                   <Text size="sm" c="dimmed">{stat.label}</Text>
@@ -341,7 +343,7 @@ const PortfolioPage: React.FC = () => {
                 { title: "Startup Accelerator", value: "30 startups", description: "Nurtured through our innovation hub" },
                 { title: "Tech Talent", value: "2,000+ engineers", description: "Driving technological advancements across our portfolio" },
               ].map((item, index) => (
-                <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+                <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
                   <Text fw={700} size="lg">{item.title}</Text>
                   <Text fw={500} mt="xs">{item.value}</Text>
                   <Text size="sm" c="dimmed" mt="xs">{item.description}</Text>
@@ -457,8 +459,8 @@ const PortfolioPage: React.FC = () => {
             { title: "Job Creation", description: "Portfolio companies created over 5,000 new jobs in the past year" },
             { title: "Global Recognition", description: "Featured in Forbes' 'Top 50 Impact Investment Firms'" },
           ].map((highlight, index) => (
-            <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
-              <ThemeIcon size={40} radius="md" variant="light" color="blue" mb="md">
+            <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
+              <ThemeIcon size={40} radius="xl" variant="light" color="blue" mb="md">
                 <IconAward size={20} />
               </ThemeIcon>
               <Text fw={700} mb="xs">{highlight.title}</Text>
@@ -493,7 +495,7 @@ const PortfolioPage: React.FC = () => {
       </Paper>
 
       <BackgroundImage src="/api/placeholder/1200/400" radius="lg" mb={50}>
-        <Box p="xl" style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
+        <Box p="xl" style={{ backgroundColor: 'rgba(0,0,0,0.7)', borderRadius: 'var(--mantine-radius-xl)' }}>
           <Title order={2} size="2rem" fw={600} ta="center" c="white" mb="xl">Future Outlook</Title>
           <Text c="white" size="lg" ta="center" maw={800} mx="auto">
             As we look to the future, Steedoo Group is committed to driving innovation, sustainability, and economic growth across Africa. Our vision includes expanding our portfolio into new sectors, fostering technological advancements, and continuing to create value for our stakeholders and communities.
@@ -501,10 +503,10 @@ const PortfolioPage: React.FC = () => {
           <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg" mt="xl">
             {[
               { icon: IconRocket, label: "Expand into 5 new African markets" },
-              { icon: IconLeaf, label: "Achieve carbon neutrality across portfolio by 2030" },
+              { icon: IconLeaf, label: "Achieve carbon neutrality across portfolio by 2050" },
               { icon: IconCoins, label: "Launch $500M Africa-focused venture fund" },
             ].map((goal, index) => (
-              <Card key={index} padding="lg" radius="md" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}>
+              <Card key={index} padding="lg" radius="xl" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}>
                 <goal.icon size={30} color="white" style={{ marginBottom: '0.5rem' }} />
                 <Text c="white" fw={500}>{goal.label}</Text>
               </Card>
@@ -522,18 +524,18 @@ const PortfolioPage: React.FC = () => {
         <Title order={2} size="2rem" fw={600} ta="center" mb="xl">Leadership Team</Title>
         <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
           {[
-            { name: "Theodore Yumba Mutumba", position: "Founder & President", image: "/images/theodore.jpg", description: "Experienced entrepreneur leading Steedoo's growth across emerging markets." },
-            { name: "Kabila Nsungu Prudent", position: "Executive Vice President", image: "/images/prudent.jpg", description: "Operational leader managing the African division." },
-            { name: "Kouvas Ilunga Vangeli", position: "Director of Technology", image: "/images/vangeli.jpg", description: "Overseeing technological innovation and infrastructure development." },
-            { name: "Kinenkinda Mulume Dan", position: "Director of Finance", image: "/images/dan.jpg", description: "Leading financial operations and investment initiatives." },
+            { name: "Theodore Yumba", position: "Founder & President", image: "/images/theodore.jpg", description: "Experienced entrepreneur leading Steedoo's growth across emerging markets." },
+            { name: "Prudent Kabila", position: "Executive Vice President", image: "/images/prudent.jpg", description: "Operational leader managing the African division." },
+            { name: "Vangeli Kouvas", position: "Director of Technology", image: "/images/vangeli.jpg", description: "Overseeing technological innovation and infrastructure development." },
+            { name: "Dan Kinenkinda", position: "Director of Finance", image: "/images/dan.jpg", description: "Leading financial operations and investment initiatives." },
             { name: "David Wilson", position: "Chief Investment Officer", image: "/api/placeholder/150/150", description: "Guiding investment strategies and portfolio management." },
             { name: "Sarah Lee", position: "Chief Sustainability Officer", image: "/api/placeholder/150/150", description: "Driving sustainable practices across all operations." },
-            { name: "Robert Taylor", position: "Head of Innovation", image: "/api/placeholder/150/150", description: "Spearheading innovative initiatives and R&D projects." },
-            { name: "Amanda Garcia", position: "Head of African Operations", image: "/api/placeholder/150/150", description: "Overseeing and expanding operations across the African continent." },
+            { name: "Robert Mukeba", position: "Head of Innovation", image: "/api/placeholder/150/150", description: "Spearheading innovative initiatives and R&D projects." },
+            { name: "Amanda DeBeer", position: "Head of African Operations", image: "/api/placeholder/150/150", description: "Overseeing and expanding operations across the African continent." },
           ].map((member, index) => (
-            <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+            <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
               <Card.Section>
-                <Image src={member.image} height={220} alt={`${member.name} photo`} />
+                <Avatar src={member.image} name={`${member.name} photo`} h={220} w='100%' radius='sm' alt={`${member.name} photo`} />
               </Card.Section>
               <Text fw={500} size="lg" mt="md">{member.name}</Text>
               <Text size="sm" c="dimmed" mb="xs">{member.position}</Text>
@@ -552,7 +554,7 @@ const PortfolioPage: React.FC = () => {
             { quote: "Working with Steedoo has opened doors to new opportunities and partnerships we couldn't have accessed on our own.", author: "CTO, HealthTech Innovations" },
             { quote: "Their commitment to sustainable development aligns perfectly with our mission, making them ideal long-term partners.", author: "President, EcoFashion Brands" },
           ].map((testimonial, index) => (
-            <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+            <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
               <Blockquote cite={`- ${testimonial.author}`} icon={<IconQuote size={24} />}>
                 {testimonial.quote}
               </Blockquote>
@@ -572,7 +574,7 @@ const PortfolioPage: React.FC = () => {
             { title: "Steedoo Group Hosts Africa Tech Summit 2024", date: "January 10, 2024" },
             { title: "Q4 2023 Financial Results: Record Growth Across Portfolio", date: "December 5, 2023" },
           ].map((news, index) => (
-            <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
+            <Card key={index} shadow="sm" padding="lg" radius="xl" withBorder>
               <Text fw={500} mb="xs">{news.title}</Text>
               <Group justify="space-between" mt="md">
                 <Text size="sm" c="dimmed">{news.date}</Text>

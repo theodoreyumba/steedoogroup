@@ -12,7 +12,7 @@ interface HomePageContentProps {
 
 export const PageContent = (props: HomePageContentProps) => {
     return(
-        <Container>
+        <Container size={'xl'}>
             <Tabs.Panel value="home">
                 <Transition mounted={props.activeTab === 'home'} transition="fade-up" duration={props.transitionDuration} timingFunction="ease">
                     {(styles) => (

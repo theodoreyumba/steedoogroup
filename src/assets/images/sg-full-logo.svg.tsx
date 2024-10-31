@@ -2,8 +2,8 @@ import classes from '@/assets/images/sg-full-logo.svg.module.css'
 import { Box } from '@mantine/core';
 
 interface SGFullLogoProps {
-    height?: number;
-    width?: number;
+    height?: any;
+    width?: any;
     mr: number;
     visibleFrom?: string;
     hiddenFrom?: string;

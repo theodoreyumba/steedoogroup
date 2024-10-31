@@ -24,7 +24,7 @@ export const Footer = ({ includeMap = true, ref, children }: FooterProps) => {
     <>
       <Divider my="sm" />
       <footer ref={ref}>
-          <Paper p="xl" shadow="md" radius="md" style={{ backgroundColor: 'light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5))' }} mb={5}>
+          <Paper p="xl" shadow="md" radius="xl" style={{ backgroundColor: 'light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5))' }} mb={5}>
           <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
             <Stack justify='center'>
                 {children}

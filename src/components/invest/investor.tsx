@@ -34,7 +34,7 @@ const PageHeader = () => (
 );
 
 const QuickLinks = () => (
-  <Paper withBorder p="md" radius="md" mb="xl">
+  <Paper withBorder p="md" radius="xl" mb="xl">
     <Group justify="apart">
       <Text fw={700}>Quick Links:</Text>
       <Group gap="xs">
@@ -48,7 +48,7 @@ const QuickLinks = () => (
 );
 
 const LatestNews = () => (
-  <Paper withBorder p="md" radius="md" mb="xl">
+  <Paper withBorder p="md" radius="xl" mb="xl">
     <Group justify="apart" mb="md">
       <Title order={3}>Latest News</Title>
       <Button variant="subtle" rightSection={<IconNews size={14} />}>View All</Button>
@@ -59,7 +59,7 @@ const LatestNews = () => (
 );
 
 const ContactInfo = () => (
-  <Paper withBorder p="md" radius="md">
+  <Paper withBorder p="md" radius="xl">
     <Title order={3} mb="md">Investor Contact</Title>
     <Group>
       <Avatar size="lg" radius="xl" src="/images/investor-relations-contact.jpg" />

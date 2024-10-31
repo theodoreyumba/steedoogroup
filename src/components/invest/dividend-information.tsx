@@ -19,7 +19,7 @@ const DividendInformation = () => {
   const dividendYield = 2.5; // This would typically be calculated based on current stock price
 
   return (
-    <Paper withBorder p="md" radius="md">
+    <Paper withBorder p="md" radius="xl">
       <Title order={2} size="h2" mb="xl">Dividend Information</Title>
       
       <Group justify="apart" mb="xl">
