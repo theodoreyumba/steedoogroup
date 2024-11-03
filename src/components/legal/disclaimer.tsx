@@ -22,7 +22,7 @@ export default function Disclaimer() {
       style={{ position: 'fixed', backgroundColor: 'var(--mantine-color-pink-filled)', top: 0, left: 0, width: '100%', zIndex: 1000 }}
     >
 <ScrollArea 
-  h={800}
+  h={600}
   type="hover"
   offsetScrollbars
   scrollbarSize={3}
