@@ -119,7 +119,7 @@ export default function RootLayout({
         <MantineProvider theme={theme} >
         <ColorSchemeScript nonce={nonce} />
             <Suspense fallback={<AppLoading/>}>
-            {/**<Disclaimer/> */}
+            <Disclaimer/>
               {children}
             </Suspense>
         </MantineProvider>
