@@ -22,7 +22,7 @@ export default function Disclaimer() {
       style={{ position: 'fixed', backgroundColor: 'var(--mantine-color-pink-filled)', top: 0, left: 0, width: '100%', zIndex: 1000 }}
     >
 <ScrollArea 
-  h={500}
+  h={800}
   type="hover"
   offsetScrollbars
   scrollbarSize={3}
@@ -49,12 +49,12 @@ export default function Disclaimer() {
         <br /><br />
         <strong>Acceptance:</strong> By clicking "Accept" or continuing to use this website, you acknowledge that you have read, understood, and agree to be bound by this disclaimer.
       </Text>
+</ScrollArea>
       <Group justify="right" mt="md">
         <Button color="red" onClick={() => setVisible(false)}>
           Accept
         </Button>
       </Group>
-</ScrollArea>
     </Alert>
   );
 }
