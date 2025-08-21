@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || 'dummy-key-for-build');
 
 interface ContactFormData {
   name: string;
@@ -42,16 +42,24 @@ export async function POST(request: NextRequest) {
       );
     }
     
+    // Check if Resend API key is available
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 503 }
+      );
+    }
+    
     // Determine recipient based on region
     const recipient = body.region === 'us' 
       ? process.env.US_CONTACT_EMAIL || 'info@steedoogroup.com'
       : process.env.GLOBAL_CONTACT_EMAIL || 'info@steedoogroup.com';
     
     // Send email via Resend
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'Steedoo Group Contact <noreply@steedoogroup.com>',
       to: [recipient],
-      reply_to: body.email,
+      replyTo: body.email,
       subject: `[${body.region.toUpperCase()}] Contact Form: ${body.subject}`,
       html: `
         <!DOCTYPE html>

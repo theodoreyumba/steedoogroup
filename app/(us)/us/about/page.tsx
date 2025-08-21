@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, MapPin, Calendar, Shield, Award, Globe } from 'lucide-react';
+import { Building2, MapPin, Shield, Award, Globe } from 'lucide-react';
 import { company } from '@/data/company';
 import { LeadershipSection } from '@/components/sections/leadership';
 

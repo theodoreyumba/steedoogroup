@@ -50,7 +50,7 @@ export function NavDock() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { region, isUS, switchRegion } = useRegion();
+  const { isUS, switchRegion } = useRegion();
   const { theme, setTheme } = useTheme();
   
   const navItems = isUS ? usNavItems : globalNavItems;

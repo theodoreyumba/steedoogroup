@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Banknote, Truck, Shirt } from 'lucide-react';
-import Link from 'next/link';
 
 export function OurCompaniesSection() {
   const companies = [

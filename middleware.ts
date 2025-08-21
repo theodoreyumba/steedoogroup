@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { geolocation } from '@vercel/functions';
 
 // List of known bot user agents to exclude from geo-redirect
 const BOT_USER_AGENTS = [
@@ -80,7 +81,7 @@ export function middleware(request: NextRequest) {
   
   // Geo-based redirect (only on first visit, no override cookie)
   if (!regionOverride) {
-    const country = request.geo?.country;
+    const { country } = geolocation(request);
     
     // If user is from US and not already on US site, redirect
     if (country === 'US' && !pathname.startsWith('/us')) {

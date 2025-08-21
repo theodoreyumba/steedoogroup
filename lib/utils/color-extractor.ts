@@ -1,4 +1,4 @@
-export function generateColorScale(baseColor: string) {
+export function generateColorScale() {
   // Primary color from logo: #37b6ff (Azure/Sky Blue)
   // This generates a complete color scale for Tailwind CSS
   
@@ -29,7 +29,7 @@ export const brandColors = {
 
 // Generate CSS variables for the color scale
 export function generateCSSVariables() {
-  const scale = generateColorScale(brandColors.primary);
+  const scale = generateColorScale();
   const variables: Record<string, string> = {
     '--primary': scale[500],
     '--primary-foreground': '0 0% 100%', // White text on primary
@@ -65,7 +65,7 @@ export function generateCSSVariables() {
 
 // Dark mode variables
 export function generateDarkCSSVariables() {
-  const scale = generateColorScale(brandColors.primary);
+  const scale = generateColorScale();
   const variables: Record<string, string> = {
     '--primary': scale[500],
     '--primary-foreground': '0 0% 100%',

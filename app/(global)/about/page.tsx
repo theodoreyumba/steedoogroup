@@ -1,9 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, Users, Globe, Shield, Award, TrendingUp } from 'lucide-react';
+import { Building2, Globe, Shield, Award, TrendingUp } from 'lucide-react';
 import { company } from '@/data/company';
-import { BrandMark } from '@/components/brand/brand-mark';
 import { LeadershipSection } from '@/components/sections/leadership';
 
 export default function AboutPage() {

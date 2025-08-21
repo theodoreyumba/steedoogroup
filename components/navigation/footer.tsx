@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { BrandMark } from '@/components/brand/brand-mark';
 import { useRegion } from '@/lib/context/region-context';
-import { company, formatAddress } from '@/data/company';
+import { company } from '@/data/company';
 import { ExternalLink } from 'lucide-react';
 
 export function Footer() {

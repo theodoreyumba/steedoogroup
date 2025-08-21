@@ -2,10 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Building2, Globe, Calendar, Users, TrendingUp, Shield } from 'lucide-react';
-import { useRegion } from '@/lib/context/region-context';
-
 export function WhoWeAreSection() {
-  const { isUS } = useRegion();
   
   return (
     <section className="py-24 bg-slate-50 dark:bg-slate-900">

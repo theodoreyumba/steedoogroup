@@ -9,7 +9,6 @@ import {
   Factory,
   ArrowRight,
   Zap,
-  Globe,
   Shield,
   BarChart
 } from 'lucide-react';

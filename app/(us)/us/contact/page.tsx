@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Clock, Building2 } from 'lucide-react';
+import { MapPin, Clock, Building2 } from 'lucide-react';
 import { ContactForm } from '@/components/forms/contact-form';
 import { company } from '@/data/company';
 
