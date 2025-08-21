@@ -31,6 +31,7 @@ export interface CompanyEntity {
     address: string;
   };
   sectors?: string[];
+  capabilities?: string[];
   principal?: string;
   duns?: string; // To be added when available
   leadership?: LeadershipMember[];
