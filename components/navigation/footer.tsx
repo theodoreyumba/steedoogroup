@@ -82,11 +82,13 @@ export function Footer() {
                   Code of Conduct
                 </Link>
               </li>
-              <li>
-                <Link href={`${baseUrl}/legal/anti-corruption`} className="text-muted-foreground hover:text-primary transition-colors">
-                  Anti-Corruption Policy
-                </Link>
-              </li>
+              {!isUS && (
+                <li>
+                  <Link href={`${baseUrl}/legal/anti-corruption`} className="text-muted-foreground hover:text-primary transition-colors">
+                    Anti-Corruption Policy
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
           
@@ -143,6 +145,71 @@ export function Footer() {
               <span className="text-xs">
                 {company.domains.primary} | {company.domains.secondary.join(' | ')}
               </span>
+            </div>
+          </div>
+          
+          {/* Legal Disclaimer */}
+          <div className="mt-6 pt-4 border-t border-border/50">
+            <div className="text-xs text-muted-foreground/80 leading-relaxed space-y-2">
+              <p className="text-center">
+                <strong>IMPORTANT LEGAL DISCLAIMER:</strong> The information contained on this website is for general informational purposes only. 
+                Some legal entities, subsidiaries, partnerships, joint ventures, acquisitions, investments, business relationships, or corporate structures mentioned on this website may not have been 
+                formally established, incorporated, registered, completed, or legally constituted at the time of publication. Business plans, projections, statements 
+                regarding future operations, anticipated transactions, planned expansions, and strategic initiatives are forward-looking and subject to change without notice.
+              </p>
+              <p className="text-center">
+                <strong>NO WARRANTIES:</strong> While we strive to keep the information accurate and up-to-date, we make no representations or warranties of any kind, express or implied, 
+                about the completeness, accuracy, reliability, suitability, availability, timeliness, or validity of the information, products, services, financial data, performance metrics, or related graphics 
+                contained on this website. Any reliance you place on such information is strictly at your own risk. The Company expressly disclaims all liability 
+                for any direct, indirect, incidental, consequential, punitive, or special damages of any kind arising from the use of this website or reliance on its content.
+              </p>
+              <p className="text-center">
+                <strong>THIRD-PARTY CONTENT:</strong> This website may contain links to external websites, references to third-party entities, news articles, press releases, or user-generated content. 
+                These are provided for convenience only and do not constitute endorsement, verification, approval, or adoption of their content, opinions, or practices. 
+                The Company is not responsible for the content, accuracy, legality, or practices of external websites, third-party entities, or any information obtained from such sources.
+              </p>
+              <p className="text-center">
+                <strong>INVESTMENT & FINANCIAL DISCLAIMERS:</strong> Nothing on this website constitutes investment advice, financial recommendations, solicitation of investment, 
+                or an offer to sell or buy securities. Past performance does not guarantee future results. All investments carry risk of loss. 
+                Consult qualified professionals before making investment decisions. Financial projections and business valuations are estimates and may not reflect actual results.
+              </p>
+              <p className="text-center">
+                <strong>REGULATORY & COMPLIANCE:</strong> Information presented may be subject to regulatory approval, licensing requirements, or compliance with local laws. 
+                Business operations may require permits, licenses, or authorizations that are pending or in process. Regulatory environments and legal requirements 
+                may vary by jurisdiction and are subject to change. The Company makes no guarantees regarding regulatory compliance or approval of proposed activities.
+              </p>
+              <p className="text-center">
+                <strong>INTELLECTUAL PROPERTY:</strong> All content, including but not limited to text, graphics, logos, images, software, and design elements, 
+                is protected by copyright, trademark, and other intellectual property laws. Unauthorized use, reproduction, or distribution is strictly prohibited. 
+                All trademarks, service marks, trade names, and logos are the property of their respective owners and are used for identification purposes only.
+              </p>
+              <p className="text-center">
+                <strong>PRIVACY & DATA:</strong> Use of this website is subject to our Privacy Policy. By accessing this website, you consent to data collection and processing 
+                as described in our privacy documentation. We are not responsible for privacy practices of linked websites or third-party services.
+              </p>
+              <p className="text-center">
+                <strong>JURISDICTIONAL LIMITATIONS:</strong> This website is controlled and operated from the Democratic Republic of Congo and the United States. 
+                We make no representation that materials on this website are appropriate or available for use in other locations. Access may be restricted in certain jurisdictions. 
+                Users are responsible for compliance with local laws and regulations. Any disputes shall be governed by the laws of the jurisdiction where the applicable entity is incorporated.
+              </p>
+              <p className="text-center">
+                <strong>UPDATES & MODIFICATIONS:</strong> The Company reserves the right to modify, update, suspend, or discontinue any part of this website at any time without notice. 
+                Information may become outdated and the Company undertakes no obligation to update or correct such information. Terms and conditions may change without prior notification.
+              </p>
+              <p className="text-center">
+                <strong>LIMITATION OF LIABILITY:</strong> In no event shall the Company, its officers, directors, employees, affiliates, agents, contractors, or licensors be liable for any 
+                direct, indirect, incidental, consequential, special, punitive, or exemplary damages including but not limited to loss of profits, data, use, goodwill, 
+                or other intangible losses resulting from your use of this website, even if advised of the possibility of such damages. Some jurisdictions do not allow 
+                the exclusion of certain warranties or limitation of liability, so some of the above limitations may not apply to you.
+              </p>
+              <p className="text-center">
+                <strong>INDEMNIFICATION:</strong> By using this website, you agree to indemnify, defend, and hold harmless the Company and its affiliates from any claims, 
+                damages, losses, liabilities, costs, and expenses arising from your use of the website, violation of these terms, or infringement of third-party rights.
+              </p>
+              <p className="text-center font-medium">
+                <strong>ACCEPTANCE OF TERMS:</strong> Continued use of this website constitutes acceptance of all terms, conditions, and disclaimers stated herein. 
+                If you do not agree with any part of this disclaimer, please discontinue use of this website immediately.
+              </p>
             </div>
           </div>
         </div>
