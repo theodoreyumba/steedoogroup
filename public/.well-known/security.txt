@@ -1,0 +1,27 @@
+# Security Policy for Steedoo Group
+# Last Updated: 2025-08-22
+
+# Our security email address
+Contact: security@steedoo.group
+Contact: mailto:security@steedoo.group
+
+# Our security policy
+Policy: https://steedoo.group/security
+
+# Our PGP key (if available)
+# Encryption: https://steedoo.group/pgp-key.asc
+
+# Acknowledgments page
+Acknowledgments: https://steedoo.group/security/acknowledgments
+
+# Preferred languages for communication
+Preferred-Languages: en, zh
+
+# Canonical URL for this file
+Canonical: https://steedoo.group/.well-known/security.txt
+
+# When this file expires (1 year from now)
+Expires: 2026-08-22T00:00:00.000Z
+
+# Digital signature (if available)
+# Signature: https://steedoo.group/.well-known/security.txt.sig

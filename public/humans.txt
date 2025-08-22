@@ -1,0 +1,41 @@
+/* TEAM */
+
+Chairman & Founder: Theodore Yumba
+Site: https://steedoo.group
+Location: Lubumbashi, Democratic Republic of Congo
+
+Chief Technology Officer: [Name]
+Location: Global
+
+Chief Financial Officer: [Name]
+Location: Global
+
+/* THANKS */
+
+Name: Our Valued Clients and Partners
+Name: Our Dedicated Employees Worldwide
+
+/* SITE */
+
+Last update: 2025/08/22
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, Next.js, TypeScript, Tailwind CSS
+Software: VS Code, Git, Vercel
+
+/* COMPANY */
+
+Company: Steedoo Group International
+Founded: [Year]
+Industries: Technology, Finance, Transportation, Investment, Industrial & Commercial
+Headquarters: Lubumbashi, DRC
+Global Presence: United States, Europe, Asia, Africa
+
+/* LANGUAGES */
+
+Languages: English, French, Chinese, Swahili
+
+/* SOCIAL */
+
+LinkedIn: https://linkedin.com/company/steedoogroup
+Twitter: https://twitter.com/steedoogroup
+Email: info@steedoo.group

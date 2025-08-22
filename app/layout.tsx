@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 import { RegionProvider } from '@/lib/context/region-context';
+import { StructuredData } from '@/components/structured-data';
 import './globals.css';
 
 const inter = Inter({
@@ -100,7 +101,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="author" href="/humans.txt" />
+      </head>
       <body className={`${inter.variable} ${interDisplay.variable} font-sans antialiased`}>
+        <StructuredData />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

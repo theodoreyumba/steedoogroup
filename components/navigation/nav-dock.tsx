@@ -49,11 +49,16 @@ export function NavDock() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const { isUS, switchRegion } = useRegion();
   const { theme, setTheme } = useTheme();
   
   const navItems = isUS ? usNavItems : globalNavItems;
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -149,7 +154,9 @@ export function NavDock() {
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="rounded-full px-2 sm:px-3"
           >
-            {theme === 'dark' ? (
+            {!mounted ? (
+              <div className="w-4 h-4" />
+            ) : theme === 'dark' ? (
               <Sun className="w-4 h-4" />
             ) : (
               <Moon className="w-4 h-4" />
