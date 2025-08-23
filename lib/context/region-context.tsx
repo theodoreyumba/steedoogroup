@@ -24,7 +24,19 @@ export function RegionProvider({ children }: { children: ReactNode }) {
     
     if (newRegion === 'us' && !currentPath.startsWith('/us')) {
       // Remove any locale prefix when switching to US (US is English only)
-      const pathWithoutLocale = currentPath.replace(/^\/fr/, '') || '/';
+      let pathWithoutLocale = currentPath;
+      
+      // Remove all possible language prefixes
+      if (pathWithoutLocale.startsWith('/fr')) {
+        pathWithoutLocale = pathWithoutLocale.replace(/^\/fr/, '') || '/';
+      } else if (pathWithoutLocale.startsWith('/sw-CD')) {
+        pathWithoutLocale = pathWithoutLocale.replace(/^\/sw-CD/, '') || '/';
+      } else if (pathWithoutLocale.startsWith('/sw')) {
+        pathWithoutLocale = pathWithoutLocale.replace(/^\/sw/, '') || '/';
+      } else if (pathWithoutLocale.startsWith('/ln')) {
+        pathWithoutLocale = pathWithoutLocale.replace(/^\/ln/, '') || '/';
+      }
+      
       targetPath = `/us${pathWithoutLocale}`;
     } else if (newRegion === 'global' && currentPath.startsWith('/us')) {
       targetPath = currentPath.replace(/^\/us/, '') || '/';
