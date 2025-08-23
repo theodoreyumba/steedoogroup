@@ -1,19 +1,40 @@
 import { Metadata } from 'next';
+import { getDictionary, type Locale } from '@/lib/dictionaries';
 
 export const metadata: Metadata = {
   title: 'Industries',
   description: 'Steedoo Group operates across technology, transportation, finance, investment, and industrial sectors.',
 };
 
-export default function IndustriesPage() {
+interface IndustriesPageProps {
+  params: Promise<{ lang: string }>;
+}
+
+export default async function IndustriesPage({ params }: IndustriesPageProps) {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang as Locale);
+
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
   return (
     <div className="min-h-screen py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Industries</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{getValue('Industries.title') || 'Our Industries'}</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Steedoo Group operates across multiple strategic sectors, driving innovation and sustainable growth in the Democratic Republic of Congo and globally.
+            {getValue('Industries.subtitle') || 'Steedoo Group operates across multiple strategic sectors, driving innovation and sustainable growth in the Democratic Republic of Congo and globally.'}
           </p>
         </div>
         
@@ -26,22 +47,22 @@ export default function IndustriesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">Technology</h3>
+            <h3 className="text-2xl font-bold mb-4">{getValue('Industries.technology') || 'Technology'}</h3>
             <p className="text-muted-foreground mb-6">
-              Digital transformation solutions, software development, and technology infrastructure for modern enterprises across Africa.
+              {getValue('Industries.technologyDescription') || 'Digital transformation solutions, software development, and technology infrastructure for modern enterprises across Africa.'}
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Software Development
+                {getValue('Industries.technologyServices.softwareDevelopment') || 'Software Development'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Digital Infrastructure
+                {getValue('Industries.technologyServices.digitalInfrastructure') || 'Digital Infrastructure'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Technology Consulting
+                {getValue('Industries.technologyServices.technologyConsulting') || 'Technology Consulting'}
               </li>
             </ul>
           </div>
@@ -53,22 +74,22 @@ export default function IndustriesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">Transportation</h3>
+            <h3 className="text-2xl font-bold mb-4">{getValue('Industries.transportation') || 'Transportation'}</h3>
             <p className="text-muted-foreground mb-6">
-              Integrated logistics and mobility solutions connecting communities and businesses across land, air, and sea transportation networks.
+              {getValue('Industries.transportationDescription') || 'Integrated logistics and mobility solutions connecting communities and businesses across land, air, and sea transportation networks.'}
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Logistics Management
+                {getValue('Industries.transportationServices.logisticsManagement') || 'Logistics Management'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Fleet Operations
+                {getValue('Industries.transportationServices.fleetOperations') || 'Fleet Operations'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Supply Chain Solutions
+                {getValue('Industries.transportationServices.supplyChain') || 'Supply Chain Solutions'}
               </li>
             </ul>
           </div>
@@ -80,22 +101,22 @@ export default function IndustriesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">Finance</h3>
+            <h3 className="text-2xl font-bold mb-4">{getValue('Industries.finance') || 'Finance'}</h3>
             <p className="text-muted-foreground mb-6">
-              Strategic financial services and banking solutions supporting economic growth and financial inclusion across emerging markets.
+              {getValue('Industries.financeDescription') || 'Strategic financial services and banking solutions supporting economic growth and financial inclusion across emerging markets.'}
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Financial Services
+                {getValue('Industries.financeServices.financialServices') || 'Financial Services'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Banking Solutions
+                {getValue('Industries.financeServices.bankingSolutions') || 'Banking Solutions'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Financial Advisory
+                {getValue('Industries.financeServices.financialAdvisory') || 'Financial Advisory'}
               </li>
             </ul>
           </div>
@@ -107,22 +128,22 @@ export default function IndustriesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">Investment</h3>
+            <h3 className="text-2xl font-bold mb-4">{getValue('Industries.investment') || 'Investment'}</h3>
             <p className="text-muted-foreground mb-6">
-              Strategic portfolio management and venture capital opportunities, driving economic development and business growth initiatives.
+              {getValue('Industries.investmentDescription') || 'Strategic portfolio management and venture capital opportunities, driving economic development and business growth initiatives.'}
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Portfolio Management
+                {getValue('Industries.investmentServices.portfolioManagement') || 'Portfolio Management'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Venture Capital
+                {getValue('Industries.investmentServices.ventureCapital') || 'Venture Capital'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Strategic Investments
+                {getValue('Industries.investmentServices.strategicInvestments') || 'Strategic Investments'}
               </li>
             </ul>
           </div>
@@ -134,22 +155,22 @@ export default function IndustriesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">Industrial & Commercial</h3>
+            <h3 className="text-2xl font-bold mb-4">{getValue('Industries.industrial') || 'Industrial & Commercial'}</h3>
             <p className="text-muted-foreground mb-6">
-              Production, processing, transformation, and commercialization of industrial products and substances with full regulatory compliance.
+              {getValue('Industries.industrialDescription') || 'Production, processing, transformation, and commercialization of industrial products and substances with full regulatory compliance.'}
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Manufacturing & Production
+                {getValue('Industries.industrialServices.manufacturing') || 'Manufacturing & Production'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Processing & Transformation
+                {getValue('Industries.industrialServices.processing') || 'Processing & Transformation'}
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                Commercial Distribution
+                {getValue('Industries.industrialServices.distribution') || 'Commercial Distribution'}
               </li>
             </ul>
           </div>
@@ -158,24 +179,24 @@ export default function IndustriesPage() {
         {/* Capabilities Section */}
         <div className="bg-primary-50 dark:bg-primary-950/20 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Licensed Capabilities</h2>
+            <h2 className="text-3xl font-bold mb-4">{getValue('Industries.licensedCapabilities') || 'Licensed Capabilities'}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Operating under RCCM: CD/LSH/RCCM/21-B-00576 with comprehensive licensing for all regulated activities.
+              {getValue('Industries.licensedCapabilitiesDescription') || 'Operating under RCCM: CD/LSH/RCCM/21-B-00576 with comprehensive licensing for all regulated activities.'}
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Production',
-              'Research',
-              'Exploitation',
-              'Processing',
-              'Transformation',
-              'Commercialization'
+              { key: 'production', label: getValue('Industries.capabilities.production') || 'Production' },
+              { key: 'research', label: getValue('Industries.capabilities.research') || 'Research' },
+              { key: 'exploitation', label: getValue('Industries.capabilities.exploitation') || 'Exploitation' },
+              { key: 'processing', label: getValue('Industries.capabilities.processing') || 'Processing' },
+              { key: 'transformation', label: getValue('Industries.capabilities.transformation') || 'Transformation' },
+              { key: 'commercialization', label: getValue('Industries.capabilities.commercialization') || 'Commercialization' }
             ].map((capability) => (
-              <div key={capability} className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg">
+              <div key={capability.key} className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg">
                 <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <span className="font-medium">{capability}</span>
+                <span className="font-medium">{capability.label}</span>
               </div>
             ))}
           </div>

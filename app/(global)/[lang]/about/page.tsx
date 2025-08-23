@@ -4,30 +4,11 @@ import { motion } from 'framer-motion';
 import { Building2, Globe, Shield, Award, TrendingUp } from 'lucide-react';
 import { company } from '@/data/company';
 import { LeadershipSection } from '@/components/sections/leadership';
-import { getDictionary, type Locale } from '@/lib/dictionaries';
+import { useTranslations } from '@/lib/hooks/use-translations';
 
-interface AboutPageProps {
-  params: Promise<{ lang: string }>;
-}
-
-export default async function AboutPage({ params }: AboutPageProps) {
-  const { lang } = await params;
-  const dictionary = await getDictionary(lang as Locale);
+export default function AboutPage() {
+  const { t } = useTranslations();
   const entity = company.global;
-
-  const getValue = (path: string) => {
-    if (!dictionary) return null;
-    const keys = path.split('.');
-    let value: unknown = dictionary;
-    for (const key of keys) {
-      if (value && typeof value === 'object' && key in value) {
-        value = (value as Record<string, unknown>)[key];
-      } else {
-        return null;
-      }
-    }
-    return typeof value === 'string' ? value : null;
-  };
   
   return (
     <div className="min-h-screen py-24">
@@ -40,10 +21,10 @@ export default async function AboutPage({ params }: AboutPageProps) {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {getValue('About.title') || 'About Steedoo Group'}
+            {t('About.title') || 'About Steedoo Group'}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {getValue('About.subtitle') || 'A diversified global corporation driving innovation and sustainable growth across multiple industry sectors in Africa and beyond.'}
+            {t('About.subtitle') || 'A diversified global corporation driving innovation and sustainable growth across multiple industry sectors in Africa and beyond.'}
           </p>
         </motion.div>
         
@@ -56,13 +37,13 @@ export default async function AboutPage({ params }: AboutPageProps) {
         >
           <div>
             <h2 className="text-2xl font-semibold mb-4">
-              {getValue('About.companyOverview') || 'Company Overview'}
+              {t('About.companyOverview') || 'Company Overview'}
             </h2>
             <p className="text-muted-foreground mb-6">
-              {getValue('About.overviewDescription') || 'Steedoo Group stands as a beacon of innovation and strategic excellence in the global business landscape. Our commitment to fostering sustainable development across emerging markets has positioned us as a trusted partner for organizations seeking transformative growth.'}
+              {t('About.overviewDescription') || 'Steedoo Group stands as a beacon of innovation and strategic excellence in the global business landscape. Our commitment to fostering sustainable development across emerging markets has positioned us as a trusted partner for organizations seeking transformative growth.'}
             </p>
             <p className="text-muted-foreground">
-              {getValue('About.ourApproach') || 'We believe in the power of strategic partnerships and collaborative innovation. Our multidisciplinary approach combines deep industry knowledge with cutting-edge technology to deliver solutions that drive measurable impact.'}
+              {t('About.ourApproach') || 'We believe in the power of strategic partnerships and collaborative innovation. Our multidisciplinary approach combines deep industry knowledge with cutting-edge technology to deliver solutions that drive measurable impact.'}
             </p>
           </div>
           
@@ -70,19 +51,19 @@ export default async function AboutPage({ params }: AboutPageProps) {
             <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-xl">
               <h3 className="font-semibold mb-3 flex items-center gap-2">
                 <Building2 className="w-5 h-5 text-primary" />
-                Corporate Registration
+                {t('About.corporateRegistration.title') || 'Corporate Registration'}
               </h3>
               <dl className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Legal Name:</dt>
+                  <dt className="text-muted-foreground">{t('About.corporateRegistration.legalName') || 'Legal Name:'}</dt>
                   <dd className="font-medium">{entity.legalName}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">RCCM:</dt>
+                  <dt className="text-muted-foreground">{t('About.corporateRegistration.rccm') || 'RCCM:'}</dt>
                   <dd className="font-mono">{entity.registrations?.rccm}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Tax ID:</dt>
+                  <dt className="text-muted-foreground">{t('About.corporateRegistration.taxId') || 'Tax ID:'}</dt>
                   <dd className="font-mono">{entity.registrations?.taxId}</dd>
                 </div>
               </dl>
@@ -91,7 +72,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-xl">
               <h3 className="font-semibold mb-3 flex items-center gap-2">
                 <Globe className="w-5 h-5 text-primary" />
-                Headquarters
+                {t('About.headquarters') || 'Headquarters'}
               </h3>
               <address className="not-italic text-sm text-muted-foreground">
                 {entity.address.street}<br />
@@ -110,7 +91,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Our Industry Sectors</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('About.ourIndustrySectors') || 'Our Industry Sectors'}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {entity.sectors?.map((sector) => (
               <div
@@ -134,7 +115,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
           className="mb-20"
         >
           <div className="bg-primary-50 dark:bg-primary-950/20 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">Core Capabilities</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">{t('About.coreCapabilities') || 'Core Capabilities'}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {company.global.capabilities?.map((capability) => (
                 <div key={capability} className="flex items-start gap-3">
@@ -142,7 +123,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
                   <div>
                     <h3 className="font-semibold">{capability}</h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Licensed and compliant operations
+                      {t('About.licensedCompliantOperations') || 'Licensed and compliant operations'}
                     </p>
                   </div>
                 </div>
@@ -155,8 +136,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
         {entity.leadership && (
           <LeadershipSection 
             leadership={entity.leadership}
-            title="Leadership Team"
-            subtitle="Meet the experienced leaders driving innovation and growth across our diverse business sectors"
+            title={t('Leadership.title') || 'Leadership Team'}
+            subtitle={t('Leadership.subtitle') || 'Meet the experienced leaders driving innovation and growth across our diverse business sectors'}
           />
         )}
         
@@ -169,23 +150,23 @@ export default async function AboutPage({ params }: AboutPageProps) {
         >
           <div className="text-center p-6 bg-slate-50 dark:bg-slate-900 rounded-xl">
             <Award className="w-8 h-8 text-primary mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">D&B Listed</h3>
+            <h3 className="font-semibold mb-2">{t('About.trustIndicators.dnbListed.title') || 'D&B Listed'}</h3>
             <p className="text-sm text-muted-foreground">
-              Verified and listed on Dun & Bradstreet business directory
+              {t('About.trustIndicators.dnbListed.description') || 'Verified and listed on Dun & Bradstreet business directory'}
             </p>
           </div>
           <div className="text-center p-6 bg-slate-50 dark:bg-slate-900 rounded-xl">
             <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Fully Compliant</h3>
+            <h3 className="font-semibold mb-2">{t('About.trustIndicators.fullyCompliant.title') || 'Fully Compliant'}</h3>
             <p className="text-sm text-muted-foreground">
-              Operating with all required licenses and regulatory approvals
+              {t('About.trustIndicators.fullyCompliant.description') || 'Operating with all required licenses and regulatory approvals'}
             </p>
           </div>
           <div className="text-center p-6 bg-slate-50 dark:bg-slate-900 rounded-xl">
             <Globe className="w-8 h-8 text-primary mx-auto mb-3" />
-            <h3 className="font-semibold mb-2">Global Reach</h3>
+            <h3 className="font-semibold mb-2">{t('About.trustIndicators.globalReach.title') || 'Global Reach'}</h3>
             <p className="text-sm text-muted-foreground">
-              Operations spanning Africa and North America
+              {t('About.trustIndicators.globalReach.description') || 'Operations spanning Africa and North America'}
             </p>
           </div>
         </motion.div>

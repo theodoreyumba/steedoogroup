@@ -101,7 +101,31 @@
     "ourApproach": "Our Approach",
     "approachDescription": "We believe in the power of strategic partnerships and collaborative innovation. Our multidisciplinary approach combines deep industry knowledge with cutting-edge technology to deliver solutions that drive measurable impact.",
     "globalPresence": "Global Presence",
-    "presenceDescription": "With operations spanning two continents, we leverage our unique position to bridge opportunities between African markets and global investors, fostering cross-border collaboration and sustainable development."
+    "presenceDescription": "With operations spanning two continents, we leverage our unique position to bridge opportunities between African markets and global investors, fostering cross-border collaboration and sustainable development.",
+    "corporateRegistration": {
+      "title": "Corporate Registration",
+      "legalName": "Legal Name:",
+      "rccm": "RCCM:",
+      "taxId": "Tax ID:"
+    },
+    "headquarters": "Headquarters",
+    "ourIndustrySectors": "Our Industry Sectors",
+    "coreCapabilities": "Core Capabilities",
+    "licensedCompliantOperations": "Licensed and compliant operations",
+    "trustIndicators": {
+      "dnbListed": {
+        "title": "D&B Listed",
+        "description": "Verified and listed on Dun & Bradstreet business directory"
+      },
+      "fullyCompliant": {
+        "title": "Fully Compliant",
+        "description": "Operating with all required licenses and regulatory approvals"
+      },
+      "globalReach": {
+        "title": "Global Reach",
+        "description": "Operations spanning Africa and North America"
+      }
+    }
   },
   "Navigation": {
     "home": "Home",
@@ -119,14 +143,55 @@
   "Industries": {
     "title": "Industries We Serve",
     "subtitle": "Driving innovation across diverse sectors with strategic expertise and global vision.",
-    "finance": "Finance & Banking",
-    "healthcare": "Healthcare",
     "technology": "Technology",
+    "technologyDescription": "Digital transformation solutions, software development, and technology infrastructure for modern enterprises across Africa.",
+    "technologyServices": {
+      "softwareDevelopment": "Software Development",
+      "digitalInfrastructure": "Digital Infrastructure",
+      "technologyConsulting": "Technology Consulting"
+    },
+    "transportation": "Transportation",
+    "transportationDescription": "Integrated logistics and mobility solutions connecting communities and businesses across land, air, and sea transportation networks.",
+    "transportationServices": {
+      "logisticsManagement": "Logistics Management",
+      "fleetOperations": "Fleet Operations",
+      "supplyChain": "Supply Chain Solutions"
+    },
+    "finance": "Finance",
+    "financeDescription": "Strategic financial services and banking solutions supporting economic growth and financial inclusion across emerging markets.",
+    "financeServices": {
+      "financialServices": "Financial Services",
+      "bankingSolutions": "Banking Solutions",
+      "financialAdvisory": "Financial Advisory"
+    },
+    "investment": "Investment",
+    "investmentDescription": "Strategic portfolio management and venture capital opportunities, driving economic development and business growth initiatives.",
+    "investmentServices": {
+      "portfolioManagement": "Portfolio Management",
+      "ventureCapital": "Venture Capital",
+      "strategicInvestments": "Strategic Investments"
+    },
+    "industrial": "Industrial & Commercial",
+    "industrialDescription": "Production, processing, transformation, and commercialization of industrial products and substances with full regulatory compliance.",
+    "industrialServices": {
+      "manufacturing": "Manufacturing & Production",
+      "processing": "Processing & Transformation",
+      "distribution": "Commercial Distribution"
+    },
+    "licensedCapabilities": "Licensed Capabilities",
+    "licensedCapabilitiesDescription": "Operating under RCCM: CD/LSH/RCCM/21-B-00576 with comprehensive licensing for all regulated activities.",
+    "capabilities": {
+      "production": "Production",
+      "research": "Research",
+      "exploitation": "Exploitation",
+      "processing": "Processing",
+      "transformation": "Transformation",
+      "commercialization": "Commercialization"
+    },
+    "healthcare": "Healthcare",
     "manufacturing": "Manufacturing",
     "retail": "Retail & E-commerce",
-    "energy": "Energy & Resources",
-    "transportation": "Transportation",
-    "industrial": "Industrial Solutions"
+    "energy": "Energy & Resources"
   },
   "Portfolio": {
     "title": "Our Portfolio",
@@ -148,27 +213,88 @@
     "title": "Get in Touch",
     "subtitle": "We'd love to hear from you",
     "form": {
+      "title": "Send Us a Message",
+      "fullName": "Full Name",
       "firstName": "First Name",
       "lastName": "Last Name",
       "email": "Email Address",
+      "emailAddress": "Email Address",
       "phone": "Phone Number",
       "company": "Company",
+      "subject": "Subject",
       "message": "Message",
       "submit": "Send Message",
       "submitting": "Sending...",
       "success": "Thank you for your message. We'll get back to you soon!",
-      "error": "There was an error sending your message. Please try again."
+      "error": "There was an error sending your message. Please try again.",
+      "placeholders": {
+        "fullName": "John Doe",
+        "email": "john@example.com",
+        "company": "Acme Corp",
+        "message": "Tell us about your inquiry..."
+      },
+      "subjects": {
+        "select": "Select a subject",
+        "general": "General Inquiry",
+        "partnership": "Partnership Opportunity",
+        "investment": "Investment Inquiry",
+        "technology": "Technology Services",
+        "other": "Other"
+      },
+      "required": "*",
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required"
+      }
     },
     "info": {
       "headquarters": "Headquarters",
       "email": "Email",
-      "phone": "Phone"
+      "phone": "Phone",
+      "getInTouch": "Get in Touch",
+      "description": "Whether you're interested in our services, exploring partnership opportunities, or have general inquiries, we'd love to hear from you."
+    },
+    "businessHours": {
+      "title": "Business Hours",
+      "weekdays": "Monday - Friday",
+      "weekdaysHours": "8:00 AM - 6:00 PM CAT",
+      "saturday": "Saturday",
+      "saturdayHours": "9:00 AM - 1:00 PM CAT",
+      "sunday": "Sunday",
+      "sundayHours": "Closed"
+    },
+    "businessInfo": {
+      "title": "Business Information",
+      "rccm": "RCCM:",
+      "taxId": "Tax ID:",
+      "principal": "Principal:"
+    },
+    "location": {
+      "city": "Lubumbashi, Haut-Katanga Province",
+      "country": "Democratic Republic of Congo"
     }
   },
   "ResearchProcessing": {
     "title": "Research & Processing",
-    "subtitle": "Advanced research methodologies and data processing capabilities",
-    "description": "Leveraging cutting-edge research techniques and processing technologies to deliver actionable insights for strategic decision-making."
+    "subtitle": "Comprehensive capabilities in production, research, exploitation, processing, transformation, and commercialization of products and substances.",
+    "description": "Leveraging cutting-edge research techniques and processing technologies to deliver actionable insights for strategic decision-making.",
+    "capabilities": {
+      "production": "Production",
+      "research": "Research",
+      "exploitation": "Exploitation",
+      "processing": "Processing",
+      "transformation": "Transformation",
+      "commercialization": "Commercialization"
+    },
+    "capabilityDescription": "Licensed and compliant operations with full regulatory approval.",
+    "regulatory": {
+      "title": "Regulatory Compliance",
+      "description1": "Operating under RCCM: CD/LSH/RCCM/21-B-00576 with comprehensive licensing for all activities involving the production, research, exploitation, processing, transformation, and commercialization of products and substances.",
+      "description2": "Our operations maintain strict adherence to environmental, safety, and quality standards across all sectors."
+    }
   },
   "Footer": {
     "quickLinks": "Quick Links",
@@ -218,6 +344,10 @@
       "title": "Comprehensive Support",
       "description": "End-to-end services from conception to implementation and beyond."
     }
+  },
+  "Leadership": {
+    "title": "Leadership Team",
+    "subtitle": "Meet the experienced professionals driving our vision and growth"
   },
   "Common": {
     "loading": "Loading...",

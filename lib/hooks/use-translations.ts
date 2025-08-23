@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { getDictionary, type Locale } from '@/lib/dictionaries';
+import { getDictionary, type Locale } from '@/lib/dictionaries-client';
 import { useState, useEffect } from 'react';
 
 type Dictionary = Record<string, unknown>;

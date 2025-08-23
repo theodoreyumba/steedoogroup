@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Home, 
@@ -22,7 +22,6 @@ import { useRegion } from '@/lib/context/region-context';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import { LanguageDropdown } from './language-dropdown';
-import { getDictionary, type Locale } from '@/lib/dictionaries-client';
 
 interface NavItem {
   labelKey: string;

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Languages, ChevronUp, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { setPreferredLanguage, type Locale } from '@/lib/language-cookie';
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -49,12 +50,23 @@ export function LanguageDropdown({ className, showLabel = true }: LanguageDropdo
       return;
     }
 
+    // Validate and cast the locale
+    if (!['en', 'fr'].includes(newLocale)) {
+      setIsOpen(false);
+      return;
+    }
+
+    const locale = newLocale as Locale;
+
+    // Save language preference in cookie
+    setPreferredLanguage(locale);
+
     let newPath: string;
     
-    if (newLocale === 'en') {
+    if (locale === 'en') {
       // For English, remove /fr prefix if present
       newPath = pathname.startsWith('/fr') ? pathname.replace('/fr', '') || '/' : pathname;
-    } else if (newLocale === 'fr') {
+    } else if (locale === 'fr') {
       // For French, add /fr prefix if not already present
       newPath = pathname.startsWith('/fr') ? pathname : `/fr${pathname}`;
     } else {

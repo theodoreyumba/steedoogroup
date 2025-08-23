@@ -28,7 +28,13 @@ const locales = ['en', 'fr'];
 const defaultLocale = 'en';
 
 function getLocale(request: NextRequest): string {
-  // Get Accept-Language header
+  // First check if there's a preferred language cookie
+  const preferredLanguage = request.cookies.get('preferred-language')?.value;
+  if (preferredLanguage && locales.includes(preferredLanguage)) {
+    return preferredLanguage;
+  }
+
+  // Fall back to Accept-Language header
   const acceptLanguage = request.headers.get('accept-language') ?? undefined;
   const headers = { 'accept-language': acceptLanguage };
   const languages = new Negotiator({ headers }).languages();
@@ -124,13 +130,43 @@ export function middleware(request: NextRequest) {
       (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
     );
 
+    // Get the preferred locale from cookie or browser
+    const preferredLocale = getLocale(request);
+    
+    // Determine current locale from pathname
+    let currentLocale = defaultLocale;
+    for (const locale of locales) {
+      if (pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`) {
+        currentLocale = locale;
+        break;
+      }
+    }
+
+    // If user has a different language preference than current URL, redirect them
+    if (pathnameHasLocale && currentLocale !== preferredLocale) {
+      let newPathname = pathname;
+      
+      // Remove current locale prefix if present
+      if (currentLocale !== defaultLocale) {
+        newPathname = pathname.replace(`/${currentLocale}`, '') || '/';
+      }
+      
+      // Add preferred locale prefix if it's not the default
+      if (preferredLocale !== defaultLocale) {
+        newPathname = `/${preferredLocale}${newPathname}`;
+      }
+      
+      if (newPathname !== pathname) {
+        request.nextUrl.pathname = newPathname;
+        return NextResponse.redirect(request.nextUrl);
+      }
+    }
+
     // Redirect if there is no locale
     if (!pathnameHasLocale) {
-      const locale = getLocale(request);
-      
       // Only add locale prefix if it's not the default locale
-      if (locale !== defaultLocale) {
-        request.nextUrl.pathname = `/${locale}${pathname}`;
+      if (preferredLocale !== defaultLocale) {
+        request.nextUrl.pathname = `/${preferredLocale}${pathname}`;
         return NextResponse.redirect(request.nextUrl);
       }
     }

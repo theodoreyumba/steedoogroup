@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useRegion } from '@/lib/context/region-context';
+import { useTranslations } from '@/lib/hooks/use-translations';
 
 interface FormData {
   name: string;
@@ -17,6 +18,7 @@ interface FormData {
 
 export function ContactForm() {
   const { region } = useRegion();
+  const { t } = useTranslations();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -58,7 +60,7 @@ export function ContactForm() {
       const data = await response.json();
       
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message');
+        throw new Error(data.error || t('Contact.form.error') || 'Failed to send message');
       }
       
       setStatus('success');
@@ -110,7 +112,7 @@ export function ContactForm() {
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
-            Full Name *
+            {t('Contact.form.fullName') || 'Full Name'} {t('Contact.form.required') || '*'}
           </label>
           <input
             type="text"
@@ -120,13 +122,13 @@ export function ContactForm() {
             onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-            placeholder="John Doe"
+            placeholder={t('Contact.form.placeholders.fullName') || 'John Doe'}
           />
         </div>
         
         <div>
           <label htmlFor="email" className="block text-sm font-medium mb-2">
-            Email Address *
+            {t('Contact.form.emailAddress') || 'Email Address'} {t('Contact.form.required') || '*'}
           </label>
           <input
             type="email"
@@ -136,7 +138,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-            placeholder="john@example.com"
+            placeholder={t('Contact.form.placeholders.email') || 'john@example.com'}
           />
         </div>
       </div>
@@ -144,7 +146,7 @@ export function ContactForm() {
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="company" className="block text-sm font-medium mb-2">
-            Company
+            {t('Contact.form.company') || 'Company'}
           </label>
           <input
             type="text"
@@ -153,13 +155,13 @@ export function ContactForm() {
             value={formData.company}
             onChange={handleChange}
             className="w-full px-4 py-2 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-            placeholder="Acme Corp"
+            placeholder={t('Contact.form.placeholders.company') || 'Acme Corp'}
           />
         </div>
         
         <div>
           <label htmlFor="subject" className="block text-sm font-medium mb-2">
-            Subject *
+            {t('Contact.form.subject') || 'Subject'} {t('Contact.form.required') || '*'}
           </label>
           <select
             id="subject"
@@ -169,19 +171,19 @@ export function ContactForm() {
             required
             className="w-full px-4 py-2 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
-            <option value="">Select a subject</option>
-            <option value="general">General Inquiry</option>
-            <option value="partnership">Partnership Opportunity</option>
-            <option value="investment">Investment Inquiry</option>
-            <option value="technology">Technology Services</option>
-            <option value="other">Other</option>
+            <option value="">{t('Contact.form.subjects.select') || 'Select a subject'}</option>
+            <option value="general">{t('Contact.form.subjects.general') || 'General Inquiry'}</option>
+            <option value="partnership">{t('Contact.form.subjects.partnership') || 'Partnership Opportunity'}</option>
+            <option value="investment">{t('Contact.form.subjects.investment') || 'Investment Inquiry'}</option>
+            <option value="technology">{t('Contact.form.subjects.technology') || 'Technology Services'}</option>
+            <option value="other">{t('Contact.form.subjects.other') || 'Other'}</option>
           </select>
         </div>
       </div>
       
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-2">
-          Message *
+          {t('Contact.form.message') || 'Message'} {t('Contact.form.required') || '*'}
         </label>
         <textarea
           id="message"
@@ -191,7 +193,7 @@ export function ContactForm() {
           required
           rows={6}
           className="w-full px-4 py-2 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-          placeholder="Tell us about your inquiry..."
+          placeholder={t('Contact.form.placeholders.message') || 'Tell us about your inquiry...'}
         />
       </div>
       
@@ -203,7 +205,7 @@ export function ContactForm() {
           className="flex items-center gap-2 p-4 bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-300 rounded-lg"
         >
           <CheckCircle className="w-5 h-5" />
-          <span>Thank you! Your message has been sent successfully.</span>
+          <span>{t('Contact.form.success') || 'Thank you! Your message has been sent successfully.'}</span>
         </motion.div>
       )}
       
@@ -214,7 +216,7 @@ export function ContactForm() {
           className="flex items-center gap-2 p-4 bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300 rounded-lg"
         >
           <AlertCircle className="w-5 h-5" />
-          <span>{errorMessage || 'An error occurred. Please try again.'}</span>
+          <span>{errorMessage || t('Contact.form.error') || 'An error occurred. Please try again.'}</span>
         </motion.div>
       )}
       
@@ -227,12 +229,12 @@ export function ContactForm() {
         {status === 'loading' ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Sending...
+            {t('Contact.form.submitting') || 'Sending...'}
           </>
         ) : (
           <>
             <Send className="mr-2 h-4 w-4" />
-            Send Message
+            {t('Contact.form.submit') || 'Send Message'}
           </>
         )}
       </Button>

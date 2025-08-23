@@ -39,38 +39,38 @@ export function WhyChooseUsSection({ dictionary }: WhyChooseUsSectionProps) {
   const globalReasons = [
     {
       icon: Globe,
-      title: 'Local Expertise, Global Vision',
-      description: 'Deep understanding of African markets combined with international best practices and global strategic perspectives.',
+      title: getValue('WhyChooseUs.localKnowledge.title') || 'Local Expertise, Global Vision',
+      description: getValue('WhyChooseUs.localKnowledge.description') || 'Deep understanding of African markets combined with international best practices and global strategic perspectives.',
       stat: '2 Continents'
     },
     {
       icon: Award,
-      title: 'Proven Track Record',
-      description: 'Demonstrated success across multiple sectors with a portfolio of innovative companies driving transformation.',
+      title: getValue('WhyChooseUs.provenResults.title') || 'Proven Track Record',
+      description: getValue('WhyChooseUs.provenResults.description') || 'Demonstrated success across multiple sectors with a portfolio of innovative companies driving transformation.',
       stat: '3+ Companies'
     },
     {
       icon: Users,
-      title: 'Experienced Leadership',
-      description: 'Seasoned executives with decades of combined experience in finance, technology, and business development.',
+      title: getValue('WhyChooseUs.globalExperience.title') || 'Experienced Leadership',
+      description: getValue('WhyChooseUs.globalExperience.description') || 'Seasoned executives with decades of combined experience in finance, technology, and business development.',
       stat: '50+ Years'
     },
     {
       icon: Lightbulb,
-      title: 'Innovation-Driven',
-      description: 'Cutting-edge solutions and forward-thinking strategies that position businesses for future success.',
+      title: getValue('WhyChooseUs.innovativeSolutions.title') || 'Innovation-Driven',
+      description: getValue('WhyChooseUs.innovativeSolutions.description') || 'Cutting-edge solutions and forward-thinking strategies that position businesses for future success.',
       stat: '100% Innovation'
     },
     {
       icon: Shield,
-      title: 'Regulatory Compliance',
-      description: 'Full licensing and regulatory compliance across all operations, ensuring secure and reliable partnerships.',
+      title: getValue('WhyChooseUs.comprehensiveSupport.title') || 'Regulatory Compliance',
+      description: getValue('WhyChooseUs.comprehensiveSupport.description') || 'Full licensing and regulatory compliance across all operations, ensuring secure and reliable partnerships.',
       stat: 'Fully Licensed'
     },
     {
       icon: TrendingUp,
-      title: 'Sustainable Growth',
-      description: 'Long-term value creation through sustainable practices and responsible business development.',
+      title: getValue('WhyChooseUs.strategicPartnership.title') || 'Sustainable Growth',
+      description: getValue('WhyChooseUs.strategicPartnership.description') || 'Long-term value creation through sustainable practices and responsible business development.',
       stat: 'ESG Focused'
     }
   ];
