@@ -3,6 +3,7 @@ import { BrandMark } from '@/components/brand/brand-mark';
 import { useRegion } from '@/lib/context/region-context';
 import { company } from '@/data/company';
 import { ExternalLink } from 'lucide-react';
+import { CookieSettingsLink } from '@/components/cookies/cookie-settings-link';
 
 interface FooterProps {
   dictionary?: Record<string, unknown>;
@@ -107,6 +108,9 @@ export function Footer({ dictionary }: FooterProps) {
                   </Link>
                 </li>
               )}
+              <li>
+                <CookieSettingsLink />
+              </li>
             </ul>
           </div>
           

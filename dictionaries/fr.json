@@ -358,5 +358,40 @@
     "previous": "Précédent",
     "close": "Fermer",
     "open": "Ouvrir"
+  },
+  "CookieConsent": {
+    "title": "Paramètres des cookies",
+    "description": "Nous utilisons des cookies pour personnaliser le contenu, diffuser des publicités et analyser le trafic.",
+    "acceptAll": "Tout accepter",
+    "acceptEssential": "Accepter l'essentiel",
+    "customize": "Personnaliser",
+    "savePreferences": "Enregistrer les préférences",
+    "required": "Requis",
+    "preferences": {
+      "title": "Préférences des cookies",
+      "description": "Personnalisez vos préférences de cookies. Vous pouvez modifier ces paramètres à tout moment."
+    },
+    "categories": {
+      "necessary": {
+        "title": "Nécessaires",
+        "description": "Permet la sécurité et les fonctionnalités de base.",
+        "details": "Ces cookies sont essentiels au bon fonctionnement du site web. Ils comprennent les cookies de session, d'authentification et de sécurité."
+      },
+      "preferences": {
+        "title": "Préférences",
+        "description": "Permet le contenu et les paramètres personnalisés.",
+        "details": "Ces cookies mémorisent vos préférences telles que les paramètres de langue, la sélection de région et les préférences de thème."
+      },
+      "analytics": {
+        "title": "Analytiques",
+        "description": "Permet le suivi des performances.",
+        "details": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web en collectant des informations anonymes sur les pages vues et le comportement des utilisateurs."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Permet la personnalisation et le suivi des publicités.",
+        "details": "Ces cookies sont utilisés pour vous montrer des publicités pertinentes et mesurer l'efficacité de nos campagnes marketing."
+      }
+    }
   }
 }

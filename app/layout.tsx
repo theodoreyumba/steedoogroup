@@ -5,6 +5,7 @@ import { ThemeProvider } from 'next-themes';
 import { RegionProvider } from '@/lib/context/region-context';
 import { LocaleProvider } from '@/components/providers/locale-provider';
 import { StructuredData } from '@/components/structured-data';
+import { CookieConsentBanner } from '@/components/cookies/cookie-consent-banner';
 import './globals.css';
 
 const inter = Inter({
@@ -117,6 +118,7 @@ export default function RootLayout({
           <RegionProvider>
             <LocaleProvider>
               {children}
+              <CookieConsentBanner />
             </LocaleProvider>
           </RegionProvider>
         </ThemeProvider>

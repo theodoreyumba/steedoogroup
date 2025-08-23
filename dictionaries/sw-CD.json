@@ -358,5 +358,40 @@
     "previous": "Iliyotangulia",
     "close": "Funga",
     "open": "Fungua"
+  },
+  "CookieConsent": {
+    "title": "Mipangilio ya Vidakuzi",
+    "description": "Tunatumia vidakuzi ili kubadilisha maudhui, kuonyesha matangazo, na kuchambua trafiki.",
+    "acceptAll": "Kubali Vyote",
+    "acceptEssential": "Kubali Muhimu",
+    "customize": "Badilisha",
+    "savePreferences": "Hifadhi Mapendeleo",
+    "required": "Inahitajika",
+    "preferences": {
+      "title": "Mapendeleo ya Vidakuzi",
+      "description": "Badilisha mapendeleo yako ya vidakuzi. Unaweza kubadilisha mipangilio hii wakati wowote."
+    },
+    "categories": {
+      "necessary": {
+        "title": "Muhimu",
+        "description": "Inaruhusu usalama na kazi za msingi.",
+        "details": "Vidakuzi hivi ni muhimu kwa tovuti kufanya kazi vizuri. Vinajumuisha vidakuzi vya kipindi, uthibitishaji na usalama."
+      },
+      "preferences": {
+        "title": "Mapendeleo",
+        "description": "Inaruhusu maudhui na mipangilio ya kibinafsi.",
+        "details": "Vidakuzi hivi vinakumbuka mapendeleo yako kama vile mipangilio ya lugha, uchaguzi wa eneo, na mapendeleo ya mandhari."
+      },
+      "analytics": {
+        "title": "Uchanganuzi",
+        "description": "Inaruhusu kufuatilia utendaji.",
+        "details": "Vidakuzi hivi vinatusaidia kuelewa jinsi wageni wanavyoshirikiana na tovuti yetu kwa kukusanya habari zisizo za kibinafsi kuhusu miongozo ya kurasa na tabia za watumiaji."
+      },
+      "marketing": {
+        "title": "Uuzaji",
+        "description": "Inaruhusu ubinafsishaji wa matangazo na kufuatilia.",
+        "details": "Vidakuzi hivi vinatumiwa kukuonyesha matangazo sahihi na kupima ufanisi wa kampeni zetu za uuzaji."
+      }
+    }
   }
 }

@@ -358,5 +358,40 @@
     "previous": "Previous",
     "close": "Close",
     "open": "Open"
+  },
+  "CookieConsent": {
+    "title": "Cookie Settings",
+    "description": "We use cookies to personalize content, run ads, and analyze traffic.",
+    "acceptAll": "Accept All",
+    "acceptEssential": "Accept Essential",
+    "customize": "Customize",
+    "savePreferences": "Save Preferences",
+    "required": "Required",
+    "preferences": {
+      "title": "Cookie Preferences",
+      "description": "Customize your cookie preferences. You can change these settings at any time."
+    },
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "description": "Enables security and basic functionality.",
+        "details": "These cookies are essential for the website to function properly. They include session cookies, authentication cookies, and security cookies."
+      },
+      "preferences": {
+        "title": "Preferences",
+        "description": "Enables personalized content and settings.",
+        "details": "These cookies remember your preferences such as language settings, region selection, and theme preferences."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Enables tracking of performance.",
+        "details": "These cookies help us understand how visitors interact with our website by collecting anonymous information about page views and user behavior."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Enables ads personalization and tracking.",
+        "details": "These cookies are used to show you relevant advertisements and measure the effectiveness of our marketing campaigns."
+      }
+    }
   }
 }

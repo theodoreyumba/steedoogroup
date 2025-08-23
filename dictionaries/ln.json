@@ -358,5 +358,40 @@
     "previous": "Oyo Eleki",
     "close": "Kanga",
     "open": "Fungola"
+  },
+  "CookieConsent": {
+    "title": "Ba Paramètres ya Ba Cookies",
+    "description": "Tozali kosalela ba cookies mpo na kopersonaliser ba contenus, kotinda ba pubs, mpe ko-analyser trafic.",
+    "acceptAll": "Ndima Nionso",
+    "acceptEssential": "Ndima Oyo Esengeli",
+    "customize": "Bongola",
+    "savePreferences": "Bomba Ba Préférences",
+    "required": "Esengeli",
+    "preferences": {
+      "title": "Ba Préférences ya Ba Cookies",
+      "description": "Bongola ba préférences na yo ya ba cookies. Okoki kobongola ba paramètres oyo na tango nyonso."
+    },
+    "categories": {
+      "necessary": {
+        "title": "Oyo Esengeli",
+        "description": "Epesaka sécurité mpe ba fonctionnalités ya moboko.",
+        "details": "Ba cookies oyo ezali essentiel mpo na site web esala malamu. Ezali na ba cookies ya session, authentication mpe sécurité."
+      },
+      "preferences": {
+        "title": "Ba Préférences",
+        "description": "Epesaka ba contenus mpe ba paramètres personnalisés.",
+        "details": "Ba cookies oyo ekanisaka ba préférences na yo lokola ba paramètres ya monoko, boponi ya région, mpe ba préférences ya thème."
+      },
+      "analytics": {
+        "title": "Analytiques",
+        "description": "Epesaka kolanda ba performances.",
+        "details": "Ba cookies oyo esalisaka biso kososola ndenge nini ba visiteurs basalaka na site na biso na kosangisa ba informations anonymes na ntina ya ba pages oyo bamonaka mpe etamboli ya ba usagers."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Epesaka personalisation ya ba publicités mpe kolanda.",
+        "details": "Ba cookies oyo esalemaka mpo na kolakisa yo ba publicités ya malamu mpe komeka efficacité ya ba campagnes na biso ya marketing."
+      }
+    }
   }
 }
