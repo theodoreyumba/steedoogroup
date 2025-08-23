@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -22,9 +23,9 @@ export default function USTermsOfServicePage() {
               These Terms of Service apply specifically to services provided by Steedoo Group Inc. 
               to US persons and US-based activities. For international services provided by other 
               Steedoo Group entities, please refer to our 
-              <a href="/legal/terms" className="text-blue-600 hover:text-blue-800 underline">
+              <Link href="/legal/terms" className="text-blue-600 hover:text-blue-800 underline">
                 Global Terms of Service
-              </a>.
+              </Link>.
             </p>
           </div>
           
@@ -880,7 +881,7 @@ export default function USTermsOfServicePage() {
                   
                   <p><strong>International Coordination:</strong></p>
                   <ul className="list-disc pl-4">
-                    <li>For global services: See our <a href="/legal/terms" className="text-blue-600 underline">Global Terms</a></li>
+                    <li>For global services: See our <Link href="/legal/terms" className="text-blue-600 underline">Global Terms</Link></li>
                     <li>Cross-border complaints: Contact relevant entity directly</li>
                   </ul>
                 </div>
@@ -893,9 +894,9 @@ export default function USTermsOfServicePage() {
                 Steedoo Group Inc. is part of a global network of regulated entities. 
                 For services provided by our international affiliates, different terms, 
                 regulations, and protections may apply. Please review our 
-                <a href="/legal/terms" className="text-purple-600 hover:text-purple-800 underline">
+                <Link href="/legal/terms" className="text-purple-600 hover:text-purple-800 underline">
                   Global Terms of Service
-                </a> for comprehensive information about our worldwide operations.
+                </Link> for comprehensive information about our worldwide operations.
               </p>
             </div>
           </section>
