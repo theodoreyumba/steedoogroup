@@ -1,0 +1,232 @@
+{
+  "HomePage": {
+    "title": "Bienvenue chez Steedoo Group International",
+    "subtitle": "Solutions d'affaires mondiales de premier plan",
+    "description": "Votre partenaire de confiance pour des services d'affaires complets dans le monde entier"
+  },
+  "Hero": {
+    "badge": {
+      "globalLocation": "Lubumbashi, RDC • Établi en 2021",
+      "usLocation": "Wyoming, États-Unis • Établi en 2022"
+    },
+    "headline": {
+      "part1": "Construire l'infrastructure",
+      "part2": "mondiale de demain"
+    },
+    "subheading": {
+      "global": "Transformer les industries grâce à la technologie, aux transports, à la finance et aux solutions industrielles durables à travers l'Afrique et au-delà.",
+      "us": "Stimuler l'innovation dans les secteurs de la technologie, de la finance et des investissements avec une expertise stratégique et une vision mondiale."
+    },
+    "stats": {
+      "sectors": "Secteurs d'activité",
+      "regions": "Régions mondiales",
+      "commitment": "Engagement"
+    }
+  },
+  "WhoWeAre": {
+    "title": "Qui nous sommes",
+    "subtitle": "Steedoo Group est une société holding multinationale qui autonomise les entreprises africaines en fournissant des stratégies innovantes et efficaces pour promouvoir la croissance et la durabilité dans tous les secteurs.",
+    "ourFoundation": "Notre fondement",
+    "foundationDescription1": "Construite sur une vision de transformation du paysage commercial africain, nous combinons l'expertise du marché local avec les meilleures pratiques mondiales pour offrir des résultats exceptionnels. Notre portefeuille diversifié couvre les secteurs de la technologie, de la finance, du transport et de l'industrie.",
+    "foundationDescription2": "Depuis nos sièges sociaux à Lubumbashi et Cheyenne, nous dirigeons des initiatives stratégiques qui créent une valeur durable pour nos partenaires, parties prenantes et les communautés que nous servons.",
+    "established": "Établi",
+    "establishedYear": "2021",
+    "headquarters": "Siège social",
+    "headquartersLocation": "Lubumbashi, RDC\\nCheyenne, USA",
+    "operating": "En activité",
+    "operatingRegions": "Afrique et\\nÉtats-Unis",
+    "portfolio": "Portefeuille",
+    "portfolioDescription": "Entreprises diverses\\net innovantes",
+    "mission": {
+      "title": "Notre mission",
+      "description": "Stimuler la croissance économique durable et l'innovation dans les marchés émergents grâce à des investissements stratégiques, des solutions technologiques de pointe et des services complets de développement des entreprises."
+    },
+    "vision": {
+      "title": "Notre vision",
+      "description": "Être le catalyseur leader de la transformation industrielle et du développement économique en Afrique, tout en construisant des ponts entre les marchés émergents et les opportunités mondiales."
+    }
+  },
+  "Services": {
+    "title": "Nos services",
+    "global": {
+      "corporateDevelopment": {
+        "title": "Développement d'entreprise",
+        "description": "Développement stratégique des affaires, stratégies d'entrée sur le marché et restructuration d'entreprise pour une croissance durable sur les marchés africains."
+      },
+      "investmentManagement": {
+        "title": "Gestion d'investissement",
+        "description": "Optimisation de portefeuille, capital-risque et investissements stratégiques dans des secteurs à forte croissance de la technologie et des marchés industriels."
+      },
+      "strategicConsulting": {
+        "title": "Conseil stratégique",
+        "description": "Conseil en gestion, excellence opérationnelle et stratégies de transformation adaptées aux environnements d'affaires africains."
+      },
+      "innovationAdvisory": {
+        "title": "Conseil en innovation",
+        "description": "Adoption de technologies, transformation numérique et développement de stratégies d'innovation pour les industries traditionnelles et émergentes."
+      },
+      "marketIntelligence": {
+        "title": "Intelligence de marché",
+        "description": "Recherche de marché complète, analyse concurrentielle et intelligence d'affaires pour une prise de décision éclairée."
+      },
+      "regulatoryCompliance": {
+        "title": "Conformité réglementaire",
+        "description": "Support complet de conformité réglementaire, assistance au licenciement et navigation du cadre juridique dans plusieurs juridictions."
+      }
+    },
+    "us": {
+      "financialAdvisory": {
+        "title": "Conseil financier",
+        "description": "Planification financière complète, gestion de patrimoine et services de conseil en investissement pour particuliers et entreprises."
+      },
+      "maAdvisory": {
+        "title": "Conseil en F&A",
+        "description": "Conseil en fusions et acquisitions, due diligence et conseil transactionnel pour des combinaisons d'entreprises stratégiques."
+      },
+      "internationalExpansion": {
+        "title": "Expansion internationale",
+        "description": "Orientation stratégique pour les entreprises américaines cherchant à s'étendre sur les marchés africains et les opportunités mondiales."
+      },
+      "technologySolutions": {
+        "title": "Solutions technologiques",
+        "description": "Implémentations technologiques personnalisées, transformation numérique et solutions de cybersécurité pour les entreprises modernes."
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "portfolio": "Portefeuille",
+    "industries": "Industries",
+    "contact": "Contact",
+    "research": "Recherche",
+    "legal": "Juridique",
+    "privacy": "Politique de confidentialité",
+    "terms": "Termes et conditions",
+    "codeOfConduct": "Code de conduite",
+    "antiCorruption": "Anti-corruption"
+  },
+  "About": {
+    "title": "À propos de Steedoo Group",
+    "subtitle": "Une corporation mondiale diversifiée stimulant l'innovation et la croissance durable dans plusieurs secteurs industriels en Afrique et au-delà.",
+    "companyOverview": "Aperçu de l'entreprise",
+    "overviewDescription": "Steedoo Group se dresse comme un phare d'innovation et d'excellence stratégique dans le paysage commercial mondial. Notre engagement à favoriser le développement durable dans les marchés émergents nous a positionnés comme un partenaire de confiance pour les organisations recherchant une croissance transformatrice.",
+    "ourApproach": "Notre approche",
+    "approachDescription": "Nous croyons au pouvoir des partenariats stratégiques et de l'innovation collaborative. Notre approche multidisciplinaire combine une connaissance approfondie de l'industrie avec une technologie de pointe pour offrir des solutions qui génèrent un impact mesurable.",
+    "globalPresence": "Présence mondiale",
+    "presenceDescription": "Avec des opérations couvrant deux continents, nous tirons parti de notre position unique pour établir des ponts entre les marchés africains et les investisseurs mondiaux, favorisant la collaboration transfrontalière et le développement durable."
+  },
+  "Industries": {
+    "title": "Industries que nous servons",
+    "subtitle": "Stimuler l'innovation dans divers secteurs avec une expertise stratégique et une vision mondiale.",
+    "finance": "Finance et banque",
+    "healthcare": "Santé",
+    "technology": "Technologie",
+    "manufacturing": "Fabrication",
+    "retail": "Commerce de détail et e-commerce",
+    "energy": "Énergie et ressources",
+    "transportation": "Transport",
+    "industrial": "Solutions industrielles"
+  },
+  "Portfolio": {
+    "title": "Notre portefeuille",
+    "subtitle": "Investissements stratégiques et entreprises dans les secteurs de la technologie, du transport, de la finance et de l'industrie.",
+    "technologyVentures": {
+      "title": "Entreprises technologiques",
+      "description": "Investissement dans des entreprises technologiques émergentes et des initiatives de transformation numérique."
+    },
+    "industrialProjects": {
+      "title": "Projets industriels",
+      "description": "Production, traitement et commercialisation de produits et matériaux industriels."
+    },
+    "strategicPartnerships": {
+      "title": "Partenariats stratégiques",
+      "description": "Entreprises collaboratives avec les leaders de l'industrie et les acteurs des marchés émergents."
+    }
+  },
+  "Contact": {
+    "title": "Prenez contact",
+    "subtitle": "Nous aimerions avoir de vos nouvelles",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "company": "Entreprise",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Merci pour votre message. Nous vous recontacterons bientôt !",
+      "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+    },
+    "info": {
+      "headquarters": "Siège social",
+      "email": "E-mail",
+      "phone": "Téléphone"
+    }
+  },
+  "Footer": {
+    "quickLinks": "Liens rapides",
+    "legalInfo": "Informations légales",
+    "followUs": "Suivez-nous",
+    "copyright": "© {year} Steedoo Group International. Tous droits réservés.",
+    "switchRegion": "Changer de région",
+    "global": "Mondial",
+    "us": "États-Unis"
+  },
+  "Buttons": {
+    "learnMore": "En savoir plus",
+    "getStarted": "Commencer",
+    "contactUs": "Nous contacter",
+    "viewPortfolio": "Voir le portefeuille",
+    "readMore": "Lire la suite"
+  },
+  "ResearchProcessing": {
+    "title": "Recherche et traitement",
+    "subtitle": "Méthodologies de recherche avancées et capacités de traitement de données",
+    "description": "Exploiter des techniques de recherche de pointe et des technologies de traitement pour fournir des informations exploitables pour la prise de décision stratégique."
+  },
+  "OurCompanies": {
+    "title": "Nos entreprises",
+    "subtitle": "Notre portefeuille diversifié d'entreprises innovantes transforme les industries et crée de la valeur durable à travers l'Afrique et au-delà.",
+    "comingSoon": "Plus d'entreprises arrivent bientôt"
+  },
+  "WhyChooseUs": {
+    "title": "Pourquoi nous choisir",
+    "subtitle": "Découvrez ce qui nous distingue en tant que partenaire de confiance pour votre réussite commerciale.",
+    "globalExperience": {
+      "title": "Expérience mondiale",
+      "description": "Plus de 3 ans d'expertise dans plusieurs continents et industries."
+    },
+    "localKnowledge": {
+      "title": "Connaissance locale",
+      "description": "Compréhension approfondie des marchés africains et des environnements d'affaires."
+    },
+    "innovativeSolutions": {
+      "title": "Solutions innovantes",
+      "description": "Technologies de pointe et approches créatives pour résoudre des défis complexes."
+    },
+    "provenResults": {
+      "title": "Résultats prouvés",
+      "description": "Historique de réussite dans la livraison de projets et la création de valeur."
+    },
+    "strategicPartnership": {
+      "title": "Partenariat stratégique",
+      "description": "Relations à long terme construites sur la confiance et le succès mutuel."
+    },
+    "comprehensiveSupport": {
+      "title": "Support complet",
+      "description": "Services de bout en bout de la conception à la mise en œuvre et au-delà."
+    }
+  },
+  "Common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "tryAgain": "Réessayer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "open": "Ouvrir"
+  }
+}

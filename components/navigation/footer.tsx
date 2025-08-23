@@ -4,8 +4,26 @@ import { useRegion } from '@/lib/context/region-context';
 import { company } from '@/data/company';
 import { ExternalLink } from 'lucide-react';
 
-export function Footer() {
+interface FooterProps {
+  dictionary?: Record<string, unknown>;
+}
+
+export function Footer({ dictionary }: FooterProps) {
   const { isUS } = useRegion();
+
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
   const entity = isUS ? company.us : company.global;
   const baseUrl = isUS ? '/us' : '';
   
@@ -36,27 +54,27 @@ export function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">{getValue('Footer.quickLinks') || 'Quick Links'}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href={`${baseUrl}/about`} className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                  {getValue('Navigation.about') || 'About Us'}
                 </Link>
               </li>
               <li>
                 <Link href={`${baseUrl}/industries`} className="text-muted-foreground hover:text-primary transition-colors">
-                  Industries
+                  {getValue('Navigation.industries') || 'Industries'}
                 </Link>
               </li>
               <li>
                 <Link href={`${baseUrl}/portfolio`} className="text-muted-foreground hover:text-primary transition-colors">
-                  Portfolio
+                  {getValue('Navigation.portfolio') || 'Portfolio'}
                 </Link>
               </li>
               {!isUS && (
                 <li>
                   <Link href="/research-processing" className="text-muted-foreground hover:text-primary transition-colors">
-                    Research & Processing
+                    {getValue('Navigation.research') || 'Research & Processing'}
                   </Link>
                 </li>
               )}
@@ -65,27 +83,27 @@ export function Footer() {
           
           {/* Legal */}
           <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
+            <h3 className="font-semibold mb-4">{getValue('Footer.legalInfo') || 'Legal Information'}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href={`${baseUrl}/legal/privacy`} className="text-muted-foreground hover:text-primary transition-colors">
-                  Privacy Policy
+                  {getValue('Navigation.privacy') || 'Privacy Policy'}
                 </Link>
               </li>
               <li>
                 <Link href={`${baseUrl}/legal/terms`} className="text-muted-foreground hover:text-primary transition-colors">
-                  Terms of Service
+                  {getValue('Navigation.terms') || 'Terms & Conditions'}
                 </Link>
               </li>
               <li>
                 <Link href={`${baseUrl}/legal/code-of-conduct`} className="text-muted-foreground hover:text-primary transition-colors">
-                  Code of Conduct
+                  {getValue('Navigation.codeOfConduct') || 'Code of Conduct'}
                 </Link>
               </li>
               {!isUS && (
                 <li>
                   <Link href={`${baseUrl}/legal/anti-corruption`} className="text-muted-foreground hover:text-primary transition-colors">
-                    Anti-Corruption Policy
+                    {getValue('Navigation.antiCorruption') || 'Anti-Corruption Policy'}
                   </Link>
                 </li>
               )}
@@ -94,7 +112,7 @@ export function Footer() {
           
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4">{getValue('Navigation.contact') || 'Contact'}</h3>
             <div className="space-y-3 text-sm text-muted-foreground">
               {!isUS ? (
                 <>
@@ -109,7 +127,7 @@ export function Footer() {
                 </>
               ) : (
                 <>
-                  <p className="font-medium">Headquarters:</p>
+                  <p className="font-medium">{getValue('Contact.info.headquarters') || 'Headquarters'}:</p>
                   <address className="not-italic">
                     {entity.address.street}<br />
                     {entity.address.city}, {entity.address.state} {entity.address.postalCode}<br />
@@ -132,7 +150,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} {entity.legalName}. All rights reserved.</p>
+            <p>{getValue('Footer.copyright')?.replace('{year}', new Date().getFullYear().toString()) || `© ${new Date().getFullYear()} ${entity.legalName}. All rights reserved.`}</p>
             <div className="flex items-center gap-4">
               <a 
                 href="https://www.dnb.com/business-directory/company-profiles.steedoo_group_sas.html"

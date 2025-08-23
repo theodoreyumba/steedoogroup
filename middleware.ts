@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { geolocation } from '@vercel/functions';
+import { match } from '@formatjs/intl-localematcher';
+import Negotiator from 'negotiator';
 
 // List of known bot user agents to exclude from geo-redirect
 const BOT_USER_AGENTS = [
@@ -20,6 +22,19 @@ const BOT_USER_AGENTS = [
   'pingdom',
   'uptimerobot',
 ];
+
+// Supported locales for global site
+const locales = ['en', 'fr'];
+const defaultLocale = 'en';
+
+function getLocale(request: NextRequest): string {
+  // Get Accept-Language header
+  const acceptLanguage = request.headers.get('accept-language') ?? undefined;
+  const headers = { 'accept-language': acceptLanguage };
+  const languages = new Negotiator({ headers }).languages();
+
+  return match(languages, locales, defaultLocale);
+}
 
 export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
@@ -99,6 +114,25 @@ export function middleware(request: NextRequest) {
       });
       
       return response;
+    }
+  }
+  
+  // Handle locale routing for global routes (not US routes)
+  if (!pathname.startsWith('/us')) {
+    // Check if there is any supported locale in the pathname
+    const pathnameHasLocale = locales.some(
+      (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    );
+
+    // Redirect if there is no locale
+    if (!pathnameHasLocale) {
+      const locale = getLocale(request);
+      
+      // Only add locale prefix if it's not the default locale
+      if (locale !== defaultLocale) {
+        request.nextUrl.pathname = `/${locale}${pathname}`;
+        return NextResponse.redirect(request.nextUrl);
+      }
     }
   }
   

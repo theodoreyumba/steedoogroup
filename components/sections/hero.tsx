@@ -6,9 +6,76 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useRegion } from '@/lib/context/region-context';
 
-export function HeroSection() {
+interface HeroSectionProps {
+  dictionary?: Record<string, unknown>;
+  lang?: string;
+}
+
+export function HeroSection({ dictionary }: HeroSectionProps) {
   const { isUS } = useRegion();
   const baseUrl = isUS ? '/us' : '';
+  
+  // Helper to safely get nested values
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
+
+  // Use translations if available, fallback to hardcoded text
+  const getBadgeText = () => {
+    const usLocation = getValue('Hero.badge.usLocation');
+    const globalLocation = getValue('Hero.badge.globalLocation');
+    if (usLocation && globalLocation) {
+      return isUS ? usLocation : globalLocation;
+    }
+    return isUS ? 'Wyoming, USA • Established 2022' : 'Lubumbashi, DRC • Established 2021';
+  };
+  
+  const getHeadline = () => {
+    const part1 = getValue('Hero.headline.part1');
+    const part2 = getValue('Hero.headline.part2');
+    if (part1 && part2) {
+      return { part1, part2 };
+    }
+    return {
+      part1: "Building Tomorrow's",
+      part2: "Global Infrastructure"
+    };
+  };
+  
+  const getSubheading = () => {
+    const us = getValue('Hero.subheading.us');
+    const global = getValue('Hero.subheading.global');
+    if (us && global) {
+      return isUS ? us : global;
+    }
+    return isUS 
+      ? 'Driving innovation across technology, finance, and investment sectors with strategic expertise and global vision.'
+      : 'Transforming industries through technology, transportation, finance, and sustainable industrial solutions across Africa and beyond.';
+  };
+  
+  const getStatsText = () => {
+    const sectors = getValue('Hero.stats.sectors');
+    const regions = getValue('Hero.stats.regions');
+    const commitment = getValue('Hero.stats.commitment');
+    if (sectors && regions && commitment) {
+      return { sectors, regions, commitment };
+    }
+    return {
+      sectors: 'Industry Sectors',
+      regions: 'Global Regions', 
+      commitment: 'Commitment'
+    };
+  };
   
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-primary-50 dark:from-slate-950 dark:via-slate-900 dark:to-primary-950">
@@ -44,7 +111,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium"
           >
             <Globe2 className="w-4 h-4" />
-            {isUS ? 'Wyoming, USA' : 'Lubumbashi, DRC'} • Established {isUS ? '2022' : '2021'}
+            {getBadgeText()}
           </motion.div>
           
           {/* Main Headline */}
@@ -55,11 +122,11 @@ export function HeroSection() {
             className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
           >
             <span className="bg-gradient-to-r from-slate-900 via-primary-600 to-primary-500 dark:from-white dark:via-primary-400 dark:to-primary-300 bg-clip-text text-transparent">
-              Building Tomorrow&apos;s
+              {getHeadline().part1}
             </span>
             <br />
             <span className="bg-gradient-to-r from-primary-600 to-slate-900 dark:from-primary-400 dark:to-white bg-clip-text text-transparent">
-              Global Infrastructure
+              {getHeadline().part2}
             </span>
           </motion.h1>
           
@@ -70,9 +137,7 @@ export function HeroSection() {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            {isUS 
-              ? 'Driving innovation across technology, finance, and investment sectors with strategic expertise and global vision.'
-              : 'Transforming industries through technology, transportation, finance, and sustainable industrial solutions across Africa and beyond.'}
+            {getSubheading()}
           </motion.p>
           
           {/* Stats */}
@@ -86,19 +151,19 @@ export function HeroSection() {
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">
                 {isUS ? '4+' : '5+'}
               </div>
-              <div className="text-sm text-muted-foreground">Industry Sectors</div>
+              <div className="text-sm text-muted-foreground">{getStatsText().sectors}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">
                 2
               </div>
-              <div className="text-sm text-muted-foreground">Global Regions</div>
+              <div className="text-sm text-muted-foreground">{getStatsText().regions}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">
                 100%
               </div>
-              <div className="text-sm text-muted-foreground">Compliant</div>
+              <div className="text-sm text-muted-foreground">{getStatsText().commitment}</div>
             </div>
           </motion.div>
           

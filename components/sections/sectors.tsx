@@ -26,10 +26,31 @@ interface Sector {
   href: string;
 }
 
+interface SectorsSectionProps {
+  dictionary?: Record<string, unknown>;
+}
+
+export function SectorsSection({ dictionary }: SectorsSectionProps) {
+  const { isUS } = useRegion();
+
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
+
 const globalSectors: Sector[] = [
   {
     id: 'technology',
-    title: 'Technology',
+    title: getValue('Industries.technology') || 'Technology',
     description: 'Digital transformation and innovation solutions for modern enterprises.',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
@@ -38,7 +59,7 @@ const globalSectors: Sector[] = [
   },
   {
     id: 'transportation',
-    title: 'Transportation',
+    title: getValue('Industries.transportation') || 'Transportation',
     description: 'Integrated logistics and mobility solutions across land, air, and sea.',
     icon: Truck,
     color: 'from-green-500 to-emerald-500',
@@ -47,7 +68,7 @@ const globalSectors: Sector[] = [
   },
   {
     id: 'finance',
-    title: 'Finance',
+    title: getValue('Industries.finance') || 'Finance',
     description: 'Strategic financial services and investment management expertise.',
     icon: TrendingUp,
     color: 'from-purple-500 to-pink-500',
@@ -65,7 +86,7 @@ const globalSectors: Sector[] = [
   },
   {
     id: 'industrial',
-    title: 'Industrial & Commercial',
+    title: getValue('Industries.industrial') || 'Industrial & Commercial',
     description: 'Production, processing, and commercialization of industrial products.',
     icon: Factory,
     color: 'from-slate-600 to-slate-800',
@@ -77,7 +98,7 @@ const globalSectors: Sector[] = [
 const usSectors: Sector[] = [
   {
     id: 'technology',
-    title: 'Technology',
+    title: getValue('Industries.technology') || 'Technology',
     description: 'Cutting-edge digital solutions and innovation consulting.',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
@@ -86,7 +107,7 @@ const usSectors: Sector[] = [
   },
   {
     id: 'finance',
-    title: 'Finance',
+    title: getValue('Industries.finance') || 'Finance',
     description: 'Comprehensive financial services and wealth management.',
     icon: TrendingUp,
     color: 'from-purple-500 to-pink-500',
@@ -113,8 +134,6 @@ const usSectors: Sector[] = [
   },
 ];
 
-export function SectorsSection() {
-  const { isUS } = useRegion();
   const sectors = isUS ? usSectors : globalSectors;
   
   return (
@@ -128,12 +147,12 @@ export function SectorsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our Industry Sectors
+            {getValue('Industries.title') || 'Industries We Serve'}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {isUS 
+            {getValue('Industries.subtitle') || (isUS 
               ? 'Strategic expertise across key business sectors'
-              : 'Comprehensive capabilities spanning production, research, and commercialization'}
+              : 'Comprehensive capabilities spanning production, research, and commercialization')}
           </p>
         </motion.div>
         

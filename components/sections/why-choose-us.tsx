@@ -15,8 +15,26 @@ import {
 } from 'lucide-react';
 import { useRegion } from '@/lib/context/region-context';
 
-export function WhyChooseUsSection() {
+interface WhyChooseUsSectionProps {
+  dictionary?: Record<string, unknown>;
+}
+
+export function WhyChooseUsSection({ dictionary }: WhyChooseUsSectionProps) {
   const { isUS } = useRegion();
+
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
   
   const globalReasons = [
     {
@@ -108,11 +126,13 @@ export function WhyChooseUsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Steedoo Group</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {getValue('WhyChooseUs.title') || 'Why Choose Steedoo Group'}
+          </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            {isUS 
+            {getValue('WhyChooseUs.subtitle') || (isUS 
               ? 'Our commitment to excellence, innovation, and client success makes us the ideal partner for your strategic objectives in the US market.'
-              : 'Our unique combination of local market knowledge, global expertise, and innovative solutions sets us apart as the premier choice for business transformation in Africa.'}
+              : 'Our unique combination of local market knowledge, global expertise, and innovative solutions sets us apart as the premier choice for business transformation in Africa.')}
           </p>
         </motion.div>
         

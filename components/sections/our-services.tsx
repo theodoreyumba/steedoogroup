@@ -15,44 +15,62 @@ import {
 } from 'lucide-react';
 import { useRegion } from '@/lib/context/region-context';
 
-export function OurServicesSection() {
+interface OurServicesSectionProps {
+  dictionary?: Record<string, unknown>;
+}
+
+export function OurServicesSection({ dictionary }: OurServicesSectionProps) {
   const { isUS } = useRegion();
+
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
   
   const globalServices = [
     {
       icon: Building2,
-      title: 'Corporate Development',
-      description: 'Strategic business development, market entry strategies, and corporate restructuring for sustainable growth across African markets.',
+      title: getValue('Services.global.corporateDevelopment.title') || 'Corporate Development',
+      description: getValue('Services.global.corporateDevelopment.description') || 'Strategic business development, market entry strategies, and corporate restructuring for sustainable growth across African markets.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: TrendingUp,
-      title: 'Investment Management',
-      description: 'Portfolio optimization, venture capital, and strategic investments in high-growth sectors across technology and industrial markets.',
+      title: getValue('Services.global.investmentManagement.title') || 'Investment Management',
+      description: getValue('Services.global.investmentManagement.description') || 'Portfolio optimization, venture capital, and strategic investments in high-growth sectors across technology and industrial markets.',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Users,
-      title: 'Strategic Consulting',
-      description: 'Management consulting, operational excellence, and transformation strategies tailored for African business environments.',
+      title: getValue('Services.global.strategicConsulting.title') || 'Strategic Consulting',
+      description: getValue('Services.global.strategicConsulting.description') || 'Management consulting, operational excellence, and transformation strategies tailored for African business environments.',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Lightbulb,
-      title: 'Innovation Advisory',
-      description: 'Technology adoption, digital transformation, and innovation strategy development for traditional and emerging industries.',
+      title: getValue('Services.global.innovationAdvisory.title') || 'Innovation Advisory',
+      description: getValue('Services.global.innovationAdvisory.description') || 'Technology adoption, digital transformation, and innovation strategy development for traditional and emerging industries.',
       color: 'from-amber-500 to-orange-500'
     },
     {
       icon: Target,
-      title: 'Market Intelligence',
-      description: 'Comprehensive market research, competitive analysis, and business intelligence for informed decision-making.',
+      title: getValue('Services.global.marketIntelligence.title') || 'Market Intelligence',
+      description: getValue('Services.global.marketIntelligence.description') || 'Comprehensive market research, competitive analysis, and business intelligence for informed decision-making.',
       color: 'from-red-500 to-rose-500'
     },
     {
       icon: Shield,
-      title: 'Regulatory Compliance',
-      description: 'Full regulatory compliance support, licensing assistance, and legal framework navigation across multiple jurisdictions.',
+      title: getValue('Services.global.regulatoryCompliance.title') || 'Regulatory Compliance',
+      description: getValue('Services.global.regulatoryCompliance.description') || 'Full regulatory compliance support, licensing assistance, and legal framework navigation across multiple jurisdictions.',
       color: 'from-slate-600 to-slate-800'
     }
   ];
@@ -60,39 +78,27 @@ export function OurServicesSection() {
   const usServices = [
     {
       icon: BarChart3,
-      title: 'Financial Advisory',
-      description: 'Comprehensive financial planning, wealth management, and investment advisory services for individuals and corporations.',
+      title: getValue('Services.us.financialAdvisory.title') || 'Financial Advisory',
+      description: getValue('Services.us.financialAdvisory.description') || 'Comprehensive financial planning, wealth management, and investment advisory services for individuals and corporations.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Handshake,
-      title: 'M&A Advisory',
-      description: 'Merger and acquisition consulting, due diligence, and transaction advisory for strategic business combinations.',
+      title: getValue('Services.us.maAdvisory.title') || 'M&A Advisory',
+      description: getValue('Services.us.maAdvisory.description') || 'Merger and acquisition consulting, due diligence, and transaction advisory for strategic business combinations.',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Globe,
-      title: 'International Expansion',
-      description: 'Strategic guidance for US companies looking to expand into African markets and global opportunities.',
+      title: getValue('Services.us.internationalExpansion.title') || 'International Expansion',
+      description: getValue('Services.us.internationalExpansion.description') || 'Strategic guidance for US companies looking to expand into African markets and global opportunities.',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Cog,
-      title: 'Technology Solutions',
-      description: 'Custom technology implementations, digital transformation, and cybersecurity solutions for modern enterprises.',
+      title: getValue('Services.us.technologySolutions.title') || 'Technology Solutions',
+      description: getValue('Services.us.technologySolutions.description') || 'Custom technology implementations, digital transformation, and cybersecurity solutions for modern enterprises.',
       color: 'from-amber-500 to-orange-500'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Strategy',
-      description: 'Strategic planning, market analysis, and growth acceleration programs for scaling businesses.',
-      color: 'from-red-500 to-rose-500'
-    },
-    {
-      icon: Users,
-      title: 'Executive Consulting',
-      description: 'C-suite advisory, leadership development, and organizational transformation consulting services.',
-      color: 'from-indigo-500 to-blue-600'
     }
   ];
   
@@ -108,7 +114,9 @@ export function OurServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {getValue('Services.title') || 'Our Services'}
+          </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
             {isUS 
               ? 'Comprehensive professional services designed to accelerate business growth and strategic success in the US market.'

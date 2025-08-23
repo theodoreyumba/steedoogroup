@@ -3,7 +3,24 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Banknote, Truck, Shirt } from 'lucide-react';
 
-export function OurCompaniesSection() {
+interface OurCompaniesSectionProps {
+  dictionary?: Record<string, unknown>;
+}
+
+export function OurCompaniesSection({ dictionary }: OurCompaniesSectionProps) {
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
   const companies = [
     {
       name: 'Juniaboss',
@@ -53,10 +70,11 @@ export function OurCompaniesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Companies</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {getValue('OurCompanies.title') || 'Our Companies'}
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our diverse portfolio of innovative companies is transforming industries 
-            and creating sustainable value across Africa and beyond.
+            {getValue('OurCompanies.subtitle') || 'Our diverse portfolio of innovative companies is transforming industries and creating sustainable value across Africa and beyond.'}
           </p>
         </motion.div>
         
@@ -102,7 +120,7 @@ export function OurCompaniesSection() {
                   {/* Learn More Button */}
                   <div className="mt-auto">
                     <button className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all duration-300">
-                      Learn More
+                      {getValue('Buttons.learnMore') || 'Learn More'}
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -125,7 +143,7 @@ export function OurCompaniesSection() {
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-100 to-primary-200 dark:from-primary-900/30 dark:to-primary-800/30 rounded-full">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-            <span className="text-primary font-medium">More companies coming soon</span>
+            <span className="text-primary font-medium">{getValue('OurCompanies.comingSoon') || 'More companies coming soon'}</span>
           </div>
         </motion.div>
       </div>

@@ -1,0 +1,232 @@
+{
+  "HomePage": {
+    "title": "Welcome to Steedoo Group International",
+    "subtitle": "Leading Global Business Solutions",
+    "description": "Your trusted partner for comprehensive business services worldwide"
+  },
+  "Hero": {
+    "badge": {
+      "globalLocation": "Lubumbashi, DRC • Established 2021",
+      "usLocation": "Wyoming, USA • Established 2022"
+    },
+    "headline": {
+      "part1": "Building Tomorrow's",
+      "part2": "Global Infrastructure"
+    },
+    "subheading": {
+      "global": "Transforming industries through technology, transportation, finance, and sustainable industrial solutions across Africa and beyond.",
+      "us": "Driving innovation across technology, finance, and investment sectors with strategic expertise and global vision."
+    },
+    "stats": {
+      "sectors": "Industry Sectors",
+      "regions": "Global Regions",
+      "commitment": "Commitment"
+    }
+  },
+  "WhoWeAre": {
+    "title": "Who We Are",
+    "subtitle": "Steedoo Group is a multinational holding company that empowers African businesses by providing innovative and effective strategies to promote growth and sustainability across industries.",
+    "ourFoundation": "Our Foundation",
+    "foundationDescription1": "Built on a vision of transforming the African business landscape, we combine local market expertise with global best practices to deliver exceptional results. Our diverse portfolio spans technology, finance, transportation, and industrial sectors.",
+    "foundationDescription2": "From our headquarters in Lubumbashi and Cheyenne, we drive strategic initiatives that create lasting value for our partners, stakeholders, and the communities we serve.",
+    "established": "Established",
+    "establishedYear": "2021",
+    "headquarters": "Headquarters",
+    "headquartersLocation": "Lubumbashi, DRC\nCheyenne, USA",
+    "operating": "Operating",
+    "operatingRegions": "Africa &\nUnited States",
+    "portfolio": "Portfolio",
+    "portfolioDescription": "Diverse\nInnovative Companies",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To drive sustainable economic growth and innovation across emerging markets through strategic investments, cutting-edge technology solutions, and comprehensive business development services."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading catalyst for industrial transformation and economic development in Africa, while building bridges between emerging markets and global opportunities."
+    }
+  },
+  "Services": {
+    "title": "Our Services",
+    "global": {
+      "corporateDevelopment": {
+        "title": "Corporate Development",
+        "description": "Strategic business development, market entry strategies, and corporate restructuring for sustainable growth across African markets."
+      },
+      "investmentManagement": {
+        "title": "Investment Management",
+        "description": "Portfolio optimization, venture capital, and strategic investments in high-growth sectors across technology and industrial markets."
+      },
+      "strategicConsulting": {
+        "title": "Strategic Consulting",
+        "description": "Management consulting, operational excellence, and transformation strategies tailored for African business environments."
+      },
+      "innovationAdvisory": {
+        "title": "Innovation Advisory",
+        "description": "Technology adoption, digital transformation, and innovation strategy development for traditional and emerging industries."
+      },
+      "marketIntelligence": {
+        "title": "Market Intelligence",
+        "description": "Comprehensive market research, competitive analysis, and business intelligence for informed decision-making."
+      },
+      "regulatoryCompliance": {
+        "title": "Regulatory Compliance",
+        "description": "Full regulatory compliance support, licensing assistance, and legal framework navigation across multiple jurisdictions."
+      }
+    },
+    "us": {
+      "financialAdvisory": {
+        "title": "Financial Advisory",
+        "description": "Comprehensive financial planning, wealth management, and investment advisory services for individuals and corporations."
+      },
+      "maAdvisory": {
+        "title": "M&A Advisory",
+        "description": "Merger and acquisition consulting, due diligence, and transaction advisory for strategic business combinations."
+      },
+      "internationalExpansion": {
+        "title": "International Expansion",
+        "description": "Strategic guidance for US companies looking to expand into African markets and global opportunities."
+      },
+      "technologySolutions": {
+        "title": "Technology Solutions",
+        "description": "Custom technology implementations, digital transformation, and cybersecurity solutions for modern enterprises."
+      }
+    }
+  },
+  "About": {
+    "title": "About Steedoo Group",
+    "subtitle": "A diversified global corporation driving innovation and sustainable growth across multiple industry sectors in Africa and beyond.",
+    "companyOverview": "Company Overview",
+    "overviewDescription": "Steedoo Group stands as a beacon of innovation and strategic excellence in the global business landscape. Our commitment to fostering sustainable development across emerging markets has positioned us as a trusted partner for organizations seeking transformative growth.",
+    "ourApproach": "Our Approach",
+    "approachDescription": "We believe in the power of strategic partnerships and collaborative innovation. Our multidisciplinary approach combines deep industry knowledge with cutting-edge technology to deliver solutions that drive measurable impact.",
+    "globalPresence": "Global Presence",
+    "presenceDescription": "With operations spanning two continents, we leverage our unique position to bridge opportunities between African markets and global investors, fostering cross-border collaboration and sustainable development."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "portfolio": "Portfolio",
+    "industries": "Industries",
+    "contact": "Contact",
+    "research": "Research",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "codeOfConduct": "Code of Conduct",
+    "antiCorruption": "Anti-Corruption"
+  },
+  "Industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Driving innovation across diverse sectors with strategic expertise and global vision.",
+    "finance": "Finance & Banking",
+    "healthcare": "Healthcare",
+    "technology": "Technology",
+    "manufacturing": "Manufacturing",
+    "retail": "Retail & E-commerce",
+    "energy": "Energy & Resources",
+    "transportation": "Transportation",
+    "industrial": "Industrial Solutions"
+  },
+  "Portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Strategic investments and ventures across technology, transportation, finance, and industrial sectors.",
+    "technologyVentures": {
+      "title": "Technology Ventures",
+      "description": "Investment in emerging technology companies and digital transformation initiatives."
+    },
+    "industrialProjects": {
+      "title": "Industrial Projects",
+      "description": "Production, processing, and commercialization of industrial products and materials."
+    },
+    "strategicPartnerships": {
+      "title": "Strategic Partnerships",
+      "description": "Collaborative ventures with industry leaders and emerging market players."
+    }
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you for your message. We'll get back to you soon!",
+      "error": "There was an error sending your message. Please try again."
+    },
+    "info": {
+      "headquarters": "Headquarters",
+      "email": "Email",
+      "phone": "Phone"
+    }
+  },
+  "ResearchProcessing": {
+    "title": "Research & Processing",
+    "subtitle": "Advanced research methodologies and data processing capabilities",
+    "description": "Leveraging cutting-edge research techniques and processing technologies to deliver actionable insights for strategic decision-making."
+  },
+  "Footer": {
+    "quickLinks": "Quick Links",
+    "legalInfo": "Legal Information",
+    "followUs": "Follow Us",
+    "copyright": "© {year} Steedoo Group International. All rights reserved.",
+    "switchRegion": "Switch Region",
+    "global": "Global",
+    "us": "United States"
+  },
+  "Buttons": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "viewPortfolio": "View Portfolio",
+    "readMore": "Read More"
+  },
+  "OurCompanies": {
+    "title": "Our Companies",
+    "subtitle": "Our diverse portfolio of innovative companies is transforming industries and creating sustainable value across Africa and beyond.",
+    "comingSoon": "More companies coming soon"
+  },
+  "WhyChooseUs": {
+    "title": "Why Choose Us",
+    "subtitle": "Discover what sets us apart as your trusted partner for business success.",
+    "globalExperience": {
+      "title": "Global Experience",
+      "description": "Over 3 years of expertise across multiple continents and industries."
+    },
+    "localKnowledge": {
+      "title": "Local Knowledge",
+      "description": "Deep understanding of African markets and business environments."
+    },
+    "innovativeSolutions": {
+      "title": "Innovative Solutions",
+      "description": "Cutting-edge technology and creative approaches to solve complex challenges."
+    },
+    "provenResults": {
+      "title": "Proven Results",
+      "description": "Track record of successful project delivery and value creation."
+    },
+    "strategicPartnership": {
+      "title": "Strategic Partnership",
+      "description": "Long-term relationships built on trust and mutual success."
+    },
+    "comprehensiveSupport": {
+      "title": "Comprehensive Support",
+      "description": "End-to-end services from conception to implementation and beyond."
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try Again",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open"
+  }
+}

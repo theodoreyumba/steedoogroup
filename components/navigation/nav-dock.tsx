@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Home, 
@@ -21,31 +21,21 @@ import { cn } from '@/lib/utils';
 import { useRegion } from '@/lib/context/region-context';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
+import { LanguageDropdown } from './language-dropdown';
+import { getDictionary, type Locale } from '@/lib/dictionaries-client';
 
 interface NavItem {
+  labelKey: string;
   label: string;
   href: string;
   icon: React.ElementType;
 }
 
-const globalNavItems: NavItem[] = [
-  { label: 'Home', href: '/', icon: Home },
-  { label: 'Industries', href: '/industries', icon: Factory },
-  { label: 'Portfolio', href: '/portfolio', icon: Briefcase },
-  { label: 'Research', href: '/research-processing', icon: Beaker },
-  { label: 'About', href: '/about', icon: Users },
-  { label: 'Contact', href: '/contact', icon: Mail },
-];
+interface NavDockProps {
+  dictionary?: Record<string, unknown>;
+}
 
-const usNavItems: NavItem[] = [
-  { label: 'Home', href: '/us', icon: Home },
-  { label: 'Industries', href: '/us/industries', icon: Factory },
-  { label: 'Portfolio', href: '/us/portfolio', icon: Briefcase },
-  { label: 'About', href: '/us/about', icon: Users },
-  { label: 'Contact', href: '/us/contact', icon: Mail },
-];
-
-export function NavDock() {
+export function NavDock({ dictionary }: NavDockProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,6 +43,37 @@ export function NavDock() {
   const pathname = usePathname();
   const { isUS, switchRegion } = useRegion();
   const { theme, setTheme } = useTheme();
+
+  const getValue = (path: string) => {
+    if (!dictionary) return null;
+    const keys = path.split('.');
+    let value: unknown = dictionary;
+    for (const key of keys) {
+      if (value && typeof value === 'object' && key in value) {
+        value = (value as Record<string, unknown>)[key];
+      } else {
+        return null;
+      }
+    }
+    return typeof value === 'string' ? value : null;
+  };
+
+  const globalNavItems: NavItem[] = [
+    { labelKey: 'Navigation.home', label: getValue('Navigation.home') || 'Home', href: '/', icon: Home },
+    { labelKey: 'Navigation.industries', label: getValue('Navigation.industries') || 'Industries', href: '/industries', icon: Factory },
+    { labelKey: 'Navigation.portfolio', label: getValue('Navigation.portfolio') || 'Portfolio', href: '/portfolio', icon: Briefcase },
+    { labelKey: 'Navigation.research', label: getValue('Navigation.research') || 'Research', href: '/research-processing', icon: Beaker },
+    { labelKey: 'Navigation.about', label: getValue('Navigation.about') || 'About', href: '/about', icon: Users },
+    { labelKey: 'Navigation.contact', label: getValue('Navigation.contact') || 'Contact', href: '/contact', icon: Mail },
+  ];
+
+  const usNavItems: NavItem[] = [
+    { labelKey: 'Navigation.home', label: getValue('Navigation.home') || 'Home', href: '/us', icon: Home },
+    { labelKey: 'Navigation.industries', label: getValue('Navigation.industries') || 'Industries', href: '/us/industries', icon: Factory },
+    { labelKey: 'Navigation.portfolio', label: getValue('Navigation.portfolio') || 'Portfolio', href: '/us/portfolio', icon: Briefcase },
+    { labelKey: 'Navigation.about', label: getValue('Navigation.about') || 'About', href: '/us/about', icon: Users },
+    { labelKey: 'Navigation.contact', label: getValue('Navigation.contact') || 'Contact', href: '/us/contact', icon: Mail },
+  ];
   
   const navItems = isUS ? usNavItems : globalNavItems;
   
@@ -80,10 +101,13 @@ export function NavDock() {
   }, [lastScrollY]);
   
   const isActive = (href: string) => {
+    // Remove locale prefix from pathname for comparison
+    const cleanPathname = pathname?.replace(/^\/fr/, '') || '/';
+    
     if (href === '/' || href === '/us') {
-      return pathname === href;
+      return cleanPathname === href || pathname === href;
     }
-    return pathname?.startsWith(href);
+    return cleanPathname?.startsWith(href) || pathname?.startsWith(href);
   };
   
   return (
@@ -134,6 +158,9 @@ export function NavDock() {
           
           <div className="w-px h-6 bg-border mx-0.5 sm:mx-1" />
           
+          {/* Language Dropdown - only show on global routes */}
+          <LanguageDropdown />
+          
           {/* Region Switcher */}
           <Button
             variant="ghost"
@@ -143,7 +170,7 @@ export function NavDock() {
           >
             <Globe className="w-4 h-4" />
             <span className="hidden md:inline ml-2">
-              {isUS ? 'Global' : 'US'}
+              {isUS ? (getValue('Footer.global') || 'Global') : 'US'}
             </span>
           </Button>
           
@@ -219,6 +246,9 @@ export function NavDock() {
                 <div className="h-px bg-border my-2" />
                 
                 <div className="flex gap-2">
+                  {/* Language Dropdown for mobile */}
+                  <LanguageDropdown showLabel={false} className="flex-1" />
+                  
                   <Button
                     variant="outline"
                     size="sm"
@@ -229,7 +259,10 @@ export function NavDock() {
                     className="flex-1"
                   >
                     <Globe className="w-4 h-4 mr-2" />
-                    {isUS ? 'Switch to Global' : 'Switch to US'}
+                    {isUS ? 
+                      `${getValue('Footer.switchRegion') || 'Switch Region'} - ${getValue('Footer.global') || 'Global'}` : 
+                      `${getValue('Footer.switchRegion') || 'Switch Region'} - US`
+                    }
                   </Button>
                   
                   <Button

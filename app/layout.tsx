@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 import { RegionProvider } from '@/lib/context/region-context';
+import { LocaleProvider } from '@/components/providers/locale-provider';
 import { StructuredData } from '@/components/structured-data';
 import './globals.css';
 
@@ -114,7 +115,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <RegionProvider>
-            {children}
+            <LocaleProvider>
+              {children}
+            </LocaleProvider>
           </RegionProvider>
         </ThemeProvider>
         <Analytics />

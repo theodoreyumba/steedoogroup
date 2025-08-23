@@ -23,13 +23,16 @@ export function RegionProvider({ children }: { children: ReactNode }) {
     let targetPath = currentPath;
     
     if (newRegion === 'us' && !currentPath.startsWith('/us')) {
-      targetPath = `/us${currentPath}`;
+      // Remove any locale prefix when switching to US (US is English only)
+      const pathWithoutLocale = currentPath.replace(/^\/fr/, '') || '/';
+      targetPath = `/us${pathWithoutLocale}`;
     } else if (newRegion === 'global' && currentPath.startsWith('/us')) {
       targetPath = currentPath.replace(/^\/us/, '') || '/';
     }
     
     // Use the set-region endpoint to switch regions
-    window.location.href = `/set-region?to=${newRegion}&return=${encodeURIComponent(targetPath.replace(/^\/us/, ''))}`;
+    const returnPath = targetPath.replace(/^\/us/, '');
+    window.location.href = `/set-region?to=${newRegion}&return=${encodeURIComponent(returnPath)}`;
   };
   
   return (
