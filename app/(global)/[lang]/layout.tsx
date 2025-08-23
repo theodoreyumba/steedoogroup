@@ -2,7 +2,7 @@ import { Locale, getDictionary } from '@/lib/dictionaries';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'fr' }];
+  return [{ lang: 'en' }, { lang: 'fr' }, { lang: 'sw' }, { lang: 'sw-CD' }, { lang: 'ln' }];
 }
 
 export default async function LocaleLayout({
@@ -14,7 +14,7 @@ export default async function LocaleLayout({
 }) {
   const { lang } = await params;
   
-  if (lang !== 'en' && lang !== 'fr') {
+  if (lang !== 'en' && lang !== 'fr' && lang !== 'sw' && lang !== 'sw-CD' && lang !== 'ln') {
     notFound();
   }
   

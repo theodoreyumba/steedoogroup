@@ -1,0 +1,362 @@
+{
+  "HomePage": {
+    "title": "Boyéyi malamu na Steedoo Group International",
+    "subtitle": "Bakambi ya misala ya mombongo na mokili mobimba",
+    "description": "Moninga na yo ya solo mpo na misala ya mombongo mobimba"
+  },
+  "Hero": {
+    "badge": {
+      "globalLocation": "Lubumbashi, RDC • Ebandaki 2021",
+      "usLocation": "Wyoming, USA • Ebandaki 2022"
+    },
+    "headline": {
+      "part1": "Totongaka Biloko ya",
+      "part2": "Lobi na Mokili Mobimba"
+    },
+    "subheading": {
+      "global": "Kobongola ba industries na nzela ya teknolozi, transport, mosolo, mpe ba solutions ya ba industries ya seko na Afrika mpe mosika.",
+      "us": "Kotambwisa ba innovations na ba secteurs ya teknolozi, mosolo, mpe investissement na mayele ya stratégie mpe vision ya mokili mobimba."
+    },
+    "stats": {
+      "sectors": "Ba Secteurs ya Industries",
+      "regions": "Ba Régions ya Mokili",
+      "commitment": "Engagement"
+    }
+  },
+  "WhoWeAre": {
+    "title": "Biso Nani",
+    "subtitle": "Steedoo Group ezali société multinationale oyo ezali kopesa makasi na ba entreprises ya Afrika na kopesa ba stratégies ya sika mpe ya malamu mpo na kokola mpe kozala seko na ba industries nionso.",
+    "ourFoundation": "Moboko na Biso",
+    "foundationDescription1": "Etongami na vision ya kobongola environnement ya mombongo ya Afrika, tosangisaka mayele ya zando ya mboka na ba pratiques ya malamu ya mokili mobimba mpo na kopesa ba résultats ya kokamwa. Portfolio na biso ya ndenge na ndenge ezali na teknolozi, mosolo, transport, mpe ba secteurs ya industries.",
+    "foundationDescription2": "Kobanda na ba sièges na biso ya Lubumbashi mpe Cheyenne, tozali kotambwisa ba initiatives stratégiques oyo ezali kosala valeur ya seko mpo na ba partenaires na biso, ba parties prenantes, mpe ba communautés oyo tozali kosalela.",
+    "established": "Ebandaki",
+    "establishedYear": "2021",
+    "headquarters": "Siège Principal",
+    "headquartersLocation": "Lubumbashi, RDC\nCheyenne, USA",
+    "operating": "Ezali Kosala",
+    "operatingRegions": "Afrika mpe\nÉtats-Unis",
+    "portfolio": "Portfolio",
+    "portfolioDescription": "Ba Sociétés\nya Ndenge na Ndenge",
+    "mission": {
+      "title": "Mission na Biso",
+      "description": "Kotambwisa bokoli ya ekonomi ya seko mpe innovation na ba marchés oyo ezali kokola na nzela ya ba investissements stratégiques, ba solutions teknolozi ya sika, mpe ba services ya développement ya mombongo mobimba."
+    },
+    "vision": {
+      "title": "Vision na Biso",
+      "description": "Kozala catalyseur principal ya transformation industrielle mpe développement économique na Afrika, wana tozali kotonga ba ponts kati ya ba marchés oyo ezali kokola mpe ba opportunités ya mokili mobimba."
+    }
+  },
+  "Services": {
+    "title": "Ba Services na Biso",
+    "global": {
+      "corporateDevelopment": {
+        "title": "Développement ya Société",
+        "description": "Développement stratégique ya mombongo, ba stratégies ya kokota na zando, mpe restructuration ya société mpo na bokoli ya seko na ba marchés ya Afrika."
+      },
+      "investmentManagement": {
+        "title": "Gestion ya Investissement",
+        "description": "Optimisation ya portfolio, capital-risque, mpe ba investissements stratégiques na ba secteurs ya bokoli makasi na teknolozi mpe ba marchés industriels."
+      },
+      "strategicConsulting": {
+        "title": "Conseil Stratégique",
+        "description": "Conseil ya gestion, excellence opérationnelle, mpe ba stratégies ya transformation oyo ebongisami mpo na ba environnements ya mombongo ya Afrika."
+      },
+      "innovationAdvisory": {
+        "title": "Conseil ya Innovation",
+        "description": "Adoption ya teknolozi, transformation numérique, mpe développement ya stratégie ya innovation mpo na ba industries ya kala mpe ya sika."
+      },
+      "marketIntelligence": {
+        "title": "Intelligence ya Zando",
+        "description": "Recherche ya zando mobimba, analyse ya concurrence, mpe intelligence ya mombongo mpo na kozwa ba décisions ya malamu."
+      },
+      "regulatoryCompliance": {
+        "title": "Conformité Réglementaire",
+        "description": "Lisungi mobimba ya conformité réglementaire, assistance ya licence, mpe navigation ya cadre juridique na ba juridictions ebele."
+      }
+    },
+    "us": {
+      "financialAdvisory": {
+        "title": "Conseil Financier",
+        "description": "Planification financière mobimba, gestion ya bozwi, mpe ba services ya conseil ya investissement mpo na bato mpe ba sociétés."
+      },
+      "maAdvisory": {
+        "title": "Conseil M&A",
+        "description": "Conseil ya fusion mpe acquisition, diligence raisonnable, mpe conseil ya transaction mpo na ba combinaisons ya mombongo stratégiques."
+      },
+      "internationalExpansion": {
+        "title": "Expansion Internationale",
+        "description": "Guidance stratégique mpo na ba sociétés ya États-Unis oyo ezali koluka kokola na ba marchés ya Afrika mpe ba opportunités ya mokili mobimba."
+      },
+      "technologySolutions": {
+        "title": "Ba Solutions Teknolozi",
+        "description": "Ba implementations teknolozi personnalisées, transformation numérique, mpe ba solutions ya cybersécurité mpo na ba entreprises ya lelo."
+      }
+    }
+  },
+  "About": {
+    "title": "Na Ntina ya Steedoo Group",
+    "subtitle": "Corporation mondiale diversifiée oyo ezali kotambwisa innovation mpe bokoli ya seko na ba secteurs industriels ebele na Afrika mpe mosika.",
+    "companyOverview": "Vue d'ensemble ya Société",
+    "overviewDescription": "Steedoo Group etelemi lokola mwinda ya innovation mpe excellence stratégique na paysage ya mombongo ya mokili mobimba. Engagement na biso ya kolendisa développement durable na ba marchés oyo ezali kokola esali ete tozala partenaire ya kozala na confiance mpo na ba organisations oyo ezali koluka bokoli ya transformation.",
+    "ourApproach": "Approche na Biso",
+    "approachDescription": "Tozali kondima na makasi ya ba partenariats stratégiques mpe innovation collaborative. Approche na biso multidisciplinaire esangisaka connaissance profonde ya industrie na teknolozi ya sika mpo na kopesa ba solutions oyo ezali kosala impact oyo ekoki komekama.",
+    "globalPresence": "Présence Mondiale",
+    "presenceDescription": "Na ba opérations oyo ezali kopanzana na ba continents mibale, tozali kosalela position na biso unique mpo na kotonga ba ponts kati ya ba marchés ya Afrika mpe ba investisseurs ya mokili mobimba, kolendisa collaboration transfrontalière mpe développement durable.",
+    "corporateRegistration": {
+      "title": "Enregistrement ya Société",
+      "legalName": "Kombo ya Mibeko:",
+      "rccm": "RCCM:",
+      "taxId": "ID ya Mpako:"
+    },
+    "headquarters": "Siège Principal",
+    "ourIndustrySectors": "Ba Secteurs na Biso ya Industries",
+    "coreCapabilities": "Ba Capacités Principales",
+    "licensedCompliantOperations": "Ba opérations na licence mpe oyo ezali kolanda mibeko",
+    "trustIndicators": {
+      "dnbListed": {
+        "title": "Listé na D&B",
+        "description": "Etaliami mpe elisté na répertoire ya mombongo ya Dun & Bradstreet"
+      },
+      "fullyCompliant": {
+        "title": "Conformité Mobimba",
+        "description": "Ezali kosala na ba licences nionso esengeli mpe ba approbations réglementaires"
+      },
+      "globalReach": {
+        "title": "Portée Mondiale",
+        "description": "Ba opérations oyo ezali kopanzana na Afrika mpe Amérique ya Nord"
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Ndako",
+    "about": "Na Ntina na Biso",
+    "portfolio": "Portfolio",
+    "industries": "Ba Industries",
+    "contact": "Kutana",
+    "research": "Recherche",
+    "legal": "Mibeko",
+    "privacy": "Politique ya Sekele",
+    "terms": "Ba Conditions",
+    "codeOfConduct": "Code ya Etamboli",
+    "antiCorruption": "Kobundisa Corruption"
+  },
+  "Industries": {
+    "title": "Ba Industries Oyo Tosalelaka",
+    "subtitle": "Kotambwisa innovation na ba secteurs ndenge na ndenge na expertise stratégique mpe vision ya mokili mobimba.",
+    "technology": "Teknolozi",
+    "technologyDescription": "Ba solutions ya transformation numérique, développement ya logiciel, mpe infrastructure teknolozi mpo na ba entreprises modernes na Afrika mobimba.",
+    "technologyServices": {
+      "softwareDevelopment": "Développement ya Logiciel",
+      "digitalInfrastructure": "Infrastructure Numérique",
+      "technologyConsulting": "Conseil Teknolozi"
+    },
+    "transportation": "Transport",
+    "transportationDescription": "Ba solutions intégrées ya logistique mpe mobilité oyo ezali kokangisa ba communautés mpe ba entreprises na nzela ya ba réseaux ya transport ya mabele, mpepo mpe mai.",
+    "transportationServices": {
+      "logisticsManagement": "Gestion ya Logistique",
+      "fleetOperations": "Opérations ya Flotte",
+      "supplyChain": "Ba Solutions ya Chaîne d'Approvisionnement"
+    },
+    "finance": "Mosolo",
+    "financeDescription": "Ba services financiers stratégiques mpe ba solutions bancaires oyo ezali kosoutenir bokoli économique mpe inclusion financière na ba marchés oyo ezali kokola.",
+    "financeServices": {
+      "financialServices": "Ba Services Financiers",
+      "bankingSolutions": "Ba Solutions Bancaires",
+      "financialAdvisory": "Conseil Financier"
+    },
+    "investment": "Investissement",
+    "investmentDescription": "Gestion ya portfolio stratégique mpe ba opportunités ya capital-risque, kotambwisa développement économique mpe ba initiatives ya bokoli ya mombongo.",
+    "investmentServices": {
+      "portfolioManagement": "Gestion ya Portfolio",
+      "ventureCapital": "Capital-Risque",
+      "strategicInvestments": "Ba Investissements Stratégiques"
+    },
+    "industrial": "Industriel mpe Commercial",
+    "industrialDescription": "Production, traitement, transformation, mpe commercialisation ya ba produits mpe ba substances industrielles na conformité réglementaire mobimba.",
+    "industrialServices": {
+      "manufacturing": "Fabrication mpe Production",
+      "processing": "Traitement mpe Transformation",
+      "distribution": "Distribution Commerciale"
+    },
+    "licensedCapabilities": "Ba Capacités na Licence",
+    "licensedCapabilitiesDescription": "Ezali kosala na se ya RCCM: CD/LSH/RCCM/21-B-00576 na licence mobimba mpo na ba activités nionso réglementées.",
+    "capabilities": {
+      "production": "Production",
+      "research": "Recherche",
+      "exploitation": "Exploitation",
+      "processing": "Traitement",
+      "transformation": "Transformation",
+      "commercialization": "Commercialisation"
+    },
+    "healthcare": "Santé",
+    "manufacturing": "Fabrication",
+    "retail": "Commerce mpe E-commerce",
+    "energy": "Énergie mpe Ba Ressources"
+  },
+  "Portfolio": {
+    "title": "Portfolio na Biso",
+    "subtitle": "Ba investissements stratégiques mpe ba ventures na ba secteurs ya teknolozi, transport, mosolo, mpe industries.",
+    "technologyVentures": {
+      "title": "Ba Ventures Teknolozi",
+      "description": "Investissement na ba sociétés teknolozi oyo ezali kokola mpe ba initiatives ya transformation numérique."
+    },
+    "industrialProjects": {
+      "title": "Ba Projets Industriels",
+      "description": "Production, traitement, mpe commercialisation ya ba produits mpe ba matériaux industriels."
+    },
+    "strategicPartnerships": {
+      "title": "Ba Partenariats Stratégiques",
+      "description": "Ba ventures collaboratives na ba leaders ya industrie mpe ba joueurs ya marchés oyo ezali kokola."
+    }
+  },
+  "Contact": {
+    "title": "Kutana na Biso",
+    "subtitle": "Tolingi koyoka yo",
+    "form": {
+      "title": "Tindela Biso Message",
+      "fullName": "Kombo Mobimba",
+      "firstName": "Kombo ya Liboso",
+      "lastName": "Kombo ya Libota",
+      "email": "Adresse Email",
+      "emailAddress": "Adresse Email",
+      "phone": "Numéro ya Téléphone",
+      "company": "Société",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Tinda Message",
+      "submitting": "Ezali kotinda...",
+      "success": "Matondo mpo na message na yo. Tokozongisela yo eyano kala mingi te!",
+      "error": "Ezalaki na problème ya kotinda message na yo. Meka lisusu.",
+      "placeholders": {
+        "fullName": "Mbote Mpweto",
+        "email": "mbote@exemple.com",
+        "company": "Société Acme",
+        "message": "Yebisa biso na ntina ya demande na yo..."
+      },
+      "subjects": {
+        "select": "Pona sujet",
+        "general": "Demande Générale",
+        "partnership": "Opportunité ya Partenariat",
+        "investment": "Demande ya Investissement",
+        "technology": "Ba Services Teknolozi",
+        "other": "Mosusu"
+      },
+      "required": "*",
+      "validation": {
+        "nameRequired": "Kombo esengeli",
+        "emailRequired": "Email esengeli",
+        "emailInvalid": "Kotisa email ya malamu",
+        "subjectRequired": "Sujet esengeli",
+        "messageRequired": "Message esengeli"
+      }
+    },
+    "info": {
+      "headquarters": "Siège Principal",
+      "email": "Email",
+      "phone": "Téléphone",
+      "getInTouch": "Kutana na Biso",
+      "description": "Soki ozali na intérêt na ba services na biso, ozali koluka ba opportunités ya partenariat, to ozali na ba questions générales, tolingi koyoka yo."
+    },
+    "businessHours": {
+      "title": "Ba Heures ya Mosala",
+      "weekdays": "Lundi - Vendredi",
+      "weekdaysHours": "8:00 AM - 6:00 PM CAT",
+      "saturday": "Samedi",
+      "saturdayHours": "9:00 AM - 1:00 PM CAT",
+      "sunday": "Dimanche",
+      "sundayHours": "Ekangami"
+    },
+    "businessInfo": {
+      "title": "Ba Informations ya Mombongo",
+      "rccm": "RCCM:",
+      "taxId": "ID ya Mpako:",
+      "principal": "Principal:"
+    },
+    "location": {
+      "city": "Lubumbashi, Province ya Haut-Katanga",
+      "country": "République Démocratique ya Congo"
+    }
+  },
+  "ResearchProcessing": {
+    "title": "Recherche mpe Traitement",
+    "subtitle": "Ba capacités mobimba na production, recherche, exploitation, traitement, transformation, mpe commercialisation ya ba produits mpe ba substances.",
+    "description": "Kosalela ba techniques ya recherche ya sika mpe ba technologies ya traitement mpo na kopesa ba insights oyo ekoki kosalelama mpo na kozwa ba décisions stratégiques.",
+    "capabilities": {
+      "production": "Production",
+      "research": "Recherche",
+      "exploitation": "Exploitation",
+      "processing": "Traitement",
+      "transformation": "Transformation",
+      "commercialization": "Commercialisation"
+    },
+    "capabilityDescription": "Ba opérations na licence mpe oyo ezali kolanda mibeko na approbation réglementaire mobimba.",
+    "regulatory": {
+      "title": "Conformité Réglementaire",
+      "description1": "Ezali kosala na se ya RCCM: CD/LSH/RCCM/21-B-00576 na licence mobimba mpo na ba activités nionso oyo ezali na production, recherche, exploitation, traitement, transformation, mpe commercialisation ya ba produits mpe ba substances.",
+      "description2": "Ba opérations na biso ezali kobatela makasi ba normes ya environnement, sécurité, mpe qualité na ba secteurs nionso."
+    }
+  },
+  "Footer": {
+    "quickLinks": "Ba Liens ya Mbangu",
+    "legalInfo": "Ba Informations Juridiques",
+    "followUs": "Landa Biso",
+    "copyright": "© {year} Steedoo Group International. Ba droits nionso ebatelami.",
+    "switchRegion": "Bongola Région",
+    "global": "Mokili Mobimba",
+    "us": "États-Unis"
+  },
+  "Buttons": {
+    "learnMore": "Yekola Mingi",
+    "getStarted": "Banda",
+    "contactUs": "Kutana na Biso",
+    "viewPortfolio": "Tala Portfolio",
+    "readMore": "Tanga Mingi"
+  },
+  "OurCompanies": {
+    "title": "Ba Sociétés na Biso",
+    "subtitle": "Portfolio na biso ya ba sociétés innovantes ezali kobongola ba industries mpe kosala valeur durable na Afrika mobimba mpe mosika.",
+    "comingSoon": "Ba sociétés mosusu ezali koya kala mingi te"
+  },
+  "WhyChooseUs": {
+    "title": "Mpo na Nini Opona Biso",
+    "subtitle": "Mona oyo esali ete tozala ndenge mosusu lokola partenaire na yo ya kozala na confiance mpo na succès ya mombongo.",
+    "globalExperience": {
+      "title": "Expérience Mondiale",
+      "description": "Koleka ba mbula 3 ya expertise na ba continents mpe ba industries ebele."
+    },
+    "localKnowledge": {
+      "title": "Connaissance Locale",
+      "description": "Compréhension profonde ya ba marchés ya Afrika mpe ba environnements ya mombongo."
+    },
+    "innovativeSolutions": {
+      "title": "Ba Solutions Innovantes",
+      "description": "Teknolozi ya sika mpe ba approches créatives mpo na kosilisa ba défis difficiles."
+    },
+    "provenResults": {
+      "title": "Ba Résultats Prouvés",
+      "description": "Historique ya succès na livraison ya ba projets mpe création ya valeur."
+    },
+    "strategicPartnership": {
+      "title": "Partenariat Stratégique",
+      "description": "Ba relations ya tango molai oyo etongami na confiance mpe succès mutuel."
+    },
+    "comprehensiveSupport": {
+      "title": "Support Complet",
+      "description": "Ba services ya ebandeli tii na suka kobanda na conception tii na implémentation mpe mosika."
+    }
+  },
+  "Leadership": {
+    "title": "Équipe ya Leadership",
+    "subtitle": "Kutana na ba professionnels expérimentés oyo bazali kotambwisa vision mpe bokoli na biso"
+  },
+  "Common": {
+    "loading": "Ezali kozela...",
+    "error": "Erreur moko esalemi",
+    "tryAgain": "Meka Lisusu",
+    "back": "Zonga",
+    "next": "Oyo Elandi",
+    "previous": "Oyo Eleki",
+    "close": "Kanga",
+    "open": "Fungola"
+  }
+}

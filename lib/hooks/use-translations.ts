@@ -12,7 +12,10 @@ export function useTranslations() {
   const [loading, setLoading] = useState(true);
   
   // Determine current locale from pathname
-  const currentLocale: Locale = pathname.startsWith('/fr') ? 'fr' : 'en';
+  const currentLocale: Locale = pathname.startsWith('/fr') ? 'fr' : 
+                                pathname.startsWith('/sw-CD') ? 'sw-CD' : 
+                                pathname.startsWith('/sw') ? 'sw' : 
+                                pathname.startsWith('/ln') ? 'ln' : 'en';
   
   useEffect(() => {
     async function loadTranslations() {

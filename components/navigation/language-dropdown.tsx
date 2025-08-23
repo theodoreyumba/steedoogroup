@@ -11,6 +11,9 @@ import { setPreferredLanguage, type Locale } from '@/lib/language-cookie';
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'sw', name: 'Kiswahili', flag: '🇹🇿' },
+  { code: 'sw-CD', name: 'Kiswahili (DRC)', flag: '🇨🇩' },
+  { code: 'ln', name: 'Lingala', flag: '🇨🇩' },
 ];
 
 interface LanguageDropdownProps {
@@ -24,7 +27,10 @@ export function LanguageDropdown({ className, showLabel = true }: LanguageDropdo
   const dropdownRef = useRef<HTMLDivElement>(null);
   
   // Determine current locale from pathname
-  const currentLocale = pathname.startsWith('/fr') ? 'fr' : 'en';
+  const currentLocale = pathname.startsWith('/fr') ? 'fr' : 
+                       pathname.startsWith('/sw-CD') ? 'sw-CD' : 
+                       pathname.startsWith('/sw') ? 'sw' : 
+                       pathname.startsWith('/ln') ? 'ln' : 'en';
   const currentLanguage = languages.find(lang => lang.code === currentLocale) || languages[0];
   
   // Don't show language dropdown on US routes
@@ -51,7 +57,7 @@ export function LanguageDropdown({ className, showLabel = true }: LanguageDropdo
     }
 
     // Validate and cast the locale
-    if (!['en', 'fr'].includes(newLocale)) {
+    if (!['en', 'fr', 'sw', 'sw-CD', 'ln'].includes(newLocale)) {
       setIsOpen(false);
       return;
     }
@@ -64,11 +70,62 @@ export function LanguageDropdown({ className, showLabel = true }: LanguageDropdo
     let newPath: string;
     
     if (locale === 'en') {
-      // For English, remove /fr prefix if present
-      newPath = pathname.startsWith('/fr') ? pathname.replace('/fr', '') || '/' : pathname;
+      // For English, remove locale prefix if present
+      if (pathname.startsWith('/fr')) {
+        newPath = pathname.replace('/fr', '') || '/';
+      } else if (pathname.startsWith('/sw-CD')) {
+        newPath = pathname.replace('/sw-CD', '') || '/';
+      } else if (pathname.startsWith('/sw')) {
+        newPath = pathname.replace('/sw', '') || '/';
+      } else if (pathname.startsWith('/ln')) {
+        newPath = pathname.replace('/ln', '') || '/';
+      } else {
+        newPath = pathname;
+      }
     } else if (locale === 'fr') {
       // For French, add /fr prefix if not already present
-      newPath = pathname.startsWith('/fr') ? pathname : `/fr${pathname}`;
+      let cleanPath = pathname;
+      if (pathname.startsWith('/sw-CD')) {
+        cleanPath = pathname.replace('/sw-CD', '') || '/';
+      } else if (pathname.startsWith('/sw')) {
+        cleanPath = pathname.replace('/sw', '') || '/';
+      } else if (pathname.startsWith('/ln')) {
+        cleanPath = pathname.replace('/ln', '') || '/';
+      }
+      newPath = pathname.startsWith('/fr') ? pathname : `/fr${cleanPath}`;
+    } else if (locale === 'sw') {
+      // For Swahili, add /sw prefix if not already present
+      let cleanPath = pathname;
+      if (pathname.startsWith('/fr')) {
+        cleanPath = pathname.replace('/fr', '') || '/';
+      } else if (pathname.startsWith('/sw-CD')) {
+        cleanPath = pathname.replace('/sw-CD', '') || '/';
+      } else if (pathname.startsWith('/ln')) {
+        cleanPath = pathname.replace('/ln', '') || '/';
+      }
+      newPath = pathname.startsWith('/sw') && !pathname.startsWith('/sw-CD') ? pathname : `/sw${cleanPath}`;
+    } else if (locale === 'sw-CD') {
+      // For Swahili-DRC, add /sw-CD prefix if not already present
+      let cleanPath = pathname;
+      if (pathname.startsWith('/fr')) {
+        cleanPath = pathname.replace('/fr', '') || '/';
+      } else if (pathname.startsWith('/sw') && !pathname.startsWith('/sw-CD')) {
+        cleanPath = pathname.replace('/sw', '') || '/';
+      } else if (pathname.startsWith('/ln')) {
+        cleanPath = pathname.replace('/ln', '') || '/';
+      }
+      newPath = pathname.startsWith('/sw-CD') ? pathname : `/sw-CD${cleanPath}`;
+    } else if (locale === 'ln') {
+      // For Lingala, add /ln prefix if not already present
+      let cleanPath = pathname;
+      if (pathname.startsWith('/fr')) {
+        cleanPath = pathname.replace('/fr', '') || '/';
+      } else if (pathname.startsWith('/sw-CD')) {
+        cleanPath = pathname.replace('/sw-CD', '') || '/';
+      } else if (pathname.startsWith('/sw')) {
+        cleanPath = pathname.replace('/sw', '') || '/';
+      }
+      newPath = pathname.startsWith('/ln') ? pathname : `/ln${cleanPath}`;
     } else {
       setIsOpen(false);
       return;

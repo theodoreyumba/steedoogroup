@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie';
 
-export type Locale = 'en' | 'fr';
+export type Locale = 'en' | 'fr' | 'sw' | 'sw-CD' | 'ln';
 
 const LANGUAGE_COOKIE_NAME = 'preferred-language';
 const COOKIE_EXPIRES_DAYS = 365;
@@ -10,7 +10,7 @@ const COOKIE_EXPIRES_DAYS = 365;
  */
 export function getPreferredLanguage(): Locale | null {
   const language = Cookies.get(LANGUAGE_COOKIE_NAME) as Locale;
-  return language && ['en', 'fr'].includes(language) ? language : null;
+  return language && ['en', 'fr', 'sw', 'sw-CD', 'ln'].includes(language) ? language : null;
 }
 
 /**
@@ -40,6 +40,15 @@ export function getDefaultLanguage(): Locale {
     if (browserLanguage.startsWith('fr')) {
       return 'fr';
     }
+    if (browserLanguage === 'sw-cd') {
+      return 'sw-CD';
+    }
+    if (browserLanguage.startsWith('sw')) {
+      return 'sw';
+    }
+    if (browserLanguage.startsWith('ln')) {
+      return 'ln';
+    }
   }
   return 'en';
 }
@@ -50,6 +59,15 @@ export function getDefaultLanguage(): Locale {
 export function getCurrentLanguageFromPath(pathname: string): Locale {
   if (pathname.startsWith('/fr')) {
     return 'fr';
+  }
+  if (pathname.startsWith('/sw-CD')) {
+    return 'sw-CD';
+  }
+  if (pathname.startsWith('/sw')) {
+    return 'sw';
+  }
+  if (pathname.startsWith('/ln')) {
+    return 'ln';
   }
   return 'en';
 }

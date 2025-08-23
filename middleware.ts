@@ -24,7 +24,7 @@ const BOT_USER_AGENTS = [
 ];
 
 // Supported locales for global site
-const locales = ['en', 'fr'];
+const locales = ['en', 'fr', 'sw', 'sw-CD', 'ln'];
 const defaultLocale = 'en';
 
 function getLocale(request: NextRequest): string {

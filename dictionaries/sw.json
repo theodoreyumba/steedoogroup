@@ -1,0 +1,362 @@
+{
+  "HomePage": {
+    "title": "Karibu Steedoo Group International",
+    "subtitle": "Viongozi wa Suluhisho za Biashara Kimataifa",
+    "description": "Mshirika wako wa kuaminika kwa huduma kamili za biashara duniani kote"
+  },
+  "Hero": {
+    "badge": {
+      "globalLocation": "Lubumbashi, DRC • Ilianzishwa 2021",
+      "usLocation": "Wyoming, USA • Ilianzishwa 2022"
+    },
+    "headline": {
+      "part1": "Tunajenga Miundombinu",
+      "part2": "ya Kesho ya Kimataifa"
+    },
+    "subheading": {
+      "global": "Kubadilisha viwanda kupitia teknolojia, usafirishaji, fedha, na suluhisho endelevu za viwanda katika Afrika na zaidi.",
+      "us": "Kuendesha uvumbuzi katika sekta za teknolojia, fedha, na uwekezaji kwa utaalamu wa kimkakati na mwono wa kimataifa."
+    },
+    "stats": {
+      "sectors": "Sekta za Viwanda",
+      "regions": "Mikoa ya Kimataifa",
+      "commitment": "Dhamira"
+    }
+  },
+  "WhoWeAre": {
+    "title": "Sisi ni Nani",
+    "subtitle": "Steedoo Group ni kampuni ya kimataifa inayowezesha biashara za Kiafrika kwa kutoa mikakati ya ubunifu na madhubuti ya kukuza ukuaji na uendelevu katika sekta zote.",
+    "ourFoundation": "Msingi Wetu",
+    "foundationDescription1": "Imejengwa juu ya maono ya kubadilisha mazingira ya biashara ya Afrika, tunachanganya utaalamu wa soko la ndani na mbinu bora za kimataifa kutoa matokeo ya kipekee. Kwingineko yetu tofauti inajumuisha teknolojia, fedha, usafirishaji, na sekta za viwanda.",
+    "foundationDescription2": "Kutoka makao yetu makuu ya Lubumbashi na Cheyenne, tunaendesha mikakati ya kimkakati inayounda thamani ya kudumu kwa washirika wetu, wadau, na jamii tunazozihudumia.",
+    "established": "Ilianzishwa",
+    "establishedYear": "2021",
+    "headquarters": "Makao Makuu",
+    "headquartersLocation": "Lubumbashi, DRC\nCheyenne, USA",
+    "operating": "Inafanya Kazi",
+    "operatingRegions": "Afrika na\nMarekani",
+    "portfolio": "Kwingineko",
+    "portfolioDescription": "Makampuni Tofauti\nya Ubunifu",
+    "mission": {
+      "title": "Dhumuni Letu",
+      "description": "Kuendesha ukuaji endelevu wa kiuchumi na uvumbuzi katika masoko yanayochipuka kupitia uwekezaji wa kimkakati, suluhisho za teknolojia za kisasa, na huduma kamili za maendeleo ya biashara."
+    },
+    "vision": {
+      "title": "Maono Yetu",
+      "description": "Kuwa kichocheo kikuu cha mabadiliko ya viwanda na maendeleo ya kiuchumi Afrika, huku tukijenga madaraja kati ya masoko yanayochipuka na fursa za kimataifa."
+    }
+  },
+  "Services": {
+    "title": "Huduma Zetu",
+    "global": {
+      "corporateDevelopment": {
+        "title": "Maendeleo ya Ushirika",
+        "description": "Maendeleo ya biashara ya kimkakati, mikakati ya kuingia sokoni, na uundaji upya wa ushirika kwa ukuaji endelevu katika masoko ya Afrika."
+      },
+      "investmentManagement": {
+        "title": "Usimamizi wa Uwekezaji",
+        "description": "Uboreshaji wa kwingineko, mtaji wa kuhatarisha, na uwekezaji wa kimkakati katika sekta za ukuaji mkubwa katika teknolojia na masoko ya viwanda."
+      },
+      "strategicConsulting": {
+        "title": "Ushauri wa Kimkakati",
+        "description": "Ushauri wa uongozi, ubora wa uendeshaji, na mikakati ya mabadiliko iliyotengezwa kwa mazingira ya biashara ya Afrika."
+      },
+      "innovationAdvisory": {
+        "title": "Ushauri wa Uvumbuzi",
+        "description": "Kutwaa teknolojia, mabadiliko ya kidijitali, na maendeleo ya mkakati wa uvumbuzi kwa viwanda vya jadi na vinavyochipuka."
+      },
+      "marketIntelligence": {
+        "title": "Akili ya Soko",
+        "description": "Utafiti kamili wa soko, uchambuzi wa ushindani, na akili ya biashara kwa kufanya maamuzi sahihi."
+      },
+      "regulatoryCompliance": {
+        "title": "Uzingatiaji wa Kanuni",
+        "description": "Msaada kamili wa uzingatiaji wa kanuni, msaada wa leseni, na uongozi wa mfumo wa kisheria katika mamlaka nyingi."
+      }
+    },
+    "us": {
+      "financialAdvisory": {
+        "title": "Ushauri wa Kifedha",
+        "description": "Mipango kamili ya kifedha, usimamizi wa mali, na huduma za ushauri wa uwekezaji kwa watu binafsi na mashirika."
+      },
+      "maAdvisory": {
+        "title": "Ushauri wa M&A",
+        "description": "Ushauri wa muunganiko na ununuzi, ukaguzi makini, na ushauri wa miamala kwa mchanganuo wa biashara ya kimkakati."
+      },
+      "internationalExpansion": {
+        "title": "Upanuzi wa Kimataifa",
+        "description": "Mwongozo wa kimkakati kwa makampuni ya Marekani yanayotafuta kupanua katika masoko ya Afrika na fursa za kimataifa."
+      },
+      "technologySolutions": {
+        "title": "Suluhisho za Teknolojia",
+        "description": "Utekelezaji wa teknolojia maalum, mabadiliko ya kidijitali, na suluhisho za usalama wa mtandao kwa biashara za kisasa."
+      }
+    }
+  },
+  "About": {
+    "title": "Kuhusu Steedoo Group",
+    "subtitle": "Shirika la kimataifa lenye tofauti linaloongoza uvumbuzi na ukuaji endelevu katika sekta nyingi za viwanda Afrika na zaidi.",
+    "companyOverview": "Muhtasari wa Kampuni",
+    "overviewDescription": "Steedoo Group inasimama kama mwanga wa uvumbuzi na ubora wa kimkakati katika mazingira ya biashara ya kimataifa. Dhamira yetu ya kukuza maendeleo endelevu katika masoko yanayochipuka imetuweka kama mshirika wa kuaminika kwa mashirika yanayotafuta ukuaji wa mabadiliko.",
+    "ourApproach": "Mkabala Wetu",
+    "approachDescription": "Tunaamini katika nguvu ya ushirikiano wa kimkakati na uvumbuzi wa ushirikiano. Mkabala wetu wa taaluma nyingi unachanganya ujuzi wa kina wa viwanda na teknolojia ya kisasa kutoa suluhisho zinazosababisha athari zinazoweza kupimwa.",
+    "globalPresence": "Uwepo wa Kimataifa",
+    "presenceDescription": "Na shughuli zinazoenea mabara mawili, tunatumia nafasi yetu ya kipekee kujenga madaraja kati ya masoko ya Afrika na wawekezaji wa kimataifa, kukuza ushirikiano wa kuvuka mipaka na maendeleo endelevu.",
+    "corporateRegistration": {
+      "title": "Usajili wa Ushirika",
+      "legalName": "Jina la Kisheria:",
+      "rccm": "RCCM:",
+      "taxId": "Kitambulisho cha Kodi:"
+    },
+    "headquarters": "Makao Makuu",
+    "ourIndustrySectors": "Sekta Zetu za Viwanda",
+    "coreCapabilities": "Uwezo Mkuu",
+    "licensedCompliantOperations": "Shughuli zilizoidhinishwa na kufuata kanuni",
+    "trustIndicators": {
+      "dnbListed": {
+        "title": "Imeorodheshwa D&B",
+        "description": "Imethibitishwa na kuorodheshwa katika saraka ya biashara ya Dun & Bradstreet"
+      },
+      "fullyCompliant": {
+        "title": "Inazingatia Kabisa",
+        "description": "Inafanya kazi na leseni zote zinazohitajika na idhini za kisheria"
+      },
+      "globalReach": {
+        "title": "Ufikiaji wa Kimataifa",
+        "description": "Shughuli zinazoenea Afrika na Amerika Kaskazini"
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Nyumbani",
+    "about": "Kuhusu Sisi",
+    "portfolio": "Kwingineko",
+    "industries": "Viwanda",
+    "contact": "Wasiliana",
+    "research": "Utafiti",
+    "legal": "Kisheria",
+    "privacy": "Sera ya Faragha",
+    "terms": "Masharti na Hali",
+    "codeOfConduct": "Kanuni za Maadili",
+    "antiCorruption": "Kupambana na Rushwa"
+  },
+  "Industries": {
+    "title": "Viwanda Tunavyohudumia",
+    "subtitle": "Kuendesha uvumbuzi katika sekta mbalimbali kwa utaalamu wa kimkakati na mwono wa kimataifa.",
+    "technology": "Teknolojia",
+    "technologyDescription": "Suluhisho za mabadiliko ya kidijitali, uundaji wa programu, na miundombinu ya teknolojia kwa biashara za kisasa kote Afrika.",
+    "technologyServices": {
+      "softwareDevelopment": "Uundaji wa Programu",
+      "digitalInfrastructure": "Miundombinu ya Kidijitali",
+      "technologyConsulting": "Ushauri wa Teknolojia"
+    },
+    "transportation": "Usafirishaji",
+    "transportationDescription": "Suluhisho kamilishi za usafirishaji na uhamaji zinazounganisha jamii na biashara kupitia mitandao ya usafirishaji wa ardhi, anga na bahari.",
+    "transportationServices": {
+      "logisticsManagement": "Usimamizi wa Vifaa",
+      "fleetOperations": "Uendeshaji wa Meli",
+      "supplyChain": "Suluhisho za Mlolongo wa Ugavi"
+    },
+    "finance": "Fedha",
+    "financeDescription": "Huduma za kifedha za kimkakati na suluhisho za benki zinazosaidia ukuaji wa kiuchumi na ujumuishaji wa kifedha katika masoko yanayochipuka.",
+    "financeServices": {
+      "financialServices": "Huduma za Kifedha",
+      "bankingSolutions": "Suluhisho za Benki",
+      "financialAdvisory": "Ushauri wa Kifedha"
+    },
+    "investment": "Uwekezaji",
+    "investmentDescription": "Usimamizi wa kwingineko ya kimkakati na fursa za mtaji wa kuhatarisha, kuendesha maendeleo ya kiuchumi na mipango ya ukuaji wa biashara.",
+    "investmentServices": {
+      "portfolioManagement": "Usimamizi wa Kwingineko",
+      "ventureCapital": "Mtaji wa Kuhatarisha",
+      "strategicInvestments": "Uwekezaji wa Kimkakati"
+    },
+    "industrial": "Viwanda na Biashara",
+    "industrialDescription": "Uzalishaji, usindikaji, mabadiliko, na uuzaji wa bidhaa na vitu vya viwanda kwa uzingatiaji kamili wa kanuni.",
+    "industrialServices": {
+      "manufacturing": "Utengenezaji na Uzalishaji",
+      "processing": "Usindikaji na Mabadiliko",
+      "distribution": "Usambazaji wa Kibiashara"
+    },
+    "licensedCapabilities": "Uwezo Ulioidhinishwa",
+    "licensedCapabilitiesDescription": "Inafanya kazi chini ya RCCM: CD/LSH/RCCM/21-B-00576 na leseni kamili kwa shughuli zote zilizodhibitiwa.",
+    "capabilities": {
+      "production": "Uzalishaji",
+      "research": "Utafiti",
+      "exploitation": "Utumiaji",
+      "processing": "Usindikaji",
+      "transformation": "Mabadiliko",
+      "commercialization": "Uuzaji wa Kibiashara"
+    },
+    "healthcare": "Afya",
+    "manufacturing": "Utengenezaji",
+    "retail": "Rejareja na E-biashara",
+    "energy": "Nishati na Rasilimali"
+  },
+  "Portfolio": {
+    "title": "Kwingineko Yetu",
+    "subtitle": "Uwekezaji wa kimkakati na miradi katika sekta za teknolojia, usafirishaji, fedha, na viwanda.",
+    "technologyVentures": {
+      "title": "Miradi ya Teknolojia",
+      "description": "Uwekezaji katika makampuni ya teknolojia yanayochipuka na mipango ya mabadiliko ya kidijitali."
+    },
+    "industrialProjects": {
+      "title": "Miradi ya Viwanda",
+      "description": "Uzalishaji, usindikaji, na uuzaji wa bidhaa na vifaa vya viwanda."
+    },
+    "strategicPartnerships": {
+      "title": "Ushirikiano wa Kimkakati",
+      "description": "Miradi ya ushirikiano na viongozi wa viwanda na wachezaji wa masoko yanayochipuka."
+    }
+  },
+  "Contact": {
+    "title": "Wasiliana Nasi",
+    "subtitle": "Tungependa kusikia kutoka kwako",
+    "form": {
+      "title": "Tutumie Ujumbe",
+      "fullName": "Jina Kamili",
+      "firstName": "Jina la Kwanza",
+      "lastName": "Jina la Familia",
+      "email": "Anwani ya Barua Pepe",
+      "emailAddress": "Anwani ya Barua Pepe",
+      "phone": "Nambari ya Simu",
+      "company": "Kampuni",
+      "subject": "Somo",
+      "message": "Ujumbe",
+      "submit": "Tuma Ujumbe",
+      "submitting": "Inatuma...",
+      "success": "Asante kwa ujumbe wako. Tutawasiliana nawe hivi karibuni!",
+      "error": "Kulikuwa na hitilafu ya kutuma ujumbe wako. Tafadhali jaribu tena.",
+      "placeholders": {
+        "fullName": "Juma Mwamba",
+        "email": "juma@mfano.com",
+        "company": "Kampuni ya Acme",
+        "message": "Tuambie kuhusu maombi yako..."
+      },
+      "subjects": {
+        "select": "Chagua somo",
+        "general": "Maombi ya Jumla",
+        "partnership": "Fursa ya Ushirikiano",
+        "investment": "Maombi ya Uwekezaji",
+        "technology": "Huduma za Teknolojia",
+        "other": "Mengine"
+      },
+      "required": "*",
+      "validation": {
+        "nameRequired": "Jina linahitajika",
+        "emailRequired": "Barua pepe inahitajika",
+        "emailInvalid": "Tafadhali weka barua pepe sahihi",
+        "subjectRequired": "Somo linahitajika",
+        "messageRequired": "Ujumbe unahitajika"
+      }
+    },
+    "info": {
+      "headquarters": "Makao Makuu",
+      "email": "Barua Pepe",
+      "phone": "Simu",
+      "getInTouch": "Wasiliana Nasi",
+      "description": "Ikiwa ungependa huduma zetu, unachunguza fursa za ushirikiano, au una maswali ya jumla, tungependa kusikia kutoka kwako."
+    },
+    "businessHours": {
+      "title": "Saa za Biashara",
+      "weekdays": "Jumatatu - Ijumaa",
+      "weekdaysHours": "8:00 AM - 6:00 PM CAT",
+      "saturday": "Jumamosi",
+      "saturdayHours": "9:00 AM - 1:00 PM CAT",
+      "sunday": "Jumapili",
+      "sundayHours": "Imefungwa"
+    },
+    "businessInfo": {
+      "title": "Taarifa za Biashara",
+      "rccm": "RCCM:",
+      "taxId": "Kitambulisho cha Kodi:",
+      "principal": "Mkuu:"
+    },
+    "location": {
+      "city": "Lubumbashi, Jimbo la Haut-Katanga",
+      "country": "Jamhuri ya Kidemokrasia ya Kongo"
+    }
+  },
+  "ResearchProcessing": {
+    "title": "Utafiti na Usindikaji",
+    "subtitle": "Uwezo kamili katika uzalishaji, utafiti, utumiaji, usindikaji, mabadiliko, na uuzaji wa bidhaa na vitu.",
+    "description": "Kutumia mbinu za utafiti za kisasa na teknolojia za usindikaji kutoa maarifa yanayoweza kutekelezwa kwa kufanya maamuzi ya kimkakati.",
+    "capabilities": {
+      "production": "Uzalishaji",
+      "research": "Utafiti",
+      "exploitation": "Utumiaji",
+      "processing": "Usindikaji",
+      "transformation": "Mabadiliko",
+      "commercialization": "Uuzaji wa Kibiashara"
+    },
+    "capabilityDescription": "Shughuli zilizoidhinishwa na zinazofuata kanuni na idhini kamili ya kisheria.",
+    "regulatory": {
+      "title": "Uzingatiaji wa Kanuni",
+      "description1": "Inafanya kazi chini ya RCCM: CD/LSH/RCCM/21-B-00576 na leseni kamili kwa shughuli zote zinazohusisha uzalishaji, utafiti, utumiaji, usindikaji, mabadiliko, na uuzaji wa bidhaa na vitu.",
+      "description2": "Shughuli zetu zinadumisha uzingatiaji mkali wa viwango vya mazingira, usalama, na ubora katika sekta zote."
+    }
+  },
+  "Footer": {
+    "quickLinks": "Viungo vya Haraka",
+    "legalInfo": "Taarifa za Kisheria",
+    "followUs": "Tufuate",
+    "copyright": "© {year} Steedoo Group International. Haki zote zimehifadhiwa.",
+    "switchRegion": "Badilisha Mkoa",
+    "global": "Kimataifa",
+    "us": "Marekani"
+  },
+  "Buttons": {
+    "learnMore": "Jifunze Zaidi",
+    "getStarted": "Anza",
+    "contactUs": "Wasiliana Nasi",
+    "viewPortfolio": "Tazama Kwingineko",
+    "readMore": "Soma Zaidi"
+  },
+  "OurCompanies": {
+    "title": "Makampuni Yetu",
+    "subtitle": "Kwingineko yetu tofauti ya makampuni ya ubunifu inabadilisha viwanda na kuunda thamani endelevu kote Afrika na zaidi.",
+    "comingSoon": "Makampuni zaidi yanakuja hivi karibuni"
+  },
+  "WhyChooseUs": {
+    "title": "Kwa Nini Utuchague",
+    "subtitle": "Gundua kinachotufanya kuwa tofauti kama mshirika wako wa kuaminika kwa mafanikio ya biashara.",
+    "globalExperience": {
+      "title": "Uzoefu wa Kimataifa",
+      "description": "Zaidi ya miaka 3 ya utaalamu katika mabara na viwanda vingi."
+    },
+    "localKnowledge": {
+      "title": "Maarifa ya Ndani",
+      "description": "Uelewa wa kina wa masoko ya Afrika na mazingira ya biashara."
+    },
+    "innovativeSolutions": {
+      "title": "Suluhisho za Ubunifu",
+      "description": "Teknolojia ya kisasa na mbinu za ubunifu za kutatua changamoto ngumu."
+    },
+    "provenResults": {
+      "title": "Matokeo Yaliyothibitishwa",
+      "description": "Rekodi ya mafanikio ya utoaji wa mradi na uundaji wa thamani."
+    },
+    "strategicPartnership": {
+      "title": "Ushirikiano wa Kimkakati",
+      "description": "Mahusiano ya muda mrefu yaliyojengwa juu ya uaminifu na mafanikio ya pande zote."
+    },
+    "comprehensiveSupport": {
+      "title": "Msaada Kamili",
+      "description": "Huduma za mwisho hadi mwisho kutoka wazo hadi utekelezaji na zaidi."
+    }
+  },
+  "Leadership": {
+    "title": "Timu ya Uongozi",
+    "subtitle": "Kutana na wataalamu wenye uzoefu wanaoongoza maono na ukuaji wetu"
+  },
+  "Common": {
+    "loading": "Inapakia...",
+    "error": "Hitilafu imetokea",
+    "tryAgain": "Jaribu Tena",
+    "back": "Rudi",
+    "next": "Inayofuata",
+    "previous": "Iliyotangulia",
+    "close": "Funga",
+    "open": "Fungua"
+  }
+}
