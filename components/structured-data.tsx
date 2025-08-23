@@ -16,7 +16,7 @@ export function StructuredData() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Corporation',
-    name: 'Steedoo Group International',
+    name: 'Steedoo Group',
     alternateName: 'Steedoo Group',
     url: 'https://steedoo.group',
     logo: 'https://steedoo.group/assets/images/logo/icon-512.png',
@@ -113,7 +113,7 @@ export function StructuredData() {
     slogan: 'Global Leadership in Technology, Finance & Industry',
     naics: '551114',
     isicV4: '6420',
-    legalName: 'Steedoo Group International Corporation',
+    legalName: 'Steedoo Group Corporation',
     taxID: 'XX-XXXXXXX',
     vatID: 'XXXXXXXXXXXX',
   };
@@ -123,10 +123,10 @@ export function StructuredData() {
     '@type': 'WebSite',
     url: 'https://steedoo.group',
     name: 'Steedoo Group',
-    description: 'Official website of Steedoo Group International',
+    description: 'Official website of Steedoo Group',
     publisher: {
       '@type': 'Corporation',
-      name: 'Steedoo Group International',
+      name: 'Steedoo Group',
     },
     potentialAction: {
       '@type': 'SearchAction',

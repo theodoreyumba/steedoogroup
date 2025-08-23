@@ -24,7 +24,7 @@ Software: VS Code, Git, Vercel
 
 /* COMPANY */
 
-Company: Steedoo Group International
+Company: Steedoo Group
 Founded: [Year]
 Industries: Technology, Finance, Transportation, Investment, Industrial & Commercial
 Headquarters: Lubumbashi, DRC
